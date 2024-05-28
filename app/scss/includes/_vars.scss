@@ -1,0 +1,13 @@
+$body-bg: #040114;
+$body-color: #fff;
+
+$white: #fff;
+$black: #212121;
+$blue-dark: #040114;
+$cyan: hsl(170, 100%, 50%);
+$cyan2: hsl(170, 73%, 43%);
+$pink: hsl(323, 100%, 74%);
+$pink2: hsl(323, 45%, 47%);
+
+$text-shadow-cyan: 0 0 5px $cyan, 0 0 15px $cyan, 0 0 20px $cyan, 0 0 40px $cyan, 0 0 60px $cyan2, 0 0 10px $cyan, 0 0 98px $cyan2;
+$text-shadow-pink: 0 0 5px $pink, 0 0 15px $pink, 0 0 20px $pink, 0 0 40px $pink, 0 0 60px $pink2, 0 0 10px $pink, 0 0 98px $pink2;

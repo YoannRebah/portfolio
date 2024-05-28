@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Megrim&family=Neonderthaw&family=Satisfy&display=swap");
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.neonderthaw-regular {
+  font-family: "Neonderthaw", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.megrim-regular {
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #040114;
+  color: #fff;
+}
+
+main {
+  position: relative;
+  height: 100%;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+.container_regular {
+  padding: 2rem;
+}
+.container[data-container=main-nav] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0 10%;
+  border-bottom: 1px solid hsl(170, 100%, 50%);
+  background: #040114;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.container[data-container=main-nav] ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.container[data-container=main-nav] ul li {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.container[data-container=main-nav] ul li a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.33rem;
+}
+.container[data-container=hero-banner] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.neon-letters {
+  display: flex;
+  flex-direction: column;
+}
+.neon-letters span:nth-child(1) {
+  font-size: 2.2rem;
+  text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%);
+  font-style: italic;
+  margin-bottom: -1.2rem;
+}
+.neon-letters span:nth-child(2) {
+  margin-bottom: -3rem;
+}
+.neon-letters span:nth-child(2), .neon-letters span:nth-child(3) {
+  font-size: 6rem;
+  text-shadow: 0 0 5px hsl(323, 100%, 74%), 0 0 15px hsl(323, 100%, 74%), 0 0 20px hsl(323, 100%, 74%), 0 0 40px hsl(323, 100%, 74%), 0 0 60px hsl(323, 45%, 47%), 0 0 10px hsl(323, 100%, 74%), 0 0 98px hsl(323, 45%, 47%);
+}
+.neon-letters span:nth-child(3) {
+  margin-left: 1rem;
+  margin-bottom: -1.25rem;
+}
+.neon-letters span:nth-child(4) {
+  font-size: 2.2rem;
+  margin-left: 14rem;
+  text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%);
+  font-style: italic;
+}
+.neon-letters.small span:nth-child(1) {
+  font-size: 0.85rem;
+  margin-bottom: -0.5rem;
+}
+.neon-letters.small span:nth-child(2) {
+  margin-bottom: -0.75rem;
+}
+.neon-letters.small span:nth-child(2), .neon-letters.small span:nth-child(3) {
+  font-size: 1.5rem;
+}
+.neon-letters.small span:nth-child(3) {
+  margin-left: 0.5rem;
+  margin-bottom: -0.15rem;
+}
+.neon-letters.small span:nth-child(4) {
+  font-size: 0.85rem;
+  margin-left: 3.2rem;
+}
+
+.h2 {
+  color: hsl(170, 100%, 50%);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+.h2::before {
+  content: "-";
+  display: flex;
+  width: 3rem;
+  height: 0.2rem;
+  background: hsl(323, 100%, 74%);
+  color: hsl(170, 100%, 50%);
+  margin-right: 0.75rem;
+}
+.h2.reduce {
+  color: hsl(323, 100%, 74%);
+}
+.h2.reduce::before {
+  content: "+";
+  background: hsl(170, 100%, 50%);
+  color: hsl(323, 100%, 74%);
+}
+
+.h3 {
+  margin-bottom: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  pointer-events: none;
+}
