@@ -1,0 +1,9 @@
+.btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &>* {
+        pointer-events: none;
+    }
+}

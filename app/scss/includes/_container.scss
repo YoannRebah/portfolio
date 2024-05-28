@@ -12,10 +12,10 @@
         left: 0;
         z-index: 1;
         padding: 0 10%;
-        border-bottom: 1px solid $cyan;
+        border-bottom: 1.5px solid $cyan;
         background: $body-bg;
         opacity: 0;
-        transition: opacity 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
 
         ul {
             list-style: none;
@@ -35,7 +35,33 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    padding: 0.33rem;
+                    padding: 0.5rem;
+                }
+            }
+        }
+
+        [data-btn-action="reduce-main-nav"]{
+            position: absolute;
+            right: 0;
+            background: $cyan;
+            color: $black;
+            padding: 0.33rem;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            font-weight: 700;
+        }
+
+        &.reduce {
+            top: -6rem;
+            border-bottom-color: $pink;
+
+            [data-btn-action="reduce-main-nav"]{
+                background: $pink;
+                color: $black;
+
+                .fa-icon {
+                    transform: rotate(180deg);
+                    transition: transform 0.25s ease-in-out;
                 }
             }
         }

@@ -39,10 +39,6 @@ main {
   height: 100%;
 }
 
-.btn {
-  cursor: pointer;
-}
-
 .display-none {
   display: none !important;
 }
@@ -60,10 +56,10 @@ main {
   left: 0;
   z-index: 1;
   padding: 0 10%;
-  border-bottom: 1px solid hsl(170, 100%, 50%);
+  border-bottom: 1.5px solid hsl(170, 100%, 50%);
   background: #040114;
   opacity: 0;
-  transition: opacity 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .container[data-container=main-nav] ul {
   list-style: none;
@@ -83,7 +79,29 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
+}
+.container[data-container=main-nav] [data-btn-action=reduce-main-nav] {
+  position: absolute;
+  right: 0;
+  background: hsl(170, 100%, 50%);
+  color: #212121;
   padding: 0.33rem;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  font-weight: 700;
+}
+.container[data-container=main-nav].reduce {
+  top: -6rem;
+  border-bottom-color: hsl(323, 100%, 74%);
+}
+.container[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] {
+  background: hsl(323, 100%, 74%);
+  color: #212121;
+}
+.container[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] .fa-icon {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease-in-out;
 }
 .container[data-container=hero-banner] {
   display: flex;
@@ -95,28 +113,32 @@ main {
   display: flex;
   flex-direction: column;
 }
+.neon-letters span {
+  position: relative;
+}
 .neon-letters span:nth-child(1) {
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%);
   font-style: italic;
-  margin-bottom: -1.2rem;
+  margin-bottom: -2.5rem;
 }
 .neon-letters span:nth-child(2) {
-  margin-bottom: -3rem;
+  margin-bottom: -4rem;
 }
 .neon-letters span:nth-child(2), .neon-letters span:nth-child(3) {
-  font-size: 6rem;
+  font-size: 8rem;
   text-shadow: 0 0 5px hsl(323, 100%, 74%), 0 0 15px hsl(323, 100%, 74%), 0 0 20px hsl(323, 100%, 74%), 0 0 40px hsl(323, 100%, 74%), 0 0 60px hsl(323, 45%, 47%), 0 0 10px hsl(323, 100%, 74%), 0 0 98px hsl(323, 45%, 47%);
 }
 .neon-letters span:nth-child(3) {
   margin-left: 1rem;
-  margin-bottom: -1.25rem;
+  margin-bottom: -2rem;
 }
 .neon-letters span:nth-child(4) {
-  font-size: 2.2rem;
-  margin-left: 14rem;
+  font-size: 3.2rem;
   text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%);
   font-style: italic;
+  text-align: right;
+  margin-right: 1rem;
 }
 .neon-letters.small span:nth-child(1) {
   font-size: 0.85rem;
@@ -134,7 +156,7 @@ main {
 }
 .neon-letters.small span:nth-child(4) {
   font-size: 0.85rem;
-  margin-left: 3.2rem;
+  margin-right: 0.33rem;
 }
 
 .h2 {
@@ -168,6 +190,15 @@ main {
 
 .h3 {
   margin-bottom: 1rem;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.btn > * {
+  pointer-events: none;
 }
 
 .overlay {
