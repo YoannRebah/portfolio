@@ -66,11 +66,13 @@
 }
 
 .h2 {
+    position: relative;
     color: $cyan;
     font-weight: 700;
     display: flex;
     align-items: center;
     font-size: 2.5rem;
+    padding-top: 7.5rem;
     margin-bottom: 2rem;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -81,9 +83,20 @@
         display: flex;
         width: 3rem;
         height: 0.2rem;
-        background: $pink;
+        background: $cyan;
         color: $cyan;
         margin-right: .75rem;
+    }
+
+    &::after {
+        content: "";
+        display: flex;
+        width: 97%;
+        height: 0.2rem;
+        background: $pink;
+        position: absolute;
+        right: 0;
+        bottom: -0.2rem;
     }
 
     &.reduce {
@@ -93,6 +106,10 @@
             content: "+";
             background: $cyan;
             color: $pink;
+        }
+
+        &::after {
+            background: $cyan;
         }
     }
 }

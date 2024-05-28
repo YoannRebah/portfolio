@@ -2,6 +2,10 @@
     position: relative;
     width: 100%;
 
+    &_medium {
+        padding: 0 16%;
+    }
+
     &_regular {
         padding: 2rem;
     }

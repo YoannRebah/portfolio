@@ -47,6 +47,9 @@ main {
   position: relative;
   width: 100%;
 }
+.container_medium {
+  padding: 0 16%;
+}
 .container_regular {
   padding: 2rem;
 }
@@ -161,11 +164,13 @@ main {
 }
 
 .h2 {
+  position: relative;
   color: hsl(170, 100%, 50%);
   font-weight: 700;
   display: flex;
   align-items: center;
   font-size: 2.5rem;
+  padding-top: 7.5rem;
   margin-bottom: 2rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -176,9 +181,19 @@ main {
   display: flex;
   width: 3rem;
   height: 0.2rem;
-  background: hsl(323, 100%, 74%);
+  background: hsl(170, 100%, 50%);
   color: hsl(170, 100%, 50%);
   margin-right: 0.75rem;
+}
+.h2::after {
+  content: "";
+  display: flex;
+  width: 97%;
+  height: 0.2rem;
+  background: hsl(323, 100%, 74%);
+  position: absolute;
+  right: 0;
+  bottom: -0.2rem;
 }
 .h2.reduce {
   color: hsl(323, 100%, 74%);
@@ -187,6 +202,9 @@ main {
   content: "+";
   background: hsl(170, 100%, 50%);
   color: hsl(323, 100%, 74%);
+}
+.h2.reduce::after {
+  background: hsl(170, 100%, 50%);
 }
 
 .h3 {
