@@ -180,6 +180,9 @@ a > * {
 .container[data-container=main-nav] ul li .link-main-nav.large {
   font-size: 1.5rem;
 }
+.container[data-container=main-nav] ul li .link-main-nav i {
+  margin-right: 0.33rem;
+}
 .container[data-container=main-nav] [data-btn-action=reduce-main-nav] {
   position: absolute;
   right: 0;
