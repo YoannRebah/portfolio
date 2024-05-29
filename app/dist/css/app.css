@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Megrim&family=Neonderthaw&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Megrim&family=Neonderthaw&family=Satisfy&display=swap?family=Reddit+Mono:wght@200..900&display=swap");
 .satisfy-regular {
   font-family: "Satisfy", cursive;
   font-weight: 400;
@@ -15,6 +15,14 @@
   font-family: "Megrim", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.reddit-mono {
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
 }
 
 * {
@@ -67,8 +75,15 @@ a > * {
 .loader-background .wrapper {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.loader-background .wrapper p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin-bottom: 0.4rem;
 }
 .loader-background .wrapper .loader {
   width: 11rem;
@@ -143,21 +158,6 @@ a > * {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: color;
-  animation: overlay-bg-anim 100s linear infinite;
-}
-@keyframes overlay-bg-anim {
-  0% {
-    background-color: hsl(323, 100%, 74%);
-  }
-  50% {
-    background-color: hsl(170, 100%, 50%);
-  }
-  90% {
-    background-color: hsl(323, 100%, 74%);
-  }
-  100% {
-    background-color: hsl(170, 100%, 50%);
-  }
 }
 
 .container {
@@ -400,13 +400,10 @@ a > * {
 .toolbar .timer,
 .toolbar .play {
   color: #fff;
-  font-size: 1.5rem;
-  opacity: 0.8;
-  font-style: italic;
-  text-shadow: 6px -4px 2px rgba(255, 52, 52, 0.6), 8px -6px 2px rgba(52, 255, 120, 0.6);
-}
-.toolbar .timer {
-  font-style: normal;
+  font-size: 1.4rem;
+  opacity: 0.65;
+  text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
+  text-transform: uppercase;
 }
 
 .glitch-line {

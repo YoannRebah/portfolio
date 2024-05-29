@@ -231,6 +231,6 @@ window.onload = () => {
         LoaderController.Hide();
         timerController.init();
         clearTimeout(timeout);
-    }, 2500)
+    }, 3000)
 
 }

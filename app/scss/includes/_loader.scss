@@ -18,8 +18,16 @@
     .wrapper {
         position: relative;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            opacity: 0.65;
+            margin-bottom: 0.4rem;
+        }
 
         .loader {
             width: 11rem;

@@ -13,19 +13,4 @@
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: color;
-    animation: overlay-bg-anim 100s linear infinite;
-    @keyframes overlay-bg-anim {
-        0% {
-            background-color: $pink;
-        }
-        50% {
-            background-color: $cyan;
-        }
-        90% {
-            background-color: $pink;
-        }
-        100% {
-            background-color: $cyan;
-        }
-    }
 }
