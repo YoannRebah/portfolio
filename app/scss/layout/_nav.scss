@@ -1,15 +1,4 @@
-.container {
-    position: relative;
-    width: 100%;
-
-    &_medium {
-        padding: 0 16%;
-    }
-
-    &_regular {
-        padding: 2rem;
-    }
-
+nav {
     &[data-container="main-nav"] {
         position: fixed;
         top: 0;
@@ -21,23 +10,23 @@
         opacity: 0;
         pointer-events: none;
         transition: 0.25s ease-in-out;
-
+    
         &.active {
             opacity: 1;
             pointer-events: all;
         }
-
+    
         ul {
             list-style: none;
             display: flex;
             align-items: center;
             height: 100%;
-
+    
             li {
                 display: flex;
                 width: 100%;
                 height: 100%;
-
+    
                 .link-main-nav {
                     text-decoration: none;
                     color: $white;
@@ -46,18 +35,18 @@
                     align-items: center;
                     justify-content: center;
                     padding: 0.5rem;
-
+    
                     &.large {
                         font-size: 1.5rem;
                     }
-
+    
                     i {
                         margin-right: .33rem;
                     }
                 }
             }
         }
-
+    
         [data-btn-action="reduce-main-nav"]{
             position: absolute;
             right: 0;
@@ -69,35 +58,20 @@
             font-weight: 700;
             transition: 0.25s ease-in-out;
         }
-
+    
         &.reduce {
             top: -5.75rem;
             border-bottom-color: $pink;
-
+    
             [data-btn-action="reduce-main-nav"]{
                 background: $pink;
                 color: $black;
-
+    
                 .fa-icon {
                     transform: rotate(180deg);
                     transition: transform 0.25s ease-in-out;
                 }
             }
         }
-    }
-
-    &[data-container="hero-banner"] {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-
-    &[data-container="main-content"] {
-
-    }
-
-    &[data-container="footer"] {
-
     }
 }

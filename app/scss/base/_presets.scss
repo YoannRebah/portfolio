@@ -27,7 +27,29 @@ a {
 }
 
 hr {
-    border: 1px solid $pink;
+    border: 1px solid;
     margin-top: 2rem;
     margin-bottom: 2rem;
+
+    &.pink {
+        border-color: $pink;
+    }
+
+    &.cyan {
+        border-color: $cyan;
+    }
+}
+
+.btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &>* {
+        pointer-events: none;
+    }
+}
+
+.display-none {
+    display: none !important;
 }

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Neonderthaw&family=Satisfy&display=swap?family=Reddit+Mono:wght@200..900&display=swap');
+
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.neonderthaw-regular {
+    font-family: "Neonderthaw", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.megrim-regular {
+    font-family: "Megrim", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.reddit-mono {
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: 2px 3px 2px $black, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
+}
+
+.h2 {
+    position: relative;
+    color: $cyan;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &::before {
+        content: "-";
+        display: flex;
+        width: 3rem;
+        height: 0.2rem;
+        background: $cyan;
+        color: $cyan;
+        margin-right: .75rem;
+    }
+
+    &::after {
+        content: "";
+        display: flex;
+        width: 97%;
+        height: 0.2rem;
+        background: $pink;
+        position: absolute;
+        right: 0;
+        bottom: -0.2rem;
+    }
+
+    &.reduce {
+        color: $pink;
+
+        &::before {
+            content: "+";
+            background: $cyan;
+            color: $pink;
+        }
+
+        &::after {
+            background: $cyan;
+        }
+    }
+}
+
+.h3 {
+    margin-bottom: 1rem;
+}

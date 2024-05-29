@@ -1,0 +1,135 @@
+section {
+    &.main-section {
+        padding-top: 7.5rem;
+    
+        [data-content="skills"] {
+            display: flex;
+            flex-direction: column;
+    
+            .row-skill {
+                display: flex;
+                align-items: center;
+    
+                .container-icon-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    flex: 15;
+                    color: $pink;
+    
+                    p {
+                        font-weight: 700;
+                        margin-bottom: .5rem;
+                    }
+    
+                    i {
+                        font-size: 5rem;
+                    }
+                }
+    
+                .wrapper {
+                    position: relative;
+                    width: 100%;
+                    padding: 1rem;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    flex: 85;
+    
+                    .skill-item {
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+    
+                        p {
+                            width: 200px;
+                            text-align: right;
+                            font-size: 0.9rem;
+                            text-wrap: nowrap;
+                        }
+    
+                        .container-progress-bar {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            background: $cyan2;
+                            border-radius: 1rem;
+    
+                            .progress-bar {
+                                position: relative;
+                                border-radius: 1rem;
+                                height: 100%;
+                                background: $cyan;
+    
+                                &::after {
+                                    content: attr(data-percent);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: absolute;
+                                    transform: translate(-50%, -50%);
+                                    top: 50%;
+                                    left: 98%;
+                                    color: $black;
+                                    font-size: 0.7rem;
+                                    border-radius: 50%;
+                                    background: $cyan;
+                                    width: 36px;
+                                    min-width: 36px;
+                                    height: 34px;
+                                    min-height: 34px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        [data-content="tools"] {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tool {
+                position: relative;
+                display: flex;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                flex: 1;
+                height: 220px;
+                margin-top: 3rem;
+
+                &::before {
+                    content: attr(data-text);
+                    text-align: center;
+                    width: 100%;
+                    position: relative;
+                    top: -2.2rem;
+                    color: $pink;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                }
+
+                &[data-text="VS Code"] {
+                    background-image: url(../../dist/assets/images/logo-vs-code.png);
+                }
+
+                &[data-text="Visual Studio"] {
+                    background-image: url(../../dist/assets/images/logo-vs.png);
+                }
+
+                &[data-text="Git"] {
+                    background-image: url(../../dist/assets/images/logo-git.png);
+                }
+
+                &[data-text="AEM"] {
+                    background-image: url(../../dist/assets/images/logo-aem.png);
+                }
+            }
+        }
+    }
+}

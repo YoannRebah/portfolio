@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- app -->
-    <link rel="stylesheet" href="./app/dist/css/app.css">
-    <script defer src="./app/dist/js/index.js"></script>
+    <link rel="stylesheet" href="./app/dist/css/main.css">
+    <script defer src="./app/dist/js/main.js"></script>
 
 </head>
 <body>
@@ -23,7 +23,7 @@
             <div class="glitch-line" style="opacity: 0.1;"></div>
             <div class="glitch-line" style="opacity: 0.1;animation-delay: 1.75s;"></div>
             <div class="wrapper">
-                <p class="reddit-mono">Veuillez patienter...</p>
+                <p class="reddit-mono">Chargement en cours...</p>
                 <div class="loader">
                     <div class="block" style="animation-delay: 0s;"><i class="fa-solid fa-dice-one"></i></div>
                     <div class="block" style="animation-delay: 0.25s;"><i class="fa-solid fa-dice-two"></i></div>
@@ -66,6 +66,12 @@
                         <a href="#skills" class="link-main-nav">
                             <i class="fa-solid fa-kitchen-set"></i>
                             <span>Compétences</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tools" class="link-main-nav">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>Outils</span>
                         </a>
                     </li>
                     <li>
@@ -147,7 +153,7 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <hr class="cyan">
                     <div class="row-skill" data-skill="sass">
                         <div class="container-icon-text">
                             <p>SASS</p>
@@ -155,7 +161,7 @@
                         </div>
                         <div class="wrapper">
                             <div class="skill-item">
-                                <p>Syntaxe / Variables&nbsp;:</p>
+                                <p>Syntaxe&nbsp;:</p>
                                 <div class="container-progress-bar">
                                     <div class="progress-bar" style="width: 70%;" data-percent="70%"></div>
                                 </div>
@@ -167,13 +173,13 @@
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <p>Partials et imports&nbsp;:</p>
+                                <p>Architecture&nbsp;:</p>
                                 <div class="container-progress-bar">
                                     <div class="progress-bar" style="width: 90%;" data-percent="90%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <p>Performances&nbsp;:</p>
+                                <p>Performance&nbsp;:</p>
                                 <div class="container-progress-bar">
                                     <div class="progress-bar" style="width: 75%;" data-percent="75%"></div>
                                 </div>
@@ -186,7 +192,7 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <hr class="cyan">
                     <div class="row-skill" data-skill="js">
                         <div class="container-icon-text">
                             <p>JavaScript</p>
@@ -194,25 +200,25 @@
                         </div>
                         <div class="wrapper">
                             <div class="skill-item">
-                                <p>Syntaxe / Variables&nbsp;:</p>
+                                <p>Bases&nbsp;:</p>
                                 <div class="container-progress-bar">
                                     <div class="progress-bar" style="width: 70%;" data-percent="70%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <p>Sélecteurs&nbsp;:</p>
+                                <p>Structure de données&nbsp;:</p>
                                 <div class="container-progress-bar">
                                     <div class="progress-bar" style="width: 80%;" data-percent="80%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <p>Partials et imports&nbsp;:</p>
+                                <p>POO&nbsp;:</p>
                                 <div class="container-progress-bar">
                                     <div class="progress-bar" style="width: 90%;" data-percent="90%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <p>Performances&nbsp;:</p>
+                                <p>Manipulation du DOM&nbsp;:</p>
                                 <div class="container-progress-bar">
                                     <div class="progress-bar" style="width: 75%;" data-percent="75%"></div>
                                 </div>
@@ -225,7 +231,17 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                </div>
+            </section>
+
+            <!-- tools -->
+            <section id="tools" class="container main-section">
+                <h2 class="btn megrim-regular h2" data-h2="tools" title="Afficher / Masquer la section">Logiciels et Outils Professionnels</h2>
+                <div class="content" data-content="tools">
+                    <div class="tool" data-text="VS Code"></div>
+                    <div class="tool" data-text="Visual Studio"></div>
+                    <div class="tool" data-text="Git"></div>
+                    <div class="tool" data-text="AEM"></div>
                 </div>
             </section>
 
@@ -256,7 +272,7 @@
         </div>
 
         <!-- footer -->
-        <footer class="container container_regular" data-container="footer"></footer>
+        <footer class="container" data-container="footer"></footer>
 
     </main>
     
