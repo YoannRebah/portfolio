@@ -15,15 +15,37 @@
 
     <main>
 
+        <!-- loader -->
+        <div class="loader-background">
+            <div class="wrapper">
+                <div class="loader">
+                    <div class="block" style="animation-delay: 0s;"><i class="fa-solid fa-dice-one"></i></div>
+                    <div class="block" style="animation-delay: 0.25s;"><i class="fa-solid fa-dice-two"></i></div>
+                    <div class="block" style="animation-delay: 0.5s;"><i class="fa-solid fa-dice-three"></i></div>
+                    <div class="block" style="animation-delay: 0.75s;"><i class="fa-solid fa-dice-four"></i></div>
+                    <div class="block" style="animation-delay: 1s;"><i class="fa-solid fa-dice-five"></i></div>
+                </div>
+            </div>
+        </div>
+
         <!-- overlay -->
         <div class="overlay"></div>
+
+        <!-- toolbar -->
+        <div class="toolbar">
+            <div class="timer">00:00:00</div>
+            <div class="play">
+                <i class="fa-solid fa-play"></i>
+                <span>Play</span>
+            </div>
+        </div>
 
         <!-- main-nav -->
         <nav class="container" data-container="main-nav">
             <div class="container">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="#" class="link-main-nav">
                             <h1 class="neon-letters small">
                                 <span class="satisfy-regular">Portfolio</span>
                                 <span class="neonderthaw-regular">Yoann</span>
@@ -33,18 +55,23 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#skills">
-                            Mes compétences
+                        <a href="#skills" class="link-main-nav">
+                            Compétences
                         </a>
                     </li>
                     <li>
-                        <a href="#projects">
-                            Mes projets
+                        <a href="#projects" class="link-main-nav">
+                            Projets
                         </a>
                     </li>
                     <li>
-                        <a href="#roadmap">
-                            Ma roadmap
+                        <a href="#roadmap" class="link-main-nav">
+                            Roadmap
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#git" class="link-main-nav large" title="Code source du portfolio">
+                            <i class="fa-brands fa-github"></i>
                         </a>
                     </li>
                 </ul>

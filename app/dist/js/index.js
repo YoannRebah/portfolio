@@ -1,3 +1,16 @@
+class LoaderController {
+    static Show() {
+        if(document.querySelector('.loader-background')) {
+            document.querySelector('.loader-background').classList.remove('display-none');
+        }
+    }
+    static Hide() {
+        if(document.querySelector('.loader-background')) {
+            document.querySelector('.loader-background').classList.add('display-none');
+        }
+    }
+}
+
 class LocalStorageController {
 
     static get Data() {
@@ -73,9 +86,8 @@ class ContentController {
 
 }
 
-class HeroBannerController {
+class MainNavController {
 
-    #heroBanner = document.querySelector('[data-container="hero-banner"]');
     #mainNav = document.querySelector('[data-container="main-nav"]');
     #btnReduceMainNav = document.querySelector('[data-btn-action="reduce-main-nav"]');
 
@@ -88,11 +100,6 @@ class HeroBannerController {
     AddEventWindowScroll() {
         window.addEventListener('scroll', ()=>{
             const scrollY = window.scrollY;
-            const opacityValue = scrollY/250;
-
-            if(this.#heroBanner) {
-                this.#heroBanner.style.opacity = `${1 - opacityValue}`;
-            }
 
             if(this.#mainNav) {
                 if(scrollY > 80) {
@@ -139,6 +146,30 @@ class HeroBannerController {
     }
 }
 
+class TimerController {
+
+    #timer = document.querySelector('.timer');
+    #timerTime = 0;
+
+    init() {
+        setInterval(() => this.UpdateTimer(), 1000);
+    }
+
+    FormatTime(number) {
+        return String(number).padStart(2, '0');
+    }
+
+    UpdateTimer() {
+        const hours = Math.floor(this.#timerTime / 3600);
+        const minutes = Math.floor((this.#timerTime % 3600) / 60);
+        const seconds = this.#timerTime % 60;
+        
+        this.#timer.textContent = `${this.FormatTime(hours)}:${this.FormatTime(minutes)}:${this.FormatTime(seconds)}`;
+        
+        this.#timerTime++;
+    }
+}
+
 window.onload = () => {
 
     const localStorageController = new LocalStorageController();
@@ -147,7 +178,15 @@ window.onload = () => {
     const contentController = new ContentController();
     contentController.init();
 
-    const heroBannerController = new HeroBannerController();
-    heroBannerController.init();
+    const mainNavController = new MainNavController();
+    mainNavController.init();
+
+    const timerController = new TimerController();
+
+    let timeout = setTimeout(()=>{
+        LoaderController.Hide();
+        timerController.init();
+        clearTimeout(timeout);
+    }, 2500)
 
 }
