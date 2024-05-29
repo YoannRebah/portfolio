@@ -42,9 +42,10 @@
                     gap: 0.5rem;
 
                     p {
-                        width: 150px;
+                        width: 200px;
                         text-align: right;
                         font-size: 0.9rem;
+                        text-wrap: nowrap;
                     }
 
                     .container-progress-bar {

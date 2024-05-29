@@ -288,9 +288,10 @@ hr {
   gap: 0.5rem;
 }
 .main-section [data-content=skills] .row-skill .wrapper .skill-item p {
-  width: 150px;
+  width: 200px;
   text-align: right;
   font-size: 0.9rem;
+  text-wrap: nowrap;
 }
 .main-section [data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar {
   position: relative;
