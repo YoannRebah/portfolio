@@ -179,7 +179,12 @@ a > * {
   border-bottom: 1.5px solid hsl(170, 100%, 50%);
   background: #040114;
   opacity: 0;
+  pointer-events: none;
   transition: 0.25s ease-in-out;
+}
+.container[data-container=main-nav].active {
+  opacity: 1;
+  pointer-events: all;
 }
 .container[data-container=main-nav] ul {
   list-style: none;
@@ -249,6 +254,24 @@ a > * {
   font-style: italic;
   margin-bottom: -2.5rem;
   margin-left: 0.85rem;
+  animation: neon-glitch-anim 10s linear infinite;
+}
+@keyframes neon-glitch-anim {
+  0% {
+    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+  90% {
+    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+  94% {
+    text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+  97% {
+    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
 }
 .neon-letters span:nth-child(2) {
   margin-bottom: -4rem;
@@ -267,12 +290,28 @@ a > * {
   font-style: italic;
   text-align: right;
   margin-right: 1rem;
+  animation: neon-glitch2-anim 20s linear infinite;
+}
+@keyframes neon-glitch2-anim {
+  0% {
+    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+  90% {
+    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+  92% {
+    text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
 }
 .neon-letters.small span:nth-child(1) {
   text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%);
   font-size: 0.85rem;
   margin-bottom: -0.5rem;
   margin-left: 0.5rem;
+  animation: none;
 }
 .neon-letters.small span:nth-child(2) {
   margin-bottom: -0.75rem;
@@ -288,6 +327,7 @@ a > * {
   text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 73%, 43%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 73%, 43%);
   font-size: 0.55rem;
   margin-right: 0.33rem;
+  animation: none;
 }
 
 .h2 {

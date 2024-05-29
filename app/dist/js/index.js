@@ -103,9 +103,9 @@ class MainNavController {
 
             if(this.#mainNav) {
                 if(scrollY > 80) {
-                    this.#mainNav.style.opacity = `1`;
+                    this.#mainNav.classList.add('active');
                 } else {
-                    this.#mainNav.style.opacity = `0`;
+                    this.#mainNav.classList.remove('active');
                 }
             }
         });

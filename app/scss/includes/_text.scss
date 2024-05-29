@@ -11,6 +11,24 @@
             font-style: italic;
             margin-bottom: -2.5rem;
             margin-left: 0.85rem;
+            animation: neon-glitch-anim 10s linear infinite;
+            @keyframes neon-glitch-anim {
+                0% {
+                    text-shadow: $text-shadow-cyan-3d;
+                }
+                90% {
+                    text-shadow: $text-shadow-cyan-3d;
+                }
+                94% {
+                    text-shadow: $text-shadow-black-3d;
+                }
+                97% {
+                    text-shadow: $text-shadow-cyan-3d;
+                }
+                100% {
+                    text-shadow: $text-shadow-black-3d;
+                }
+            }
         }
 
         &:nth-child(2) {
@@ -34,6 +52,21 @@
             font-style: italic;
             text-align: right;
             margin-right: 1rem;
+            animation: neon-glitch2-anim 20s linear infinite;
+            @keyframes neon-glitch2-anim {
+                0% {
+                    text-shadow: $text-shadow-cyan-3d;
+                }
+                90% {
+                    text-shadow: $text-shadow-cyan-3d;
+                }
+                92% {
+                    text-shadow: $text-shadow-black-3d;
+                }
+                100% {
+                    text-shadow: $text-shadow-black-3d;
+                }
+            }
         }
     }
 
@@ -44,6 +77,7 @@
                 font-size: 0.85rem;
                 margin-bottom: -0.5rem;
                 margin-left: 0.5rem;
+                animation: none;
             }
     
             &:nth-child(2) {
@@ -64,6 +98,7 @@
                 text-shadow: $text-shadow-cyan;
                 font-size: 0.55rem;
                 margin-right: 0.33rem;
+                animation: none;
             }
         }
     }
