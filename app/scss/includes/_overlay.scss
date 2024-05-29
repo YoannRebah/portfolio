@@ -8,11 +8,24 @@
     opacity: 0.1;
     background-color: $pink;
     pointer-events: none;
-    background-image: repeating-linear-gradient(
-        to bottom,
-        transparent 7px,
-        rgba(0, 0, 0, 0.8) 9px,
-        rgba(0, 0, 0, 0.8) 13px,
-        transparent 13px
-    );
+    background-image: url(../../dist/assets/images/tv-no-signal.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    animation: overlay-bg-anim 100s linear infinite;
+    @keyframes overlay-bg-anim {
+        0% {
+            background-color: $pink;
+        }
+        50% {
+            background-color: $cyan;
+        }
+        90% {
+            background-color: $pink;
+        }
+        100% {
+            background-color: $cyan;
+        }
+    }
 }
