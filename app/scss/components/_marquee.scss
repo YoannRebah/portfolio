@@ -1,0 +1,78 @@
+$gap: 0.75rem;
+
+.marquee {  
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: $gap;
+  background: $black;
+  padding: 1.75rem 0;
+
+  ul {
+    position: relative;
+    list-style: none;
+    flex-shrink: 0;
+    display: flex;
+    gap: $gap;
+    min-width: 100%;
+    height: 330px;
+    animation: marquee-anim 30s linear infinite;
+    @keyframes marquee-anim {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-100% - $gap));
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 14px;
+      width: 100%;
+      display: block;
+      background-color: $white;
+      top: -22px;
+      background-image: 
+      linear-gradient(90deg, transparent 24%, white 25%, white 26%, transparent 27%, transparent 74%, white 75%, white 76%, transparent 77%),
+      linear-gradient(transparent 24%, white 25%, white 26%, transparent 27%, transparent 74%, white 75%, white 76%, transparent 77%);
+    }
+
+    li {
+      display: flex;
+
+      img {
+        border-radius: 1rem;
+      }
+    }
+  }
+}
+
+// .carousel-infinite-loop {
+//     width: 100%;
+//     overflow: hidden;
+//     position: relative;
+  
+//     .content-carousel {
+//       display: flex;
+//       width: 200%;
+//       animation: scroll 20s linear infinite;
+  
+//       img {
+//         width: 10%;
+//         flex-shrink: 0;
+//       }
+//     }
+//   }
+  
+//   @keyframes scroll {
+//     0% {
+//       transform: translateX(0);
+//     }
+//     100% {
+//       transform: translateX(-50%);
+//     }
+//   }
+  

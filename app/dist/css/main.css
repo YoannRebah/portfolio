@@ -223,198 +223,6 @@ section.main-section:last-child {
 section.main-section .content {
   margin-top: 5rem;
 }
-section.main-section .content[data-content=skills] {
-  display: flex;
-  flex-direction: column;
-}
-section.main-section .content[data-content=skills] .row-skill {
-  display: flex;
-  align-items: center;
-}
-section.main-section .content[data-content=skills] .row-skill:last-of-type + hr {
-  display: none;
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=html] .container-icon-text {
-  color: hsl(27, 100%, 70%);
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=html] .container-progress-bar {
-  background: hsl(27, 85%, 33%);
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=html] .container-progress-bar .progress-bar {
-  background: hsl(27, 100%, 70%);
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=sass] .container-icon-text {
-  color: hsl(323, 100%, 78%);
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=sass] .container-progress-bar {
-  background: hsl(323, 63%, 37%);
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=sass] .container-progress-bar .progress-bar {
-  background: hsl(323, 100%, 78%);
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=js] .container-icon-text {
-  color: hsl(56, 100%, 70%);
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=js] .container-progress-bar {
-  background: hsl(56, 88%, 29%);
-}
-section.main-section .content[data-content=skills] .row-skill[data-skill=js] .container-progress-bar .progress-bar {
-  background: hsl(56, 100%, 70%);
-}
-section.main-section .content[data-content=skills] .row-skill .container-icon-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 15;
-}
-section.main-section .content[data-content=skills] .row-skill .container-icon-text p {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-section.main-section .content[data-content=skills] .row-skill .container-icon-text i {
-  font-size: 5rem;
-}
-section.main-section .content[data-content=skills] .row-skill .wrapper {
-  position: relative;
-  width: 100%;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  flex: 85;
-}
-section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item {
-  height: 16px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item p {
-  width: 250px;
-  text-align: right;
-  font-size: 0.9rem;
-  text-wrap: nowrap;
-}
-section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-}
-section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar .progress-bar {
-  position: relative;
-  border-radius: 1rem;
-  height: 100%;
-}
-section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar .progress-bar::after {
-  content: attr(data-percent);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 49%;
-  right: 0;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border-radius: 50%;
-  height: 100%;
-  color: #212121;
-}
-section.main-section .content[data-content=tools] {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-}
-section.main-section .content[data-content=tools] .tool {
-  position: relative;
-  flex: 25%;
-  height: 185px;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 16px solid #212121;
-  outline: 2px solid hsl(170, 79%, 33%);
-}
-@media (min-width: 1281px) {
-  section.main-section .content[data-content=tools] .tool {
-    flex: 1;
-  }
-}
-section.main-section .content[data-content=tools] .tool::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 1.5rem;
-  filter: brightness(120%);
-  background-color: #c7c7c7;
-  box-shadow: inset 0px 0px 32px 8px rgba(0, 0, 0, 0.75);
-  background-image: repeating-linear-gradient(to bottom, transparent 7px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 13px, transparent 13px);
-}
-section.main-section .content[data-content=tools] .tool .screen {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  animation: tool-anim 20s linear infinite;
-}
-@keyframes tool-anim {
-  0% {
-    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
-  }
-  6% {
-    filter: grayscale(100%) hue-rotate(90deg) blur(1px);
-  }
-  8% {
-    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
-  }
-  95% {
-    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
-  }
-  97% {
-    filter: grayscale(100%) hue-rotate(90deg) blur(1px);
-  }
-  100% {
-    filter: grayscale(0%) hue-rotate(0deg) blur(1px);
-  }
-}
-section.main-section .content[data-content=tools] .tool .screen::before {
-  content: attr(data-tool);
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  font-family: "Reddit Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
-}
-section.main-section .content[data-content=tools] .tool .screen[data-tool] {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-section.main-section .content[data-content=tools] .tool .screen[data-tool="VS Code"] {
-  background-image: url(../../dist/assets/images/logo-vs-code.png);
-}
-section.main-section .content[data-content=tools] .tool .screen[data-tool="Visual Studio"] {
-  background-image: url(../../dist/assets/images/logo-vs.png);
-}
-section.main-section .content[data-content=tools] .tool .screen[data-tool=Figma] {
-  background-image: url(../../dist/assets/images/logo-figma.png);
-}
-section.main-section .content[data-content=tools] .tool .screen[data-tool=Git] {
-  background-image: url(../../dist/assets/images/logo-git.png);
-}
-section.main-section .content[data-content=tools] .tool .screen[data-tool=AEM] {
-  background-image: url(../../dist/assets/images/logo-aem.png);
-}
-section.main-section .content[data-content=tools] .tool .screen[data-tool=Wordpress] {
-  background-image: url(../../dist/assets/images/logo-wordpress.png);
-}
 
 .glitch-line {
   position: absolute;
@@ -678,4 +486,244 @@ section.main-section .content[data-content=tools] .tool .screen[data-tool=Wordpr
   opacity: 0.65;
   text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
   text-transform: uppercase;
+}
+
+[data-content=skills] {
+  display: flex;
+  flex-direction: column;
+}
+[data-content=skills] .row-skill {
+  display: flex;
+  align-items: center;
+}
+[data-content=skills] .row-skill:last-of-type + hr {
+  display: none;
+}
+[data-content=skills] .row-skill[data-skill=html] .container-icon-text {
+  color: hsl(27, 100%, 70%);
+}
+[data-content=skills] .row-skill[data-skill=html] .container-progress-bar {
+  background: hsl(27, 85%, 33%);
+}
+[data-content=skills] .row-skill[data-skill=html] .container-progress-bar .progress-bar {
+  background: hsl(27, 100%, 70%);
+}
+[data-content=skills] .row-skill[data-skill=sass] .container-icon-text {
+  color: hsl(323, 100%, 78%);
+}
+[data-content=skills] .row-skill[data-skill=sass] .container-progress-bar {
+  background: hsl(323, 63%, 37%);
+}
+[data-content=skills] .row-skill[data-skill=sass] .container-progress-bar .progress-bar {
+  background: hsl(323, 100%, 78%);
+}
+[data-content=skills] .row-skill[data-skill=js] .container-icon-text {
+  color: hsl(56, 100%, 70%);
+}
+[data-content=skills] .row-skill[data-skill=js] .container-progress-bar {
+  background: hsl(56, 88%, 29%);
+}
+[data-content=skills] .row-skill[data-skill=js] .container-progress-bar .progress-bar {
+  background: hsl(56, 100%, 70%);
+}
+[data-content=skills] .row-skill .container-icon-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 15;
+}
+[data-content=skills] .row-skill .container-icon-text p {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+[data-content=skills] .row-skill .container-icon-text i {
+  font-size: 5rem;
+}
+[data-content=skills] .row-skill .wrapper {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 85;
+}
+[data-content=skills] .row-skill .wrapper .skill-item {
+  height: 16px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+[data-content=skills] .row-skill .wrapper .skill-item p {
+  width: 250px;
+  text-align: right;
+  font-size: 0.9rem;
+  text-wrap: nowrap;
+}
+[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar .progress-bar {
+  position: relative;
+  border-radius: 1rem;
+  height: 100%;
+}
+[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar .progress-bar::after {
+  content: attr(data-percent);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 49%;
+  right: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 50%;
+  height: 100%;
+  color: #212121;
+}
+
+[data-content=tools] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+[data-content=tools] .tool {
+  position: relative;
+  flex: 25%;
+  height: 185px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 16px solid #212121;
+  outline: 3px solid #3a3a3a;
+}
+@media (min-width: 1281px) {
+  [data-content=tools] .tool {
+    flex: 1;
+  }
+}
+[data-content=tools] .tool::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  filter: brightness(120%);
+  background-color: #c7c7c7;
+  box-shadow: inset 0px 0px 32px 8px rgba(0, 0, 0, 0.75);
+  background-image: repeating-linear-gradient(to bottom, transparent 7px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 13px, transparent 13px);
+}
+[data-content=tools] .tool .screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: tool-anim 20s linear infinite;
+}
+@keyframes tool-anim {
+  0% {
+    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
+  }
+  6% {
+    filter: grayscale(100%) hue-rotate(90deg) blur(1px);
+  }
+  8% {
+    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
+  }
+  95% {
+    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
+  }
+  97% {
+    filter: grayscale(100%) hue-rotate(90deg) blur(1px);
+  }
+  100% {
+    filter: grayscale(0%) hue-rotate(0deg) blur(1px);
+  }
+}
+[data-content=tools] .tool .screen::before {
+  content: attr(data-tool);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
+}
+[data-content=tools] .tool .screen[data-tool] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+[data-content=tools] .tool .screen[data-tool="VS Code"] {
+  background-image: url(../../dist/assets/images/logo-vs-code.png);
+}
+[data-content=tools] .tool .screen[data-tool="Visual Studio"] {
+  background-image: url(../../dist/assets/images/logo-vs.png);
+}
+[data-content=tools] .tool .screen[data-tool=Figma] {
+  background-image: url(../../dist/assets/images/logo-figma.png);
+}
+[data-content=tools] .tool .screen[data-tool=Git] {
+  background-image: url(../../dist/assets/images/logo-git.png);
+}
+[data-content=tools] .tool .screen[data-tool=AEM] {
+  background-image: url(../../dist/assets/images/logo-aem.png);
+}
+[data-content=tools] .tool .screen[data-tool=Wordpress] {
+  background-image: url(../../dist/assets/images/logo-wordpress.png);
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  gap: 0.75rem;
+  background: #212121;
+  padding: 1.75rem 0;
+}
+.marquee ul {
+  position: relative;
+  list-style: none;
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.75rem;
+  min-width: 100%;
+  height: 330px;
+  animation: marquee-anim 30s linear infinite;
+}
+@keyframes marquee-anim {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 0.75rem));
+  }
+}
+.marquee ul::after {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  top: -22px;
+  background-image: linear-gradient(90deg, transparent 24%, white 25%, white 26%, transparent 27%, transparent 74%, white 75%, white 76%, transparent 77%), linear-gradient(transparent 24%, white 25%, white 26%, transparent 27%, transparent 74%, white 75%, white 76%, transparent 77%);
+}
+.marquee ul li {
+  display: flex;
+}
+.marquee ul li img {
+  border-radius: 1rem;
 }
