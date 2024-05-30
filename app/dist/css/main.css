@@ -51,18 +51,18 @@
   display: flex;
   width: 97%;
   height: 0.2rem;
-  background: hsl(323, 100%, 74%);
+  background: hsl(323, 100%, 78%);
   position: absolute;
   right: 0;
   bottom: -0.2rem;
 }
 .h2.reduce {
-  color: hsl(323, 100%, 74%);
+  color: hsl(323, 100%, 78%);
 }
 .h2.reduce::before {
   content: "+";
   background: hsl(172, 85%, 49%);
-  color: hsl(323, 100%, 74%);
+  color: hsl(323, 100%, 78%);
 }
 .h2.reduce::after {
   background: hsl(172, 85%, 49%);
@@ -104,7 +104,7 @@ hr {
   margin-bottom: 2rem;
 }
 hr.pink {
-  border-color: hsl(323, 100%, 74%);
+  border-color: hsl(323, 100%, 78%);
 }
 hr.cyan {
   border-color: hsl(172, 85%, 49%);
@@ -193,10 +193,10 @@ nav[data-container=main-nav] [data-btn-action=reduce-main-nav] {
 }
 nav[data-container=main-nav].reduce {
   top: -5.75rem;
-  border-bottom-color: hsl(323, 100%, 74%);
+  border-bottom-color: hsl(323, 100%, 78%);
 }
 nav[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] {
-  background: hsl(323, 100%, 74%);
+  background: hsl(323, 100%, 78%);
   color: #212121;
 }
 nav[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] .fa-icon {
@@ -221,12 +221,15 @@ section.main-section .content[data-content=skills] .row-skill {
   display: flex;
   align-items: center;
 }
+section.main-section .content[data-content=skills] .row-skill:last-of-type + hr {
+  display: none;
+}
 section.main-section .content[data-content=skills] .row-skill .container-icon-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 15;
-  color: hsl(323, 100%, 74%);
+  color: hsl(323, 100%, 78%);
 }
 section.main-section .content[data-content=skills] .row-skill .container-icon-text p {
   font-weight: 700;
@@ -331,13 +334,13 @@ section.main-section .content[data-content=tools] .tool .screen {
   0% {
     filter: grayscale(10%) hue-rotate(0deg) blur(0px);
   }
-  5% {
+  6% {
     filter: grayscale(100%) hue-rotate(90deg) blur(1px);
   }
   8% {
     filter: grayscale(10%) hue-rotate(0deg) blur(0px);
   }
-  90% {
+  95% {
     filter: grayscale(10%) hue-rotate(0deg) blur(0px);
   }
   97% {
@@ -348,13 +351,13 @@ section.main-section .content[data-content=tools] .tool .screen {
   }
 }
 section.main-section .content[data-content=tools] .tool .screen::before {
-  content: attr(data-text);
+  content: attr(data-tool);
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   font-family: "Reddit Mono", monospace;
   font-optical-sizing: auto;
@@ -362,27 +365,27 @@ section.main-section .content[data-content=tools] .tool .screen::before {
   font-style: normal;
   text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
 }
-section.main-section .content[data-content=tools] .tool .screen[data-text] {
+section.main-section .content[data-content=tools] .tool .screen[data-tool] {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-section.main-section .content[data-content=tools] .tool .screen[data-text="VS Code"] {
+section.main-section .content[data-content=tools] .tool .screen[data-tool="VS Code"] {
   background-image: url(../../dist/assets/images/logo-vs-code.png);
 }
-section.main-section .content[data-content=tools] .tool .screen[data-text="Visual Studio"] {
+section.main-section .content[data-content=tools] .tool .screen[data-tool="Visual Studio"] {
   background-image: url(../../dist/assets/images/logo-vs.png);
 }
-section.main-section .content[data-content=tools] .tool .screen[data-text=Figma] {
+section.main-section .content[data-content=tools] .tool .screen[data-tool=Figma] {
   background-image: url(../../dist/assets/images/logo-figma.png);
 }
-section.main-section .content[data-content=tools] .tool .screen[data-text=Git] {
+section.main-section .content[data-content=tools] .tool .screen[data-tool=Git] {
   background-image: url(../../dist/assets/images/logo-git.png);
 }
-section.main-section .content[data-content=tools] .tool .screen[data-text=AEM] {
+section.main-section .content[data-content=tools] .tool .screen[data-tool=AEM] {
   background-image: url(../../dist/assets/images/logo-aem.png);
 }
-section.main-section .content[data-content=tools] .tool .screen[data-text=Wordpress] {
+section.main-section .content[data-content=tools] .tool .screen[data-tool=Wordpress] {
   background-image: url(../../dist/assets/images/logo-wordpress.png);
 }
 
@@ -449,7 +452,7 @@ section.main-section .content[data-content=tools] .tool .screen[data-text=Wordpr
     border-color: hsl(172, 85%, 49%);
   }
   50% {
-    border-color: hsl(323, 100%, 74%);
+    border-color: hsl(323, 100%, 78%);
   }
   100% {
     border-color: hsl(172, 85%, 49%);
@@ -459,7 +462,7 @@ section.main-section .content[data-content=tools] .tool .screen[data-text=Wordpr
   display: flex;
   align-items: center;
   justify-content: center;
-  background: hsl(323, 100%, 74%);
+  background: hsl(323, 100%, 78%);
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -472,7 +475,7 @@ section.main-section .content[data-content=tools] .tool .screen[data-text=Wordpr
   }
   50% {
     opacity: 1;
-    background: hsl(323, 100%, 74%);
+    background: hsl(323, 100%, 78%);
   }
   100% {
     opacity: 0;
@@ -528,7 +531,7 @@ section.main-section .content[data-content=tools] .tool .screen[data-text=Wordpr
 }
 .neon-letters span:nth-child(2), .neon-letters span:nth-child(3) {
   font-size: 8rem;
-  text-shadow: 0 0 5px hsl(323, 100%, 74%), 0 0 15px hsl(323, 100%, 74%), 0 0 20px hsl(323, 100%, 74%), 0 0 40px hsl(323, 100%, 74%), 0 0 60px hsl(323, 45%, 47%), 0 0 10px hsl(323, 100%, 74%), 0 0 98px hsl(323, 45%, 47%);
+  text-shadow: 0 0 5px hsl(323, 100%, 78%), 0 0 15px hsl(323, 100%, 78%), 0 0 20px hsl(323, 100%, 78%), 0 0 40px hsl(323, 100%, 78%), 0 0 60px hsl(323, 45%, 47%), 0 0 10px hsl(323, 100%, 78%), 0 0 98px hsl(323, 45%, 47%);
 }
 .neon-letters span:nth-child(3) {
   margin-left: 1rem;
@@ -587,8 +590,8 @@ section.main-section .content[data-content=tools] .tool .screen[data-text=Wordpr
   width: 100%;
   height: 100%;
   z-index: 9999;
-  opacity: 0.14;
-  background-color: hsl(323, 100%, 74%);
+  opacity: 0.16;
+  background-color: hsl(323, 100%, 78%);
   pointer-events: none;
   background-image: url(../../dist/assets/images/tv-no-signal.jpg);
   background-size: cover;

@@ -1,0 +1,139 @@
+SKILLS ===================================
+    <div class="row-skill" data-skill="html">
+        <div class="container-icon-text">
+            <p>HTML</p>
+            <i class="fa-brands fa-html5"></i>
+        </div>
+        <div class="wrapper">
+            <div class="skill-item">
+                <p>Structure&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 70%;" data-percent="70%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Accessibilité&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 80%;" data-percent="80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>SEO&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 90%;" data-percent="90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Performances&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 75%;" data-percent="75%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Bonnes pratiques&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 87%;" data-percent="87%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="cyan">
+    <div class="row-skill" data-skill="sass">
+        <div class="container-icon-text">
+            <p>SASS</p>
+            <i class="fa-brands fa-sass"></i>
+        </div>
+        <div class="wrapper">
+            <div class="skill-item">
+                <p>Syntaxe&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 70%;" data-percent="70%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Sélecteurs&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 80%;" data-percent="80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Architecture&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 90%;" data-percent="90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Performances&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 75%;" data-percent="75%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Bonnes pratiques&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 87%;" data-percent="87%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="cyan">
+    <div class="row-skill" data-skill="js">
+        <div class="container-icon-text">
+            <p>JavaScript</p>
+            <i class="fa-brands fa-js"></i>
+        </div>
+        <div class="wrapper">
+            <div class="skill-item">
+                <p>Bases&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 70%;" data-percent="70%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Structure de données&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 80%;" data-percent="80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>POO&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 90%;" data-percent="90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Manipulation du DOM&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 75%;" data-percent="75%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <p>Bonnes pratiques&nbsp;:</p>
+                <div class="container-progress-bar">
+                    <div class="progress-bar" style="width: 87%;" data-percent="87%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+FIN SKILLS ===============================
+
+TOOLS ===================================
+    <div class="tool">
+        <div class="screen" data-tool="VS Code" style="animation-delay: 10s;"></div>
+    </div>
+    <div class="tool">
+        <div class="screen" data-tool="Visual Studio" style="animation-delay: 2.2s;"></div>
+    </div>
+    <div class="tool">
+        <div class="screen" data-tool="Figma" style="animation-delay: 8s;"></div>
+    </div>
+    <div class="tool">
+        <div class="screen" data-tool="Git" style="animation-delay: 4.5s;"></div>
+    </div>
+    <div class="tool">
+        <div class="screen" data-tool="AEM" style="animation-delay: 1s;"></div>
+    </div>
+    <div class="tool">
+        <div class="screen" data-tool="Wordpress" style="animation-delay: 3.8s;"></div>
+    </div>
+FIN TOOLS ===============================

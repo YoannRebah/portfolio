@@ -16,6 +16,12 @@ section {
                 .row-skill {
                     display: flex;
                     align-items: center;
+
+                    &:last-of-type {
+                        + hr {
+                            display: none;
+                        }
+                    }
         
                     .container-icon-text {
                         display: flex;
@@ -135,7 +141,7 @@ section {
                             transparent 13px
                         );
                     }
-    
+
                     .screen {
                         position: relative;
                         width: 100%;
@@ -145,13 +151,13 @@ section {
                             0% {
                                 filter: grayscale(10%) hue-rotate(0deg) blur(0px);
                             }
-                            5% {
+                            6% {
                                 filter: grayscale(100%) hue-rotate(90deg) blur(1px);
                             }
                             8% {
                                 filter: grayscale(10%) hue-rotate(0deg) blur(0px);
                             }
-                            90% {
+                            95% {
                                 filter: grayscale(10%) hue-rotate(0deg) blur(0px);
                             }
                             97% {
@@ -163,13 +169,13 @@ section {
                         }
     
                         &::before {
-                            content: attr(data-text);
+                            content: attr(data-tool);
                             width: 100%;
                             position: absolute;
                             bottom: 0;
                             left: 0;
                             color: $white;
-                            font-size: 1.2rem;
+                            font-size: 1.1rem;
                             font-weight: 700;
                             font-family: "Reddit Mono", monospace;
                             font-optical-sizing: auto;
@@ -178,33 +184,33 @@ section {
                             text-shadow: 2px 3px 2px $black, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
                         }
     
-                        &[data-text] {
+                        &[data-tool] {
                             background-size: cover;
                             background-position: center;
                             background-repeat: no-repeat;
                         }
         
-                        &[data-text="VS Code"] {
+                        &[data-tool="VS Code"] {
                             background-image: url(../../dist/assets/images/logo-vs-code.png);
                         }
         
-                        &[data-text="Visual Studio"] {
+                        &[data-tool="Visual Studio"] {
                             background-image: url(../../dist/assets/images/logo-vs.png);
                         }
         
-                        &[data-text="Figma"] {
+                        &[data-tool="Figma"] {
                             background-image: url(../../dist/assets/images/logo-figma.png);
                         }
         
-                        &[data-text="Git"] {
+                        &[data-tool="Git"] {
                             background-image: url(../../dist/assets/images/logo-git.png);
                         }
         
-                        &[data-text="AEM"] {
+                        &[data-tool="AEM"] {
                             background-image: url(../../dist/assets/images/logo-aem.png);
                         }
         
-                        &[data-text="Wordpress"] {
+                        &[data-tool="Wordpress"] {
                             background-image: url(../../dist/assets/images/logo-wordpress.png);
                         }
                     }
