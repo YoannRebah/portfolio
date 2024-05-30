@@ -16,7 +16,7 @@ $gap: 0.75rem;
     display: flex;
     gap: $gap;
     min-width: 100%;
-    height: 330px;
+    height: 270px;
     animation: marquee-anim 30s linear infinite;
     @keyframes marquee-anim {
       from {
