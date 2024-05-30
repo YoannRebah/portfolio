@@ -1,49 +1,54 @@
 class LoaderController {
-    static Show() {
-        if(document.querySelector('.loader-background')) {
-            document.querySelector('.loader-background').classList.remove('display-none');
-        }
+
+    static get LoaderHTML() {
+        return document.querySelector('.loader-background') || null;
     }
+
+    static Show() {
+        const loader = LoaderController.LoaderHTML;
+        if (loader) loader.classList.remove('display-none');
+    }
+
     static Hide() {
-        if(document.querySelector('.loader-background')) {
-            document.querySelector('.loader-background').classList.add('display-none');
-        }
+        const loader = LoaderController.LoaderHTML;
+        if (loader) loader.classList.add('display-none');
     }
 }
 
 class LocalStorageController {
 
+    static get PortfolioKey() {
+        return 'portfolio-yr';
+    }
+
     static get Data() {
-        const data = JSON.parse(localStorage.getItem('portfolio-yr'));
+        const data = JSON.parse(localStorage.getItem(LocalStorageController.PortfolioKey));
         return data;
     }
 
     static SetData(key, value) {
-        const data = LocalStorageController.Data;
+        let data = LocalStorageController.Data;
+        if (!data) data = {};
         data[key] = value;
         const stringifiedData = JSON.stringify(data);
-        localStorage.setItem('portfolio-yr', stringifiedData);
+        localStorage.setItem(LocalStorageController.PortfolioKey, stringifiedData);
     }
 
     init() {
-        if(localStorage.getItem('portfolio-yr') == null) this.StoreDefaultData();
+        if(localStorage.getItem(LocalStorageController.PortfolioKey) == null) this.StoreDefaultData();
     }
 
     StoreDefaultData() {
         const defaultData = {
             mainNavIsReduce: false,
-            skillsIsReduce: false,
-            projectsIsReduce: false,
-            roadmapIsReduce: false
         }
-
-        localStorage.setItem('portfolio-yr', JSON.stringify(defaultData));
+        localStorage.setItem(LocalStorageController.PortfolioKey, JSON.stringify(defaultData));
     }
 }
 
 class ContentController {
 
-    #dataH2 = document.querySelectorAll('[data-h2]');
+    #titlesH2 = document.querySelectorAll('[data-h2]');
 
     init() {
         this.AddEventClickH2();
@@ -73,7 +78,7 @@ class ContentController {
 
     AddEventClickH2() {
         if(document.querySelector('[data-h2]')) {
-            this.#dataH2.forEach((elem)=>{
+            this.#titlesH2.forEach((elem)=>{
                 elem.addEventListener('click', (e)=>{
                     const thisTarget = e.target;
                     const thisDataH2 = thisTarget.getAttribute('data-h2');
@@ -165,7 +170,6 @@ class TimerController {
         const seconds = this.#timerTime % 60;
         
         this.#timer.textContent = `${this.FormatTime(hours)}:${this.FormatTime(minutes)}:${this.FormatTime(seconds)}`;
-        
         this.#timerTime++;
     }
 }

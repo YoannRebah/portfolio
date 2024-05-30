@@ -7,26 +7,26 @@
 
         &:nth-child(1) {
             font-size: 3.2rem;
-            text-shadow: $text-shadow-cyan-3d;
+            text-shadow: $shadow-cyan-3d;
             font-style: italic;
             margin-bottom: -2.5rem;
             margin-left: 0.85rem;
             animation: neon-glitch-anim 10s linear infinite;
             @keyframes neon-glitch-anim {
                 0% {
-                    text-shadow: $text-shadow-cyan-3d;
+                    text-shadow: $shadow-cyan-3d;
                 }
                 90% {
-                    text-shadow: $text-shadow-cyan-3d;
+                    text-shadow: $shadow-cyan-3d;
                 }
                 94% {
-                    text-shadow: $text-shadow-black-3d;
+                    text-shadow: $shadow-black-3d;
                 }
                 97% {
-                    text-shadow: $text-shadow-cyan-3d;
+                    text-shadow: $shadow-cyan-3d;
                 }
                 100% {
-                    text-shadow: $text-shadow-black-3d;
+                    text-shadow: $shadow-black-3d;
                 }
             }
         }
@@ -38,7 +38,7 @@
         &:nth-child(2),
         &:nth-child(3) {
             font-size: 8rem;
-            text-shadow: $text-shadow-pink;
+            text-shadow: $shadow-pink;
         }
 
         &:nth-child(3) {
@@ -48,23 +48,23 @@
 
         &:nth-child(4) {
             font-size: 2.5rem;
-            text-shadow: $text-shadow-cyan-3d;
+            text-shadow: $shadow-cyan-3d;
             font-style: italic;
             text-align: right;
             margin-right: 1rem;
             animation: neon-glitch2-anim 20s linear infinite;
             @keyframes neon-glitch2-anim {
                 0% {
-                    text-shadow: $text-shadow-cyan-3d;
+                    text-shadow: $shadow-cyan-3d;
                 }
                 90% {
-                    text-shadow: $text-shadow-cyan-3d;
+                    text-shadow: $shadow-cyan-3d;
                 }
                 92% {
-                    text-shadow: $text-shadow-black-3d;
+                    text-shadow: $shadow-black-3d;
                 }
                 100% {
-                    text-shadow: $text-shadow-black-3d;
+                    text-shadow: $shadow-black-3d;
                 }
             }
         }
@@ -73,7 +73,7 @@
     &.small {
         span {
             &:nth-child(1) {
-                text-shadow: $text-shadow-cyan;
+                text-shadow: $shadow-cyan;
                 font-size: 0.85rem;
                 margin-bottom: -0.5rem;
                 margin-left: 0.5rem;
@@ -95,7 +95,7 @@
             }
     
             &:nth-child(4) {
-                text-shadow: $text-shadow-cyan;
+                text-shadow: $shadow-cyan;
                 font-size: 0.55rem;
                 margin-right: 0.33rem;
                 animation: none;

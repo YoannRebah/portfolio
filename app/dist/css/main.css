@@ -27,7 +27,7 @@
 
 .h2 {
   position: relative;
-  color: hsl(170, 100%, 50%);
+  color: hsl(172, 85%, 49%);
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -42,8 +42,8 @@
   display: flex;
   width: 3rem;
   height: 0.2rem;
-  background: hsl(170, 100%, 50%);
-  color: hsl(170, 100%, 50%);
+  background: hsl(172, 85%, 49%);
+  color: hsl(172, 85%, 49%);
   margin-right: 0.75rem;
 }
 .h2::after {
@@ -61,11 +61,11 @@
 }
 .h2.reduce::before {
   content: "+";
-  background: hsl(170, 100%, 50%);
+  background: hsl(172, 85%, 49%);
   color: hsl(323, 100%, 74%);
 }
 .h2.reduce::after {
-  background: hsl(170, 100%, 50%);
+  background: hsl(172, 85%, 49%);
 }
 
 .h3 {
@@ -107,7 +107,7 @@ hr.pink {
   border-color: hsl(323, 100%, 74%);
 }
 hr.cyan {
-  border-color: hsl(170, 100%, 50%);
+  border-color: hsl(172, 85%, 49%);
 }
 
 .btn {
@@ -144,7 +144,7 @@ nav[data-container=main-nav] {
   left: 0;
   z-index: 1;
   padding: 0 10%;
-  border-bottom: 1.5px solid hsl(170, 100%, 50%);
+  border-bottom: 1.5px solid hsl(172, 85%, 49%);
   background: #040114;
   opacity: 0;
   pointer-events: none;
@@ -183,7 +183,7 @@ nav[data-container=main-nav] ul li .link-main-nav i {
 nav[data-container=main-nav] [data-btn-action=reduce-main-nav] {
   position: absolute;
   right: 0;
-  background: hsl(170, 100%, 50%);
+  background: hsl(172, 85%, 49%);
   color: #212121;
   padding: 0.33rem;
   border-bottom-left-radius: 6px;
@@ -207,29 +207,35 @@ nav[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] .fa-icon {
 section.main-section {
   padding-top: 7.5rem;
 }
-section.main-section [data-content=skills] {
+section.main-section:last-child {
+  padding-bottom: 6rem;
+}
+section.main-section .content {
+  margin-top: 5rem;
+}
+section.main-section .content[data-content=skills] {
   display: flex;
   flex-direction: column;
 }
-section.main-section [data-content=skills] .row-skill {
+section.main-section .content[data-content=skills] .row-skill {
   display: flex;
   align-items: center;
 }
-section.main-section [data-content=skills] .row-skill .container-icon-text {
+section.main-section .content[data-content=skills] .row-skill .container-icon-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 15;
   color: hsl(323, 100%, 74%);
 }
-section.main-section [data-content=skills] .row-skill .container-icon-text p {
+section.main-section .content[data-content=skills] .row-skill .container-icon-text p {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-section.main-section [data-content=skills] .row-skill .container-icon-text i {
+section.main-section .content[data-content=skills] .row-skill .container-icon-text i {
   font-size: 5rem;
 }
-section.main-section [data-content=skills] .row-skill .wrapper {
+section.main-section .content[data-content=skills] .row-skill .wrapper {
   position: relative;
   width: 100%;
   padding: 1rem;
@@ -239,32 +245,32 @@ section.main-section [data-content=skills] .row-skill .wrapper {
   gap: 1.5rem;
   flex: 85;
 }
-section.main-section [data-content=skills] .row-skill .wrapper .skill-item {
+section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item {
   height: 20px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-section.main-section [data-content=skills] .row-skill .wrapper .skill-item p {
+section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item p {
   width: 200px;
   text-align: right;
   font-size: 0.9rem;
   text-wrap: nowrap;
 }
-section.main-section [data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar {
+section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar {
   position: relative;
   width: 100%;
   height: 100%;
   background: hsl(170, 79%, 33%);
   border-radius: 1rem;
 }
-section.main-section [data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar .progress-bar {
+section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar .progress-bar {
   position: relative;
   border-radius: 1rem;
   height: 100%;
-  background: hsl(170, 100%, 50%);
+  background: hsl(172, 85%, 49%);
 }
-section.main-section [data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar .progress-bar::after {
+section.main-section .content[data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar .progress-bar::after {
   content: attr(data-percent);
   display: flex;
   align-items: center;
@@ -276,52 +282,113 @@ section.main-section [data-content=skills] .row-skill .wrapper .skill-item .cont
   color: #212121;
   font-size: 0.7rem;
   border-radius: 50%;
-  background: hsl(170, 100%, 50%);
+  background: hsl(172, 85%, 49%);
   width: 36px;
   min-width: 36px;
   height: 34px;
   min-height: 34px;
   font-weight: 700;
 }
-section.main-section [data-content=tools] {
+section.main-section .content[data-content=tools] {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.65rem;
 }
-section.main-section [data-content=tools] .tool {
+section.main-section .content[data-content=tools] .tool {
   position: relative;
-  display: flex;
+  flex: 25%;
+  height: 185px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 16px solid #212121;
+  outline: 2px solid #444444;
+}
+@media (min-width: 1281px) {
+  section.main-section .content[data-content=tools] .tool {
+    flex: 1;
+  }
+}
+section.main-section .content[data-content=tools] .tool::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  filter: brightness(120%);
+  background-color: #c7c7c7;
+  box-shadow: inset 0px 0px 32px 8px rgba(0, 0, 0, 0.75);
+  background-image: repeating-linear-gradient(to bottom, transparent 7px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 13px, transparent 13px);
+}
+section.main-section .content[data-content=tools] .tool .screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: tool-anim 20s linear infinite;
+}
+@keyframes tool-anim {
+  0% {
+    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
+  }
+  5% {
+    filter: grayscale(100%) hue-rotate(90deg) blur(1px);
+  }
+  8% {
+    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
+  }
+  90% {
+    filter: grayscale(10%) hue-rotate(0deg) blur(0px);
+  }
+  97% {
+    filter: grayscale(100%) hue-rotate(90deg) blur(1px);
+  }
+  100% {
+    filter: grayscale(0%) hue-rotate(0deg) blur(1px);
+  }
+}
+section.main-section .content[data-content=tools] .tool .screen::before {
+  content: attr(data-text);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
+}
+section.main-section .content[data-content=tools] .tool .screen[data-text] {
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  flex: 1;
-  height: 220px;
-  margin-top: 3rem;
 }
-section.main-section [data-content=tools] .tool::before {
-  content: attr(data-text);
-  text-align: center;
-  width: 100%;
-  position: relative;
-  top: -2.2rem;
-  color: hsl(323, 100%, 74%);
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-section.main-section [data-content=tools] .tool[data-text="VS Code"] {
+section.main-section .content[data-content=tools] .tool .screen[data-text="VS Code"] {
   background-image: url(../../dist/assets/images/logo-vs-code.png);
 }
-section.main-section [data-content=tools] .tool[data-text="Visual Studio"] {
+section.main-section .content[data-content=tools] .tool .screen[data-text="Visual Studio"] {
   background-image: url(../../dist/assets/images/logo-vs.png);
 }
-section.main-section [data-content=tools] .tool[data-text=Git] {
+section.main-section .content[data-content=tools] .tool .screen[data-text=Figma] {
+  background-image: url(../../dist/assets/images/logo-figma.png);
+}
+section.main-section .content[data-content=tools] .tool .screen[data-text=Git] {
   background-image: url(../../dist/assets/images/logo-git.png);
 }
-section.main-section [data-content=tools] .tool[data-text=AEM] {
+section.main-section .content[data-content=tools] .tool .screen[data-text=AEM] {
   background-image: url(../../dist/assets/images/logo-aem.png);
+}
+section.main-section .content[data-content=tools] .tool .screen[data-text=Wordpress] {
+  background-image: url(../../dist/assets/images/logo-wordpress.png);
 }
 
 .glitch-line {
-  position: fixed;
+  position: absolute;
+  left: 0;
   top: 0%;
   width: 100%;
   height: 1px;
@@ -370,7 +437,7 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
   width: 11rem;
   height: 2.7rem;
   border-radius: 10px;
-  border: 2px solid hsl(170, 100%, 50%);
+  border: 2px solid hsl(172, 85%, 49%);
   padding: 0.4rem;
   display: flex;
   justify-content: center;
@@ -379,13 +446,13 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
 }
 @keyframes border-color-anim {
   0% {
-    border-color: hsl(170, 100%, 50%);
+    border-color: hsl(172, 85%, 49%);
   }
   50% {
     border-color: hsl(323, 100%, 74%);
   }
   100% {
-    border-color: hsl(170, 100%, 50%);
+    border-color: hsl(172, 85%, 49%);
   }
 }
 .loader-background .wrapper .loader .block {
@@ -401,7 +468,7 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
 @keyframes block-color-anim {
   0% {
     opacity: 0;
-    background: hsl(170, 100%, 50%);
+    background: hsl(172, 85%, 49%);
   }
   50% {
     opacity: 1;
@@ -409,7 +476,7 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
   }
   100% {
     opacity: 0;
-    background: hsl(170, 100%, 50%);
+    background: hsl(172, 85%, 49%);
   }
 }
 .loader-background .wrapper .loader .block:first-child {
@@ -433,7 +500,7 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
 }
 .neon-letters span:nth-child(1) {
   font-size: 3.2rem;
-  text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   font-style: italic;
   margin-bottom: -2.5rem;
   margin-left: 0.85rem;
@@ -441,16 +508,16 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
 }
 @keyframes neon-glitch-anim {
   0% {
-    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+    text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
   90% {
-    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+    text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
   94% {
     text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
   97% {
-    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+    text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
   100% {
     text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
@@ -469,7 +536,7 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
 }
 .neon-letters span:nth-child(4) {
   font-size: 2.5rem;
-  text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   font-style: italic;
   text-align: right;
   margin-right: 1rem;
@@ -477,10 +544,10 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
 }
 @keyframes neon-glitch2-anim {
   0% {
-    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+    text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
   90% {
-    text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+    text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
   92% {
     text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
@@ -490,7 +557,7 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
   }
 }
 .neon-letters.small span:nth-child(1) {
-  text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%);
+  text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%);
   font-size: 0.85rem;
   margin-bottom: -0.5rem;
   margin-left: 0.5rem;
@@ -507,7 +574,7 @@ section.main-section [data-content=tools] .tool[data-text=AEM] {
   margin-bottom: -0.15rem;
 }
 .neon-letters.small span:nth-child(4) {
-  text-shadow: 0 0 5px hsl(170, 100%, 50%), 0 0 15px hsl(170, 100%, 50%), 0 0 20px hsl(170, 100%, 50%), 0 0 40px hsl(170, 100%, 50%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(170, 100%, 50%), 0 0 98px hsl(170, 79%, 33%);
+  text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%);
   font-size: 0.55rem;
   margin-right: 0.33rem;
   animation: none;
