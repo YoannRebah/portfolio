@@ -727,8 +727,10 @@ section.main-section .content {
   bottom: -22px;
 }
 .marquee ul li {
+  position: relative;
   display: flex;
 }
 .marquee ul li img {
   border-radius: 1rem;
+  filter: grayscale(0.4) contrast(0.75);
 }

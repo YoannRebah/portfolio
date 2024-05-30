@@ -47,38 +47,14 @@ $gap: 0.75rem;
     }
 
     li {
+      position: relative;
       display: flex;
 
       img {
         border-radius: 1rem;
+        filter: grayscale(0.4) contrast(0.75);
       }
     }
   }
 }
-
-// .carousel-infinite-loop {
-//     width: 100%;
-//     overflow: hidden;
-//     position: relative;
-  
-//     .content-carousel {
-//       display: flex;
-//       width: 200%;
-//       animation: scroll 20s linear infinite;
-  
-//       img {
-//         width: 10%;
-//         flex-shrink: 0;
-//       }
-//     }
-//   }
-  
-//   @keyframes scroll {
-//     0% {
-//       transform: translateX(0);
-//     }
-//     100% {
-//       transform: translateX(-50%);
-//     }
-//   }
   
