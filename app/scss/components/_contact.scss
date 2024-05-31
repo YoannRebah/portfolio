@@ -1,0 +1,36 @@
+[data-content="contact"] {
+
+    .container-contact {
+        display: flex;
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 50%;
+            height: 17rem;
+
+            &.illustration {
+                background-image: url(../../dist/assets/images/illu-contact.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                filter: hue-rotate(125deg);
+            }
+
+            h3 {
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+            }
+        
+            .list-contact-infos {
+                margin-left: 2rem;
+
+                li {
+                    font-size: 1.4rem;
+                    margin-bottom: 1.75rem;
+                }
+            }
+        }
+    }
+}

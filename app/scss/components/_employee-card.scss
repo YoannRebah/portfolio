@@ -57,22 +57,22 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
             justify-content: space-between;
 
             h3 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .container-icon {
                 z-index: 1;
                 border-radius: 50%;
                 background: #444671;
-                width: 65px;
-                height: 65px;
+                width: 60px;
+                height: 60px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
                 i {
                     color: $white;
-                    font-size: 2rem;
+                    font-size: 1.6rem;
                 }
             }
         }
@@ -84,7 +84,7 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
             .photo {
                 position: relative;
                 width: 100px;
-                height: 130px;
+                height: 120px;
                 background-image: url(../../dist/assets/images/me.png);
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -105,13 +105,13 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
 
                     &:nth-child(1) {
                         span {
-                            font-size: 1.5rem;
+                            font-size: 1.3rem;
                             font-weight: 700;
                         }
                     }
 
                     &:nth-child(2) {
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                     }
                 }
             }
@@ -134,11 +134,11 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
                     &:nth-child(1) {
                         font-weight: 600;
                         margin-bottom: 0.4rem;
-                        font-size: 1.4rem;
+                        font-size: 1.2rem;
                     }
                     &:nth-child(2) {
                         font-weight: 300;
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                         font-style: italic;
                     }
                 }
@@ -151,7 +151,7 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
             justify-content: space-between;
 
             i {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             p {
@@ -161,17 +161,17 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
 
                 span {
                     &:nth-child(1) {
-                        font-size: 1.15rem;
+                        font-size: 1.05rem;
                         font-weight: 700;
                     }
                     &:nth-child(2) {
-                        font-size: 0.9rem;
+                        font-size: 0.8rem;
                     }
                 }
 
                 i {
                     margin: 0 0.2rem;
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                 }
             }
         }
@@ -188,7 +188,7 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
             position: absolute;
             transform: translate(-50%, -50%);
             top: 50%;
-            right: -$half-circle-width;
+            right: -($half-circle-width + 20);
             width: $half-circle-width;
             height: $half-circle-width;
             border-radius: 50%;
