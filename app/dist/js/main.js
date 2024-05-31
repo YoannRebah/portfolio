@@ -1,19 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 window.onload = () => {
 
     const localStorage = new LocalStorage();

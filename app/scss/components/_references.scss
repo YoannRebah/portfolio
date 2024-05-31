@@ -1,10 +1,18 @@
-.references-list {
-    li {
-        margin-left: 1rem;
-        padding: 0.33rem 0;
+[data-content="references"] {
+    margin-top: 0 !important;
 
-        a {
-            color: $white;
+    .references-list {
+        column-count: 3;
+        column-fill: auto;
+        height: 30vh;
+
+        li {
+            margin-left: 1rem;
+            padding: 0.33rem 0;
+
+            a {
+                color: $white;
+            }
         }
     }
 }
