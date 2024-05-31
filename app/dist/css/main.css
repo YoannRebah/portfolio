@@ -1090,6 +1090,7 @@ section.main-section .content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 1.3rem;
 }
 .employee-card .card .card-header .container-icon i {
   color: #fff;
@@ -1266,15 +1267,15 @@ section.main-section .content {
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
-  height: 17rem;
+  height: 20rem;
 }
 [data-content=contact] .container-contact .contact.illustration {
   background-image: url(../../dist/assets/images/minitel.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  -webkit-filter: hue-rotate(125deg);
-          filter: hue-rotate(125deg);
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
 }
 [data-content=contact] .container-contact .contact h3 {
   font-size: 2.2rem;

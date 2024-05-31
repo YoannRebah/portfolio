@@ -8,14 +8,14 @@
             flex-direction: column;
             justify-content: center;
             flex: 50%;
-            height: 17rem;
+            height: 20rem;
 
             &.illustration {
                 background-image: url(../../dist/assets/images/minitel.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
-                filter: hue-rotate(125deg);
+                filter: sepia(1);
             }
 
             h3 {
