@@ -1,0 +1,139 @@
+.employee-card {
+    position: relative;
+    width: 720px;
+    border-radius: 1rem;
+    background: #ffffff21;
+    letter-spacing: -0.11rem;
+    color: #444671;
+    border: 1rem solid #ffffff38;
+
+    .card {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        gap: 1.5rem;
+        background: #e0dccb;
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            .container-icon {
+                border-radius: 50%;
+                background: #444671;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    color: $white;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .card-content {
+            display: flex;
+            gap: 2.5rem;
+
+            .photo {
+                position: relative;
+                width: 100px;
+                height: 130px;
+                background-image: url(../../dist/assets/images/logo-figma.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .container-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+
+                p {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                    &:nth-child(1) {
+                        span {
+                            font-size: 1.7rem;
+                            font-weight: 700;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+
+        .banner {
+            background: #444671;
+
+            p {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0.7rem;
+                color: $white;
+
+                span {
+                    &:nth-child(1) {
+                        font-weight: 600;
+                        margin-bottom: 0.4rem;
+                        font-size: 1.6rem;
+                    }
+                    &:nth-child(2) {
+                        font-weight: 300;
+                        font-size: 1.3rem;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            i {
+                font-size: 2rem;
+            }
+
+            p {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                span {
+                    &:nth-child(1) {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                    }
+                    &:nth-child(2) {
+                        font-size: 1rem;
+                    }
+                }
+
+                i {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

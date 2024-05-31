@@ -1,8 +1,11 @@
+$nav-height: 6rem;
+
 nav {
     &[data-container="main-nav"] {
         position: fixed;
         top: 0;
         left: 0;
+        height: $nav-height;
         z-index: 1;
         padding: 0 10%;
         border-bottom: 1.5px solid $cyan;
@@ -61,7 +64,7 @@ nav {
         }
     
         &.reduce {
-            top: -5.75rem;
+            top: -$nav-height;
             border-bottom-color: $pink;
     
             [data-btn-action="reduce-main-nav"]{

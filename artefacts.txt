@@ -1,4 +1,4 @@
-SKILLS ===================================
+SKILLS =============================================
     <div class="row-skill" data-skill="html">
         <div class="container-icon-text">
             <p>HTML</p>
@@ -115,9 +115,9 @@ SKILLS ===================================
             </div>
         </div>
     </div>
-FIN SKILLS ===============================
+FIN SKILLS ========================================
 
-TOOLS ===================================
+TOOLS =============================================
     <div class="tool">
         <div class="screen" data-tool="VS Code" style="animation-delay: 10s;"></div>
     </div>
@@ -136,4 +136,9 @@ TOOLS ===================================
     <div class="tool">
         <div class="screen" data-tool="Wordpress" style="animation-delay: 3.8s;"></div>
     </div>
-FIN TOOLS ===============================
+FIN TOOLS =======================================
+
+MEDIA QUERIES ===================================
+@include screen('m', min-width, landscape) {}
+@include screen('l') {}
+FIN MEDIA QUERIES ===============================

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Megrim&family=Neonderthaw&family=Satisfy&display=swap?family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&family=Neonderthaw&family=Reddit+Mono:wght@200..900&family=Satisfy&display=swap");
 .satisfy-regular {
   font-family: "Satisfy", cursive;
   font-weight: 400;
@@ -23,6 +23,12 @@
   font-weight: 700;
   font-style: normal;
   text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
+}
+
+.averia-serif-libre-light {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .h2 {
@@ -151,6 +157,7 @@ nav[data-container=main-nav] {
   position: fixed;
   top: 0;
   left: 0;
+  height: 6rem;
   z-index: 1;
   padding: 0 10%;
   border-bottom: 1.5px solid hsl(172, 85%, 49%);
@@ -202,7 +209,7 @@ nav[data-container=main-nav] [data-btn-action=reduce-main-nav] {
   transition: 0.25s ease-in-out;
 }
 nav[data-container=main-nav].reduce {
-  top: -5.75rem;
+  top: -6rem;
   border-bottom-color: hsl(323, 100%, 78%);
 }
 nav[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] {
@@ -701,7 +708,7 @@ section.main-section .content {
   gap: 0.75rem;
   min-width: 100%;
   height: 270px;
-  animation: marquee-anim 30s linear infinite;
+  animation: marquee-anim 24s linear infinite;
 }
 @keyframes marquee-anim {
   from {
@@ -733,4 +740,119 @@ section.main-section .content {
 .marquee ul li img {
   border-radius: 1rem;
   filter: grayscale(0.4) contrast(0.75);
+}
+
+.employee-card {
+  position: relative;
+  width: 720px;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1294117647);
+  letter-spacing: -0.11rem;
+  color: #444671;
+  border: 1rem solid rgba(255, 255, 255, 0.2196078431);
+}
+.employee-card .card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1.5rem;
+  background: #e0dccb;
+}
+.employee-card .card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.employee-card .card .card-header h3 {
+  font-size: 2rem;
+}
+.employee-card .card .card-header .container-icon {
+  border-radius: 50%;
+  background: #444671;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.employee-card .card .card-header .container-icon i {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.employee-card .card .card-content {
+  display: flex;
+  gap: 2.5rem;
+}
+.employee-card .card .card-content .photo {
+  position: relative;
+  width: 100px;
+  height: 130px;
+  background-image: url(../../dist/assets/images/logo-figma.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.employee-card .card .card-content .container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.employee-card .card .card-content .container-text p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.employee-card .card .card-content .container-text p:nth-child(1) span {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.employee-card .card .card-content .container-text p:nth-child(2) {
+  font-size: 1.3rem;
+}
+.employee-card .card .banner {
+  background: #444671;
+}
+.employee-card .card .banner p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.7rem;
+  color: #fff;
+}
+.employee-card .card .banner p span:nth-child(1) {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 1.6rem;
+}
+.employee-card .card .banner p span:nth-child(2) {
+  font-weight: 300;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+.employee-card .card .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.employee-card .card .card-footer i {
+  font-size: 2rem;
+}
+.employee-card .card .card-footer p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.employee-card .card .card-footer p span:nth-child(1) {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.employee-card .card .card-footer p span:nth-child(2) {
+  font-size: 1rem;
+}
+.employee-card .card .card-footer p i {
+  font-size: 0.8rem;
 }

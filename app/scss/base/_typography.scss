@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Neonderthaw&family=Satisfy&display=swap?family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&family=Neonderthaw&family=Reddit+Mono:wght@200..900&family=Satisfy&display=swap');
 
 .satisfy-regular {
     font-family: "Satisfy", cursive;
@@ -24,6 +24,12 @@
     font-weight: 700;
     font-style: normal;
     text-shadow: 2px 3px 2px $black, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
+}
+
+.averia-serif-libre-light {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .h2 {

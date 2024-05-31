@@ -1,3 +1,4 @@
+// Media queries
 @mixin screen($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         @media (min-width: map-get($breakpoints, $breakpoint)) {
@@ -9,6 +10,3 @@
         @warn "Breakpoint #{$breakpoint} not found in \$breakpoints map.";
     }
 }
-
-// @include screen('m', min-width, landscape) {}
-// @include screen('l') {}
