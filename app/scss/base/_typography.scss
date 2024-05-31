@@ -23,13 +23,20 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    text-shadow: 2px 3px 2px $black, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
 }
 
 .averia-serif-libre-light {
     font-family: "Averia Serif Libre", serif;
     font-weight: 300;
     font-style: normal;
+}
+
+.text-shadow-glitch {
+    text-shadow: 2px 3px 2px $black, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
+}
+
+.text-shadow-glitch-2 {
+    text-shadow: 2px 3px 2px $black, 4px -3px 2px rgba(255, 52, 52, 0.3), 5px -5px 2px rgba(52, 255, 120, 0.3);
 }
 
 .h2 {
@@ -43,7 +50,6 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    text-shadow: 2px 3px 2px $black, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
 
     &::before {
         content: "-";
@@ -79,8 +85,4 @@
             background: $cyan;
         }
     }
-}
-
-.h3 {
-    margin-bottom: 1rem;
 }

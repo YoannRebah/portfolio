@@ -14,7 +14,7 @@
     <script defer src="./app/dist/js/main.js"></script>
 
 </head>
-<body>
+<body class="reddit-mono">
 
     <main>
 
@@ -23,8 +23,8 @@
             <div class="glitch-line" style="opacity: 0.1;"></div>
             <div class="glitch-line" style="opacity: 0.1;animation-delay: 1.75s;"></div>
             <div class="wrapper">
-                <p id="loader-text-1" class="reddit-mono"><i class="fa-solid fa-satellite-dish"></i> Signal perdu.</p>
-                <p id="loader-text-2" class="reddit-mono">Lancement du dernier programme enregistré...</p>
+                <p id="loader-text-1" class="reddit-mono text-shadow-glitch"><i class="fa-solid fa-satellite-dish"></i> Signal perdu.</p>
+                <p id="loader-text-2" class="reddit-mono text-shadow-glitch">Lancement du dernier programme enregistré...</p>
                 <div class="loader">
                     <div class="block" style="animation-delay: 0s;"><i class="fa-solid fa-video-slash"></i></div>
                     <div class="block" style="animation-delay: 0.25s;"><i class="fa-solid fa-video-slash"></i></div>
@@ -42,8 +42,8 @@
 
         <!-- toolbar -->
         <div class="toolbar">
-            <div class="timer reddit-mono">00:00:00</div>
-            <div class="play">
+            <div class="timer reddit-mono text-shadow-glitch">00:00:00</div>
+            <div class="play text-shadow-glitch">
                 <span class="reddit-mono">Play</span>
                 <i class="fa-solid fa-play"></i>
             </div>
@@ -108,7 +108,7 @@
 
             <!-- skills -->
             <section id="skills" class="container main-section">
-                <h2 class="btn megrim-regular h2" data-h2="skills" title="Afficher / Masquer la section">Mes Compétences</h2>
+                <h2 class="btn megrim-regular h2 text-shadow-glitch-2" data-h2="skills" title="Afficher / Masquer la section">Mes Compétences</h2>
                 <div class="content" data-content="skills">
                     <!-- dynamic load => SectionController => AppendSkillsHTML() -->
                 </div>
@@ -116,7 +116,7 @@
 
             <!-- tools -->
             <section id="tools" class="container main-section">
-                <h2 class="btn megrim-regular h2" data-h2="tools" title="Afficher / Masquer la section">Logiciels et Outils Professionnels</h2>
+                <h2 class="btn megrim-regular h2 text-shadow-glitch-2" data-h2="tools" title="Afficher / Masquer la section">Logiciels et Outils Professionnels</h2>
                 <div class="content" data-content="tools">
                     <!-- dynamic load => SectionController => AppendToolsHTML() -->
                 </div>
@@ -124,7 +124,7 @@
 
             <!-- notable-achievements -->
             <section id="notable-achievements" class="container main-section">
-                <h2 class="btn megrim-regular h2" data-h2="notable-achievements" title="Afficher / Masquer la section">Réalisations Notables</h2>
+                <h2 class="btn megrim-regular h2 text-shadow-glitch-2" data-h2="notable-achievements" title="Afficher / Masquer la section">Réalisations Notables</h2>
                 <div class="content" data-content="notable-achievements">
                     <h3 class="h3">Lorem ipsum dolor sit amet</h3>
                     <p>
@@ -136,7 +136,7 @@
 
             <!-- roadmap -->
             <section id="roadmap" class="container main-section">
-                <h2 class="btn megrim-regular h2" data-h2="roadmap" title="Afficher / Masquer la section">Ma roadmap</h2>
+                <h2 class="btn megrim-regular h2 text-shadow-glitch-2" data-h2="roadmap" title="Afficher / Masquer la section">Ma roadmap</h2>
                 <div class="content" data-content="roadmap">
                     <h3 class="h3">Lorem ipsum dolor sit amet</h3>
                     <p>
@@ -148,8 +148,9 @@
 
             <!-- current-job -->
             <section id="current-job" class="container main-section">
-                <h2 class="btn megrim-regular h2" data-h2="current-job" title="Afficher / Masquer la section">Poste Actuel</h2>
+                <h2 class="btn megrim-regular h2 text-shadow-glitch-2" data-h2="current-job" title="Afficher / Masquer la section">Poste Actuel</h2>
                 <div class="content" data-content="current-job">
+                    <!-- employee-card -->
                     <div class="employee-card averia-serif-libre-light">
                         <div class="card">
                             <div class="card-header">
@@ -179,11 +180,12 @@
                             <div class="card-footer">
                                 <i class="fa-solid fa-dragon"></i>
                                 <p>
-                                    <span>Lorem ipsum dolor sit amet</span>
-                                    <span>D.E.V <i class="fa-regular fa-copyright"></i> 2019</span>
+                                    <span>Web Development</span>
+                                    <span>I.N.T & D.E.V <i class="fa-regular fa-copyright"></i> 2019</span>
                                 </p>
                                 <i class="fa-brands fa-connectdevelop"></i>
                             </div>
+                            <img class="wave" src="./app/dist/assets/images/wave.png" alt="Vague">
                         </div>
                     </div>
                 </div>
@@ -191,7 +193,7 @@
 
             <!-- interests -->
             <section id="interests" class="container main-section">
-                <h2 class="btn megrim-regular h2" data-h2="interests" title="Afficher / Masquer la section">Centres d'intérêt</h2>
+                <h2 class="btn megrim-regular h2 text-shadow-glitch-2" data-h2="interests" title="Afficher / Masquer la section">Centres d'intérêt</h2>
                 <div class="content" data-content="interests">
                     <div class="marquee">
                         <ul>
@@ -214,7 +216,7 @@
 
             <!-- references -->
             <section id="references" class="container main-section">
-                <h2 class="btn megrim-regular h2" data-h2="references" title="Afficher / Masquer la section">Références et Inspirations</h2>
+                <h2 class="btn megrim-regular h2 text-shadow-glitch-2" data-h2="references" title="Afficher / Masquer la section">Références et Inspirations</h2>
                 <div class="content" data-content="references">
                     <h3 class="h3">Lorem ipsum dolor sit amet</h3>
                     <p>

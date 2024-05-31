@@ -7,7 +7,7 @@ $gap-marquee: 0.75rem;
   user-select: none;
   gap: $gap-marquee;
   background: $black;
-  padding: 1.75rem 0;
+  padding: 2rem 0;
 
   ul {
     position: relative;
@@ -39,11 +39,11 @@ $gap-marquee: 0.75rem;
     }
 
     &::before {
-      top: -22px;
+      top: -24px;
     }
 
     &::after {
-      bottom: -22px;
+      bottom: -24px;
     }
 
     li {
