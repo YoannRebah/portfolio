@@ -11,7 +11,7 @@
             height: 17rem;
 
             &.illustration {
-                background-image: url(../../dist/assets/images/illu-contact.png);
+                background-image: url(../../dist/assets/images/minitel.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -27,8 +27,18 @@
                 margin-left: 2rem;
 
                 li {
-                    font-size: 1.4rem;
                     margin-bottom: 1.75rem;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 1.4rem;
+                        border-bottom: 1px solid;
+                        padding-bottom: 0.1rem;
+
+                        i {
+                            margin-right: 0.2rem;
+                        }
+                    }
                 }
             }
         }

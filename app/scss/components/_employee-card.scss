@@ -84,7 +84,7 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
             .photo {
                 position: relative;
                 width: 100px;
-                height: 120px;
+                height: 150px;
                 background-image: url(../../dist/assets/images/me.png);
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -96,7 +96,7 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                gap: 1rem;
+                gap: 0.85rem;
 
                 p {
                     display: flex;
@@ -111,7 +111,7 @@ $box-shadow-card: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
                     }
 
                     &:nth-child(2) {
-                        font-size: 1rem;
+                        font-size: 1.1rem;
                     }
                 }
             }
