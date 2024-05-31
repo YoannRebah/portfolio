@@ -29,10 +29,10 @@ class Timer {
             elem.classList.remove('fa-video-slash');
             elem.classList.add('fa-video');
         });
-        LoaderController.Show();
+        Loader.Show();
 
         let timeout = setTimeout(()=>{
-            LoaderController.Hide();
+            Loader.Hide();
             this.AppendTVProgramHTML();
             clearTimeout(timeout);
         }, 5000);
