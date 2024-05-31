@@ -747,14 +747,15 @@ section.main-section .content {
   background: rgba(255, 255, 255, 0.1294117647);
   letter-spacing: -0.11rem;
   color: #444671;
-  border: 1rem solid rgba(255, 255, 255, 0.2196078431);
+  background: rgba(255, 255, 255, 0.2196078431);
   transition: box-shadow 0.1s, transform 0.1s;
+  overflow: hidden;
 }
 .employee-card > * {
   pointer-events: none;
 }
 .employee-card:hover {
-  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
 }
 .employee-card .card {
   position: relative;
@@ -763,8 +764,22 @@ section.main-section .content {
   flex-direction: column;
   justify-content: space-between;
   padding: 0.8rem;
+  margin: 1.3rem;
   gap: 0.75rem;
   background: #e0dccb;
+}
+.employee-card .card::after {
+  content: "02/01/1990 - 37100 - 178";
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: -28.5px;
+  font-size: 1rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: rgba(255, 255, 255, 0.1294117647);
+  font-weight: 700;
 }
 .employee-card .card .card-header {
   display: flex;
@@ -873,6 +888,17 @@ section.main-section .content {
   bottom: 0;
   right: 10px;
   height: 83%;
+}
+.employee-card .card .half-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: -180px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px -1px 45px 0px rgba(212, 212, 212, 0.2);
 }
 
 .references-list li {
