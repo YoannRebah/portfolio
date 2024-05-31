@@ -800,6 +800,7 @@ section.main-section .content {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  filter: grayscale(0.4) contrast(0.75);
 }
 .employee-card .card .card-content .container-text {
   display: flex;
