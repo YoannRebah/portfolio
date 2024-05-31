@@ -874,3 +874,11 @@ section.main-section .content {
   right: 10px;
   height: 83%;
 }
+
+.references-list li {
+  margin-left: 1rem;
+  padding: 0.33rem 0;
+}
+.references-list li a {
+  color: #fff;
+}
