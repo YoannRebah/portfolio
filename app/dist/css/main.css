@@ -1403,6 +1403,11 @@ section.main-section .content {
   -webkit-transform: rotate(1deg);
           transform: rotate(1deg);
 }
+.container-polaroid .polaroid:hover .photo {
+  background-size: 65%;
+  -webkit-filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(150%);
+          filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(150%);
+}
 .container-polaroid .polaroid .scotch-band {
   position: absolute;
   z-index: 1;
@@ -1452,6 +1457,8 @@ section.main-section .content {
   background-color: #212121;
   -webkit-filter: sepia(0.4) contrast(0.8) grayscale(0.4) brightness(130%);
           filter: sepia(0.4) contrast(0.8) grayscale(0.4) brightness(130%);
+  -webkit-transition: background-size 0.2s ease-in-out;
+  transition: background-size 0.2s ease-in-out;
 }
 .container-polaroid .polaroid .photo[data-photo=hb] {
   background-image: url(../../dist/assets/images/logo-hb.png);
