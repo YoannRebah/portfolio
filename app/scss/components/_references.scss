@@ -11,4 +11,15 @@
             padding: 0.33rem 0;
         }
     }
+
+    .nb {
+        color: $yellow;
+        margin-top: 1.5rem;
+        font-size: 0.8rem;
+        font-style: italic;
+
+        span {
+            text-decoration: underline;
+        }
+    }
 }
