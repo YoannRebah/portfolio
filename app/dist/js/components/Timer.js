@@ -10,7 +10,7 @@ class Timer {
 
     AppendTVProgramHTML() {
         const video = document.createElement('video');
-        video.src = './app/dist/assets/images/program-tv.mp4';
+        video.src = './app/dist/assets/videos/program-tv.mp4';
         video.autoplay = true;
         video.controls = false;
 
