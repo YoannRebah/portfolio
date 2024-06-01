@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&family=Neonderthaw&family=Reddit+Mono:wght@200..900&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&family=Neonderthaw&family=Reddit+Mono:wght@200..900&family=Satisfy&display=swap&family=Caveat:wght@400..700&display=swap&family=Shadows+Into+Light&display=swap&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
 
 .satisfy-regular {
     font-family: "Satisfy", cursive;
@@ -28,5 +28,24 @@
 .averia-serif-libre-light {
     font-family: "Averia Serif Libre", serif;
     font-weight: 300;
+    font-style: normal;
+}
+
+.caveat-regular {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
     font-style: normal;
 }

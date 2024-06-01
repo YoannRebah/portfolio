@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&family=Neonderthaw&family=Reddit+Mono:wght@200..900&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&family=Neonderthaw&family=Reddit+Mono:wght@200..900&family=Satisfy&display=swap&family=Caveat:wght@400..700&display=swap&family=Shadows+Into+Light&display=swap&family=Permanent+Marker&family=Shadows+Into+Light&display=swap");
 .satisfy-regular {
   font-family: "Satisfy", cursive;
   font-weight: 400;
@@ -27,6 +27,25 @@
 .averia-serif-libre-light {
   font-family: "Averia Serif Libre", serif;
   font-weight: 300;
+  font-style: normal;
+}
+
+.caveat-regular {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.shadows-into-light-regular {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1339,4 +1358,130 @@ section.main-section .content {
 }
 .container-title-popin .title-popin span {
   font-size: 0.7rem;
+}
+
+.container-polaroid {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+}
+.container-polaroid .polaroid {
+  position: relative;
+  -webkit-box-flex: calc(50% - 5rem);
+      -ms-flex: calc(50% - 5rem);
+          flex: calc(50% - 5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 330px;
+  border: 10px solid #fff;
+}
+.container-polaroid .polaroid:nth-child(1) {
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+.container-polaroid .polaroid:nth-child(2) {
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+}
+.container-polaroid .polaroid:nth-child(3) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.container-polaroid .polaroid:nth-child(4) {
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+.container-polaroid .polaroid .scotch-band {
+  position: absolute;
+  z-index: 1;
+}
+.container-polaroid .polaroid .scotch-band_top-left {
+  width: 130px;
+  top: -12px;
+  left: -50px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+.container-polaroid .polaroid .scotch-band_top-right {
+  width: 132px;
+  top: -16px;
+  right: -50px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+.container-polaroid .polaroid .scotch-band_bottom-right {
+  width: 140px;
+  bottom: -10px;
+  right: -45px;
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+.container-polaroid .polaroid .scotch-band_top-middle {
+  width: 80px;
+  left: 38%;
+  top: -20px;
+  -webkit-transform: rotate(280deg);
+          transform: rotate(280deg);
+}
+.container-polaroid .polaroid .scotch-band_top-middle-horizontal {
+  width: 200px;
+  top: -34px;
+  left: 15%;
+  -webkit-transform: rotate(170deg);
+          transform: rotate(170deg);
+}
+.container-polaroid .polaroid .photo {
+  -webkit-box-flex: 80;
+      -ms-flex: 80;
+          flex: 80;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center;
+  background-color: #212121;
+  -webkit-filter: sepia(0.4) contrast(0.8) grayscale(0.4) brightness(130%);
+          filter: sepia(0.4) contrast(0.8) grayscale(0.4) brightness(130%);
+}
+.container-polaroid .polaroid .photo[data-photo=hb] {
+  background-image: url(../../dist/assets/images/logo-hb.png);
+}
+.container-polaroid .polaroid .photo[data-photo=hb-pro] {
+  background-image: url(../../dist/assets/images/logo-hb-pro.png);
+}
+.container-polaroid .polaroid .photo[data-photo=open-street-map] {
+  background-image: url(../../dist/assets/images/logo-open-street-map.png);
+}
+.container-polaroid .polaroid .photo[data-photo=bnp] {
+  background-image: url(../../dist/assets/images/logo-bnp.png);
+}
+.container-polaroid .polaroid .note {
+  -webkit-box-flex: 20;
+      -ms-flex: 20;
+          flex: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+}
+.container-polaroid .polaroid .note p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #212121;
 }
