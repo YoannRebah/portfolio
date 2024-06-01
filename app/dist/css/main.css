@@ -278,8 +278,12 @@ header[data-container=hero-banner] {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   font-weight: 700;
-  -webkit-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+[data-container=main-nav] .main-nav [data-btn-action=reduce-main-nav]:hover {
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
 }
 [data-container=main-nav].reduce {
   top: -5.9rem;
