@@ -13,6 +13,7 @@
     <script src="./app/dist/js/services/LocalStorage.js"></script>
 
     <!-- controllers -->
+    <script src="./app/dist/js/controllers/TitlePopin.js"></script>
     <script src="./app/dist/js/controllers/Section.js"></script>
     <script src="./app/dist/js/controllers/MainNav.js"></script>
     <script src="./app/dist/js/controllers/Overlay.js"></script>
@@ -96,12 +97,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/YoannRebah/portfolio" target="_blank" class="link-main-nav large" title="Code source du portfolio">
+                        <a href="https://github.com/YoannRebah/portfolio" target="_blank" class="link-main-nav large" data-title-popin="Code source du portfolio">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </li>
                 </ul>
-                <button class="btn" data-btn-action="reduce-main-nav" title="Masquer le menu">
+                <button class="btn" data-btn-action="reduce-main-nav" data-title-popin="Masquer le menu">
                     <i class="fa-solid fa-chevron-up fa-icon"></i>
                 </button>
             </div>
@@ -122,7 +123,7 @@
 
             <!-- skills -->
             <section id="skills" class="container main-section">
-                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="skills" title="Afficher / Masquer la section">Mes Compétences</h2>
+                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="skills" data-title-popin="Afficher / Masquer la section">Mes Compétences</h2>
                 <div class="content" data-content="skills">
                     <!-- js load => controllers/Section.js -->
                 </div>
@@ -130,7 +131,7 @@
 
             <!-- tools -->
             <section id="tools" class="container main-section">
-                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="tools" title="Afficher / Masquer la section">Logiciels et Outils Professionnels</h2>
+                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="tools" data-title-popin="Afficher / Masquer la section">Logiciels et Outils Professionnels</h2>
                 <div class="content" data-content="tools">
                     <!-- js load => controllers/Section.js -->
                 </div>
@@ -138,7 +139,7 @@
 
             <!-- notable-achievements -->
             <section id="notable-achievements" class="container main-section">
-                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="notable-achievements" title="Afficher / Masquer la section">Réalisations Notables</h2>
+                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="notable-achievements" data-title-popin="Afficher / Masquer la section">Réalisations Notables</h2>
                 <div class="content" data-content="notable-achievements">
                     <h3 class="h3">Lorem ipsum dolor sit amet</h3>
                     <p>
@@ -150,7 +151,7 @@
 
             <!-- roadmap -->
             <section id="roadmap" class="container main-section">
-                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="roadmap" title="Afficher / Masquer la section">Ma roadmap</h2>
+                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="roadmap" data-title-popin="Afficher / Masquer la section">Ma roadmap</h2>
                 <div class="content" data-content="roadmap">
                     <h3 class="h3">Lorem ipsum dolor sit amet</h3>
                     <p>
@@ -162,7 +163,7 @@
 
             <!-- current-job -->
             <section id="current-job" class="container main-section">
-                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="current-job" title="Afficher / Masquer la section">Poste Actuel</h2>
+                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="current-job" data-title-popin="Afficher / Masquer la section">Poste Actuel</h2>
                 <div class="content" data-content="current-job">
                     <!-- employee-card -->
                     <div class="employee-card averia-serif-libre-light">
@@ -208,7 +209,7 @@
 
             <!-- interests -->
             <section id="interests" class="container main-section">
-                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="interests" title="Afficher / Masquer la section">Centres d'intérêt</h2>
+                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="interests" data-title-popin="Afficher / Masquer la section">Centres d'intérêt</h2>
                 <div class="content" data-content="interests">
                     <div class="marquee">
                         <ul>
@@ -231,26 +232,26 @@
 
             <!-- contact -->
             <section id="contact" class="container main-section">
-                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="contact" title="Afficher / Masquer la section">Contact</h2>
+                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="contact" data-title-popin="Afficher / Masquer la section">Contact</h2>
                 <div class="content" data-content="contact">
                     <div class="container-contact">
                         <div class="contact illustration"></div>
                         <div class="contact">
                             <ul class="list-contact-infos">
                                 <li>
-                                    <a href="mailto:y.rebah.pro@gmail.com" title="Envoyer un mail">
+                                    <a href="mailto:y.rebah.pro@gmail.com" data-title-popin="Envoyer un mail">
                                         <i class="fa-regular fa-envelope"></i>
                                         <span>y.rebah.pro@gmail.com</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tel:+33662784667" title="Appeler le numéro">
+                                    <a href="tel:+33662784667" data-title-popin="Appeler le numéro">
                                         <i class="fa-solid fa-mobile-screen-button"></i>
                                         <span>06 62 78 46 67</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.geek-directeur-technique.com/2012/07/06/le-minitel-est-mort" title="Minitel" target="_blank">
+                                    <a href="https://www.geek-directeur-technique.com/2012/07/06/le-minitel-est-mort" data-title-popin="Minitel" target="_blank">
                                         <i class="fa-solid fa-laptop"></i>
                                         <span>3615 YREBAH</span>
                                     </a>
@@ -263,7 +264,7 @@
 
             <!-- references -->
             <section id="references" class="container main-section">
-                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="references" title="Afficher / Masquer la section">Références & Inspirations</h2>
+                <h2 class="btn megrim-regular text-shadow-glitch-2" data-h2="references" data-title-popin="Afficher / Masquer la section">Références & Inspirations</h2>
                 <div class="content" data-content="references">
                     <ul class="references-list">
                         <!-- js load => components/References.js -->

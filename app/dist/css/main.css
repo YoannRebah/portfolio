@@ -1300,3 +1300,38 @@ section.main-section .content {
 [data-content=contact] .container-contact .contact .list-contact-infos li a i {
   margin-right: 0.2rem;
 }
+
+.container-title-popin {
+  position: fixed;
+  background: #212121;
+  z-index: 99999;
+  pointer-events: none;
+  border: 2px solid grey;
+  opacity: 0;
+  -webkit-animation: title-popin-anim 0.25s forwards;
+          animation: title-popin-anim 0.25s forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+@-webkit-keyframes title-popin-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes title-popin-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container-title-popin .title-popin {
+  padding: 0.25rem 0.33rem;
+}
+.container-title-popin .title-popin span {
+  font-size: 0.8rem;
+}

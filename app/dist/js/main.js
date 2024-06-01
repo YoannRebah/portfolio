@@ -2,6 +2,9 @@ window.onload = () => {
 
     const localStorage = new LocalStorage();
     localStorage.init();
+
+    const titlePopin = new TitlePopin();
+    titlePopin.init();
    
     const section = new Section();
     section.init();
