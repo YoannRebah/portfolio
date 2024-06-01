@@ -24,6 +24,12 @@ body, a, h2, button {
     cursor: url(../../dist/assets/images/mouse-cursor.png), auto;
 }
 
+p, span, h1, h2, h3, li, a {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 main {
     position: relative;
     height: 100%;
@@ -37,9 +43,6 @@ h2 {
     align-items: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 
     &::before {
         content: "-";

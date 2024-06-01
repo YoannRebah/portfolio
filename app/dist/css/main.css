@@ -75,6 +75,13 @@ body, a, h2, button {
   cursor: url(../../dist/assets/images/mouse-cursor.png), auto;
 }
 
+p, span, h1, h2, h3, li, a {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
 main {
   position: relative;
   height: 100%;
@@ -92,10 +99,6 @@ h2 {
           align-items: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
 }
 h2::before {
   content: "-";
@@ -1260,11 +1263,11 @@ section.main-section .content {
   -webkit-column-fill: auto;
      -moz-column-fill: auto;
           column-fill: auto;
-  height: 30vh;
+  height: 32vh;
 }
 [data-content=references] .references-list li {
   margin-left: 1rem;
-  padding: 0.33rem 0;
+  padding: 0.5rem 0;
 }
 [data-content=references] .nb {
   color: hsl(56, 100%, 70%);
