@@ -2,6 +2,7 @@ class Timer {
 
     #timer = document.querySelector('.timer');
     #timerTime = 0;
+    #maxTime = 3600;
 
     init() {
         setInterval(() => this.UpdateTimer(), 1000);
@@ -23,7 +24,7 @@ class Timer {
     }
 
     InitSignalOn() {
-        document.querySelector('#loader-text-1').innerHTML = `<i class="fa-solid fa-satellite-dish"></i> Signal faible.`;
+        document.querySelector('#loader-text-1').innerHTML = `<i class="fa-solid fa-satellite-dish"></i> Signal faible...`;
         document.querySelector('#loader-text-2').innerHTML = `Reprise des programmes...`;
         document.querySelectorAll('.fa-solid.fa-video-slash').forEach((elem)=>{
             elem.classList.remove('fa-video-slash');
@@ -50,6 +51,6 @@ class Timer {
         this.#timer.textContent = `${this.FormatTime(hours)}:${this.FormatTime(minutes)}:${this.FormatTime(seconds)}`;
         this.#timerTime++;
 
-        if(this.#timerTime === 3600) this.InitSignalOn();
+        if(this.#timerTime === this.#maxTime) this.InitSignalOn();
     }
 }
