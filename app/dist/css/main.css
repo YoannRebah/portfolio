@@ -748,7 +748,7 @@ section.main-section .content {
   margin-bottom: 0.5rem;
 }
 [data-content=skills] .row-skill .container-icon-text i {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 [data-content=skills] .row-skill .wrapper {
   position: relative;
@@ -1268,7 +1268,7 @@ section.main-section .content {
 }
 [data-content=references] .nb {
   color: hsl(56, 100%, 70%);
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-size: 0.8rem;
   font-style: italic;
 }
@@ -1404,7 +1404,7 @@ section.main-section .content {
           transform: rotate(1deg);
 }
 .container-polaroid .polaroid:hover .photo {
-  background-size: 65%;
+  background-size: 60%;
   -webkit-filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(150%);
           filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(150%);
 }
