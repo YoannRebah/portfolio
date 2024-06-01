@@ -200,25 +200,29 @@ header[data-container=hero-banner] {
   height: 100vh;
 }
 
-nav[data-container=main-nav] {
+[data-container=main-nav] {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   height: 6rem;
-  z-index: 1;
-  padding: 0 10%;
-  border-bottom: 1.5px solid hsl(172, 85%, 49%);
   background: #040114;
+  border-bottom: 1.5px solid hsl(172, 85%, 49%);
+  z-index: 1;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
-nav[data-container=main-nav].active {
+[data-container=main-nav].active {
   opacity: 1;
   pointer-events: all;
 }
-nav[data-container=main-nav] ul {
+[data-container=main-nav] .main-nav {
+  position: relative;
+  padding: 0 10%;
+}
+[data-container=main-nav] .main-nav ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,7 +232,7 @@ nav[data-container=main-nav] ul {
           align-items: center;
   height: 100%;
 }
-nav[data-container=main-nav] ul li {
+[data-container=main-nav] .main-nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,7 +245,7 @@ nav[data-container=main-nav] ul li {
   width: 100%;
   height: 100%;
 }
-nav[data-container=main-nav] ul li .link-main-nav {
+[data-container=main-nav] .main-nav ul li .link-main-nav {
   text-decoration: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -258,15 +262,16 @@ nav[data-container=main-nav] ul li .link-main-nav {
   padding: 0.7rem;
   font-weight: 700;
 }
-nav[data-container=main-nav] ul li .link-main-nav.large {
+[data-container=main-nav] .main-nav ul li .link-main-nav.large {
   font-size: 1.5rem;
 }
-nav[data-container=main-nav] ul li .link-main-nav i {
+[data-container=main-nav] .main-nav ul li .link-main-nav i {
   margin-right: 0.33rem;
 }
-nav[data-container=main-nav] [data-btn-action=reduce-main-nav] {
+[data-container=main-nav] .main-nav [data-btn-action=reduce-main-nav] {
   position: absolute;
-  right: 0;
+  right: 12%;
+  bottom: -24px;
   background: hsl(172, 85%, 49%);
   color: #212121;
   padding: 0.33rem;
@@ -276,15 +281,15 @@ nav[data-container=main-nav] [data-btn-action=reduce-main-nav] {
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
-nav[data-container=main-nav].reduce {
-  top: -6rem;
+[data-container=main-nav].reduce {
+  top: -5.9rem;
   border-bottom-color: hsl(323, 100%, 78%);
 }
-nav[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] {
+[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] {
   background: hsl(323, 100%, 78%);
   color: #212121;
 }
-nav[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] .fa-icon {
+[data-container=main-nav].reduce [data-btn-action=reduce-main-nav] .fa-icon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   -webkit-transition: -webkit-transform 0.25s ease-in-out;

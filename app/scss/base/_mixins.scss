@@ -5,8 +5,13 @@
             @content;
         }
     }
-
-    @else {
-        @warn "Breakpoint #{$breakpoint} not found in \$breakpoints map.";
-    }
 }
+
+// Use case :
+// @include screen('xs') {}
+// @include screen('s') {}
+// @include screen('m') {}
+// @include screen('l') {}
+// @include screen('xl') {}
+// @include screen('xxl') {}
+// @include screen('mega') {}

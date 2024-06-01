@@ -1,23 +1,26 @@
 $nav-height: 6rem;
 
-nav {
-    &[data-container="main-nav"] {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: $nav-height;
-        z-index: 1;
+[data-container="main-nav"] {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: $nav-height;
+    background: $body-bg;
+    border-bottom: 1.5px solid $cyan;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-in-out;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .main-nav {
+        position: relative;
         padding: 0 10%;
-        border-bottom: 1.5px solid $cyan;
-        background: $body-bg;
-        opacity: 0;
-        pointer-events: none;
-        transition: 0.25s ease-in-out;
-    
-        &.active {
-            opacity: 1;
-            pointer-events: all;
-        }
     
         ul {
             list-style: none;
@@ -54,7 +57,8 @@ nav {
     
         [data-btn-action="reduce-main-nav"]{
             position: absolute;
-            right: 0;
+            right: 12%;
+            bottom: -24px;
             background: $cyan;
             color: $black;
             padding: 0.33rem;
@@ -63,19 +67,19 @@ nav {
             font-weight: 700;
             transition: 0.25s ease-in-out;
         }
-    
-        &.reduce {
-            top: -$nav-height;
-            border-bottom-color: $pink;
-    
-            [data-btn-action="reduce-main-nav"]{
-                background: $pink;
-                color: $black;
-    
-                .fa-icon {
-                    transform: rotate(180deg);
-                    transition: transform 0.25s ease-in-out;
-                }
+    }
+
+    &.reduce {
+        top: -$nav-height + 0.1rem;
+        border-bottom-color: $pink;
+
+        [data-btn-action="reduce-main-nav"]{
+            background: $pink;
+            color: $black;
+
+            .fa-icon {
+                transform: rotate(180deg);
+                transition: transform 0.25s ease-in-out;
             }
         }
     }
