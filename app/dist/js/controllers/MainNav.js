@@ -28,11 +28,11 @@ class MainNav {
             if(this.#mainNav.classList.contains('reduce')) {
                 this.#mainNav.classList.remove('reduce');
                 this.#btnReduceMainNav.setAttribute('data-title-popin', 'Masquer le menu');
-                LocalStorageController.SetData('mainNavIsReduce', false);
+                LocalStorage.SetData('mainNavIsReduce', false);
             } else {
                 this.#mainNav.classList.add('reduce');
                 this.#btnReduceMainNav.setAttribute('data-title-popin', 'Afficher le menu');
-                LocalStorageController.SetData('mainNavIsReduce', true);
+                LocalStorage.SetData('mainNavIsReduce', true);
             }
         }
     }
