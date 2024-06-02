@@ -58,8 +58,9 @@ class References {
 
             const a = document.createElement('a');
             a.innerHTML = elem.html;
-            a.setAttribute('target', '_blank');
             a.setAttribute('href', elem.href);
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
 
             li.append(a);
             this.#referencesList.append(li);
