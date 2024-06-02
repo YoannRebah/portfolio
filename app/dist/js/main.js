@@ -24,10 +24,8 @@ window.onload = () => {
     references.init();
 
     const earthGlobe = new EarthGlobe();
-    earthGlobe.init();
 
     const titlePopin = new TitlePopin();
-    titlePopin.init();
 
     const initTypedJs = () => {
         var typed = new Typed('#typed-text-cities', {
@@ -43,7 +41,9 @@ window.onload = () => {
     let timeout = setTimeout(()=>{
         Loader.Hide();
         timer.init();
+        earthGlobe.init();
         initTypedJs();
+        titlePopin.init();
         clearTimeout(timeout);
     }, 5000);
 }

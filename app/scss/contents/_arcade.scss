@@ -1,0 +1,58 @@
+[data-content="arcade"] {
+    .container-arcade {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            animation: h3-anim 0.9s linear infinite;
+            @keyframes h3-anim {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0.65;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+
+        [data-btn-action="open-arcade-game"] {
+            display: flex;
+            align-items: center;
+            background: $pink;
+            padding: 0.5rem 2rem;
+            border-radius: 0.15rem;
+            transition: background 0.1s ease-in-out;
+
+            &:hover {
+                background: $pink2;
+            }
+
+            img {
+                width: 2.2rem;
+                margin-right: 0.33rem;
+                animation: img-anim 1.2s linear infinite;
+                @keyframes img-anim {
+                    0% {
+                        transform: rotateY(0deg);
+                    }
+                    100% {
+                        transform: rotateY(360deg);
+                    }
+                }
+            }
+
+            span {
+                color: $white;
+                font-size: 1.5rem;
+                margin-right: 0.2rem;
+                letter-spacing: -0.15rem;
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&family=Neonderthaw&family=Reddit+Mono:wght@200..900&family=Satisfy&display=swap&family=Caveat:wght@400..700&display=swap&family=Shadows+Into+Light&display=swap&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&family=Neonderthaw&family=Reddit+Mono:wght@200..900&family=Satisfy&display=swap&family=Caveat:wght@400..700&display=swap&family=Shadows+Into+Light&display=swap&family=Permanent+Marker&family=Dancing+Script:wght@400..700&family=Shadows+Into+Light&display=swap&family=Jersey+15&family=Silkscreen:wght@400;700&display=swap');
 
 .satisfy-regular {
     font-family: "Satisfy", cursive;
@@ -48,4 +48,23 @@
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-style: normal;
+}
+
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dancing-script-regular {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
 }
