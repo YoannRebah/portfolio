@@ -329,7 +329,7 @@ footer [data-content=footer] .list-footer {
   -webkit-column-fill: auto;
      -moz-column-fill: auto;
           column-fill: auto;
-  height: 22vh;
+  height: 120px;
 }
 footer [data-content=footer] .list-footer li {
   margin-bottom: 1rem;
@@ -1317,7 +1317,7 @@ footer [data-content=footer] .list-footer li {
   -webkit-column-fill: auto;
      -moz-column-fill: auto;
           column-fill: auto;
-  height: 32vh;
+  height: 150px;
 }
 [data-content=references] .references-list li {
   margin-left: 1rem;
