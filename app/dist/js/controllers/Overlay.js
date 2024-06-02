@@ -1,41 +1,44 @@
 class Overlay {
     
     #overlay = document.querySelector('.overlay');
+    #glitchLinesMaxCount = 8;
+    #glitchLineMinHeight = 1;
+    #glitchLineMaxHeight = 3;
+    #intervalCreateGlitchLine = 16000;
+    #intervalRemoveGlitchLines = 6000;
 
     init() {
-        this.AddAndRemoveRandomDivs();
+        this.AppendGlitchLinesHTML();
         this.StartPeriodicRemoval();
     }
 
-    AddAndRemoveRandomDivs() {
-        const addDivs = () => {
-            const numDivsToAdd = Math.floor(Math.random() * 8);
-            for (let i = 0; i < numDivsToAdd; i++) {
-                const delay = Math.random() * 16000;
+    AppendGlitchLinesHTML() {
+        const createGlitchLines = () => {
+            const randomCountGlitchLines = Math.floor(Math.random() * this.#glitchLinesMaxCount);
 
+            for (let i = 0; i < randomCountGlitchLines; i++) {
+                const delay = Math.random() * this.#intervalCreateGlitchLine;
                 setTimeout(() => {
-                    const newDiv = document.createElement('div');
-                    newDiv.className = 'glitch-line';
-                    newDiv.style.height = `${Math.floor(Math.random() * 3) + 1}px`;
-                    this.#overlay.appendChild(newDiv);
+                    const glitchLine = document.createElement('div');
+                    glitchLine.classList.add('glitch-line');
+                    glitchLine.style.height = `${Math.floor(Math.random() * this.#glitchLineMaxHeight) + this.#glitchLineMinHeight}px`;
+                    this.#overlay.appendChild(glitchLine);
                 }, delay);
             }
         };
 
-        setInterval(addDivs, 16000);
+        setInterval(createGlitchLines, this.#intervalCreateGlitchLine);
     }
 
     RemoveAllGlitchLines() {
-        const glitchDivs = this.#overlay.querySelectorAll('.glitch-line');
-
-        glitchDivs.forEach(div => {
-            this.#overlay.removeChild(div);
+        this.#overlay.querySelectorAll('.glitch-line').forEach((elem) => {
+            this.#overlay.removeChild(elem);
         });
     }
 
     StartPeriodicRemoval() {
         setInterval(() => {
             this.RemoveAllGlitchLines();
-        }, 6000);
+        }, this.#intervalRemoveGlitchLines);
     }
 }

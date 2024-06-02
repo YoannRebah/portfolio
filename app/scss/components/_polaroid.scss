@@ -33,7 +33,7 @@
 
         &:hover {
             .photo {
-                background-size: 60%;
+                background-size: 50%;
                 filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(150%);
             }
         }
@@ -80,12 +80,12 @@
 
         .photo {
             flex: 80;
-            background-repeat: no-repeat;
-            background-size: 45%;
-            background-position: center;
             background-color: $black;
-            filter: sepia(0.4) contrast(0.8) grayscale(0.4) brightness(130%);
-            transition: background-size 0.2s ease-in-out;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 55%;
+            filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(180%);
+            transition: 0.2s ease-in-out;
 
             &[data-photo="hb"] {
                 background-image: url(../../dist/assets/images/logo-hb.png);
@@ -112,7 +112,7 @@
             background: $white;
 
             p {
-                font-size: 1.2rem;
+                font-size: 1.15rem;
                 text-align: center;
                 color: $black;
             }

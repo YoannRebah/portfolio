@@ -1416,7 +1416,7 @@ section.main-section .content {
           transform: rotate(1deg);
 }
 .container-polaroid .polaroid:hover .photo {
-  background-size: 60%;
+  background-size: 50%;
   -webkit-filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(150%);
           filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(150%);
 }
@@ -1463,14 +1463,14 @@ section.main-section .content {
   -webkit-box-flex: 80;
       -ms-flex: 80;
           flex: 80;
-  background-repeat: no-repeat;
-  background-size: 45%;
-  background-position: center;
   background-color: #212121;
-  -webkit-filter: sepia(0.4) contrast(0.8) grayscale(0.4) brightness(130%);
-          filter: sepia(0.4) contrast(0.8) grayscale(0.4) brightness(130%);
-  -webkit-transition: background-size 0.2s ease-in-out;
-  transition: background-size 0.2s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55%;
+  -webkit-filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(180%);
+          filter: sepia(0.4) contrast(0.7) grayscale(0.2) brightness(180%);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .container-polaroid .polaroid .photo[data-photo=hb] {
   background-image: url(../../dist/assets/images/logo-hb.png);
@@ -1500,7 +1500,7 @@ section.main-section .content {
   background: #fff;
 }
 .container-polaroid .polaroid .note p {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   text-align: center;
   color: #212121;
 }
