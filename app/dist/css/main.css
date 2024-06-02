@@ -94,6 +94,10 @@ body, a, h2, button {
   cursor: url(../../dist/assets/images/mouse-cursor.png), auto;
 }
 
+a:hover, h2:hover, button:hover, .employee-card:hover {
+  cursor: url(../../dist/assets/images/mouse-cursor-hover.png), auto;
+}
+
 p, span, h1, h2, h3, li, a {
   -webkit-user-select: none;
   -ms-user-select: none;
