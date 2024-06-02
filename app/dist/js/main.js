@@ -29,6 +29,14 @@ window.onload = () => {
     let timeout = setTimeout(()=>{
         Loader.Hide();
         timer.init();
+        var typed = new Typed('#typed-text-cities', {
+            strings: ["????", "Évry", "[CITY_NAME_ERROR]", "Soisy-sur-????", "Paris", "Suresnes", "????", "DATA_CITY", "Juvisy", "Draveil", "New-York", "Créteil"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            backDelay: 2000,
+            cursorChar: '<i class="fa-solid fa-square"></i>',
+            loop: true
+        });
         clearTimeout(timeout);
     }, 5000);
 

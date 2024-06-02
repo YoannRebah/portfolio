@@ -4,7 +4,7 @@ class EarthGlobe {
     #camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     #renderer = new THREE.WebGLRenderer({ canvas: this.#canvas });
     #sphereGeometry = new THREE.SphereGeometry(8, 32, 32);
-    #rotationSpeed = 0.0025;
+    #rotationSpeed = 0.003;
     #texturePath = './app/dist/assets/images/earth-texture.jpg';
     #textureLoader = new THREE.TextureLoader();
     #texture = this.#textureLoader.load(this.#texturePath);
