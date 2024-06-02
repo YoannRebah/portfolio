@@ -1,5 +1,7 @@
 window.onload = () => {
 
+    const timer = new Timer();
+
     const localStorage = new LocalStorage();
     localStorage.init();
 
@@ -21,7 +23,8 @@ window.onload = () => {
     const references = new References();
     references.init();
 
-    const timer = new Timer();
+    const earthGlobe = new EarthGlobe();
+    earthGlobe.init();
 
     let timeout = setTimeout(()=>{
         Loader.Hide();
