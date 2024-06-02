@@ -32,9 +32,11 @@
     <script src="./app/dist/js/services/LocalStorage.js"></script>
 
     <!-- controllers -->
+    <script src="./app/dist/js/controllers/Contents.js"></script>
     <script src="./app/dist/js/controllers/TitlePopin.js"></script>
     <script src="./app/dist/js/controllers/Section.js"></script>
     <script src="./app/dist/js/controllers/MainNav.js"></script>
+    <script src="./app/dist/js/controllers/Footer.js"></script>
     <script src="./app/dist/js/controllers/Overlay.js"></script>
     <script src="./app/dist/js/controllers/Loader.js"></script>
     
@@ -87,9 +89,9 @@
         <!-- main-nav -->
         <div class="container" data-container="main-nav">
             <nav class="main-nav">
-                <ul>
+                <ul class="list-main-nav">
                     <li>
-                        <a href="#" class="link-main-nav link-h1" aria-label="Accueil">
+                        <a href="#" class="link-main-nav link-h1" aria-label="Accueil" data-title-popin="Accueil">
                             <h1 class="neon-letters small">
                                 <span class="satisfy-regular">Portfolio</span>
                                 <span class="neonderthaw-regular">Yoann</span>
@@ -98,29 +100,7 @@
                             </h1>
                         </a>
                     </li>
-                    <li>
-                        <a href="#skills" class="link-main-nav">
-                            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-                            <span>Compétences</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#tools" class="link-main-nav">
-                            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
-                            <span>Outils</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#notable-achievements" class="link-main-nav">
-                            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
-                            <span>Réalisations</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/YoannRebah/portfolio" target="_blank" class="link-main-nav large" aria-label="Code source du portfolio" rel="noopener noreferrer">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
-                        </a>
-                    </li>
+                    <!-- js load => controllers/MainNav.js -->
                 </ul>
                 <button class="btn" data-btn-action="reduce-main-nav" data-title-popin="Masquer le menu" aria-label="Masquer le menu">
                     <i class="fa-solid fa-chevron-up fa-icon" aria-hidden="true"></i>
@@ -329,7 +309,13 @@
         </div>
 
         <!-- footer -->
-        <footer class="container" data-container="footer"></footer>
+        <footer class="container container_medium" data-container="footer">
+            <div class="content" data-content="footer">
+                <ul class="list-footer">
+                    <!-- js load => controllers/Footer.js -->
+                </ul>
+            </div>
+        </footer>
 
     </main>
     

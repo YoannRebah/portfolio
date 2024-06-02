@@ -308,12 +308,31 @@ section {
 section.main-section {
   padding-top: 7.5rem;
 }
-section.main-section:last-child {
-  padding-bottom: 6rem;
-}
 section.main-section .content {
   position: relative;
   margin-top: 5rem;
+}
+
+footer {
+  background: #212121;
+}
+footer [data-content=footer] {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+footer [data-content=footer] .list-footer {
+  list-style: none;
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-fill: auto;
+     -moz-column-fill: auto;
+          column-fill: auto;
+  height: 22vh;
+}
+footer [data-content=footer] .list-footer li {
+  margin-bottom: 1rem;
 }
 
 .glitch-line {

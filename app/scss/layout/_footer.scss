@@ -1,0 +1,20 @@
+footer {
+    background: $black;
+
+    [data-content="footer"] {
+        margin-top: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    
+        .list-footer {
+            list-style: none;
+            column-count: 3;
+            column-fill: auto;
+            height: 22vh;
+
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

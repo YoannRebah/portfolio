@@ -4,15 +4,15 @@ window.onload = () => {
 
     const localStorage = new LocalStorage();
     localStorage.init();
-
-    const titlePopin = new TitlePopin();
-    titlePopin.init();
    
     const section = new Section();
     section.init();
 
     const mainNav = new MainNav();
     mainNav.init();
+
+    const footer = new Footer();
+    footer.init();
 
     const overlay = new Overlay();
     overlay.init();
@@ -25,6 +25,9 @@ window.onload = () => {
 
     const earthGlobe = new EarthGlobe();
     earthGlobe.init();
+
+    const titlePopin = new TitlePopin();
+    titlePopin.init();
 
     const initTypedJs = () => {
         var typed = new Typed('#typed-text-cities', {
