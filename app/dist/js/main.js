@@ -23,6 +23,9 @@ window.onload = () => {
     const references = new References();
     references.init();
 
+    const arcade = new Arcade();
+    arcade.init();
+
     const earthGlobe = new EarthGlobe();
 
     const titlePopin = new TitlePopin();

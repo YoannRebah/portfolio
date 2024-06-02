@@ -5,17 +5,17 @@ class EmployeeCard {
     #width = this.#employeeCard.clientWidth;
 
     init() {
-        this.addEventMouseMove();
-        this.addEventMouseOut();
-        this.addEventMouseDown();
-        this.addEventMouseUp();
+        this.AddEventMouseMove();
+        this.AddEventMouseOut();
+        this.AddEventMouseDown();
+        this.AddEventMouseUp();
     }
 
-    addEventMouseMove() {
-        this.#employeeCard.addEventListener('mousemove', this.handleMove.bind(this));
+    AddEventMouseMove() {
+        this.#employeeCard.addEventListener('mousemove', this.HandleMove.bind(this));
     }
 
-    handleMove(e) {
+    HandleMove(e) {
         const xVal = e.layerX;
         const yVal = e.layerY;
         const yRotation = 20 * ((xVal - this.#width / 2) / this.#width);
@@ -24,27 +24,27 @@ class EmployeeCard {
         this.#employeeCard.style.transform = string;
     }
 
-    addEventMouseOut() {
-        this.#employeeCard.addEventListener('mouseout', this.handleMouseOut.bind(this));
+    AddEventMouseOut() {
+        this.#employeeCard.addEventListener('mouseout', this.HandleMouseOut.bind(this));
     }
 
-    handleMouseOut() {
+    HandleMouseOut() {
         this.#employeeCard.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
     }
 
-    addEventMouseDown() {
-        this.#employeeCard.addEventListener('mousedown', this.handleMouseDown.bind(this));
+    AddEventMouseDown() {
+        this.#employeeCard.addEventListener('mousedown', this.HandleMouseDown.bind(this));
     }
 
-    handleMouseDown() {
+    HandleMouseDown() {
         this.#employeeCard.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)';
     }
 
-    addEventMouseUp() {
-        this.#employeeCard.addEventListener('mouseup', this.handleMouseUp.bind(this));
+    AddEventMouseUp() {
+        this.#employeeCard.addEventListener('mouseup', this.HandleMouseUp.bind(this));
     }
 
-    handleMouseUp() {
+    HandleMouseUp() {
         this.#employeeCard.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)';
     }
 }

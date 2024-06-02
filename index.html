@@ -45,6 +45,7 @@
     <script src="./app/dist/js/components/EmployeeCard.js"></script>
     <script src="./app/dist/js/components/References.js"></script>
     <script defer src="./app/dist/js/components/EarthGlobe.js"></script>
+    <script defer src="./app/dist/js/components/Arcade.js"></script>
 
     <!-- main -->
     <link rel="stylesheet" href="./app/dist/css/main.min.css">
@@ -86,17 +87,22 @@
             </div>
         </div>
 
-        <!-- video-game -->
-        <div class="video-game-background">
+        <!-- video-game-menu -->
+        <div class="video-game-menu">
             <div class="content">
                 <div class="content-main-menu">
                     <div class="container-title">
                         <p class="dancing-script-regular">Freedom Games presents</p>
                         <h3 class="jersey-15-regular">BLOCKER 80</h3>
                     </div>
-                    <button class="btn" data-btn-action="play-video-game" data-title-popin="Lancer une nouvelle partie" aria-label="Lancer une nouvelle partie">
-                        <span class="jersey-15-regular">Nouvelle partie</span>
-                    </button>
+                    <div class="container-btn">
+                        <button class="btn btn-menu-video-game" data-btn-action="play-video-game" data-title-popin="Lancer une nouvelle partie" aria-label="Lancer une nouvelle partie">
+                            <span class="jersey-15-regular">Nouvelle partie</span>
+                        </button>
+                        <button class="btn btn-menu-video-game" data-btn-action="quit-video-game" data-title-popin="Quitter le mode arcade" aria-label="Quitter le mode arcade">
+                            <span class="jersey-15-regular">Quitter</span>
+                        </button>
+                    </div>
                     <div class="container-footer">
                         <p class="jersey-15-regular">COPYRIGHT <i class="fa-regular fa-copyright"></i> 1980</p>
                     </div>
@@ -337,8 +343,8 @@
                 <div class="content" data-content="arcade">
                     <div class="container-arcade">
                         <h3 class="silkscreen-regular">Credits 0</h3>
-                        <button class="btn" data-btn-action="open-arcade-game" data-title-popin="Cliquez pour jouer" aria-label="Cliquez pour jouer">
-                            <img src="./app/dist/assets/images/coin-video-games.png" alt="">
+                        <button class="btn" data-btn-action="open-arcade-menu" data-title-popin="Cliquez pour jouer" aria-label="Cliquez pour jouer">
+                            <img src="./app/dist/assets/images/coin-video-games.png" alt="Pièce de monnaie" aria-hidden="true">
                             <span class="silkscreen-regular">INSERT COINS</span>
                         </button>
                     </div>
