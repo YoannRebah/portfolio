@@ -1,4 +1,6 @@
 section {
+    position: relative;
+
     &.main-section {
         padding-top: 7.5rem;
 
@@ -7,6 +9,7 @@ section {
         }
 
         .content {
+            position: relative;
             margin-top: 5rem;
         }
     }

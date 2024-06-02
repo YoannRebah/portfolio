@@ -302,6 +302,9 @@ header[data-container=hero-banner] {
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
+section {
+  position: relative;
+}
 section.main-section {
   padding-top: 7.5rem;
 }
@@ -309,6 +312,7 @@ section.main-section:last-child {
   padding-bottom: 6rem;
 }
 section.main-section .content {
+  position: relative;
   margin-top: 5rem;
 }
 
