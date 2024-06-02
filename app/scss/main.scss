@@ -17,12 +17,14 @@
 @import './components/neon-letters';
 @import './components/overlay';
 @import './components/toolbar';
-@import './components/skills';
-@import './components/tools';
 @import './components/marquee';
 @import './components/employee-card';
-@import './components/references';
-@import './components/contact';
 @import './components/titlePopin';
-@import './components/polaroid';
-@import './components/location';
+
+// contents
+@import './contents/contact';
+@import './contents/location';
+@import './contents/notable-achievements';
+@import './contents/references';
+@import './contents/skills';
+@import './contents/tools';

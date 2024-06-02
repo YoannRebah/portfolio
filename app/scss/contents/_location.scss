@@ -31,11 +31,15 @@
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 0.6rem;
 
             span {
                 font-weight: 300;
+            }
+
+            &:last-child {
+                text-shadow: 0 0 3px #ff8080, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
             }
         }
     }

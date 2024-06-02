@@ -26,18 +26,21 @@ window.onload = () => {
     const earthGlobe = new EarthGlobe();
     earthGlobe.init();
 
-    let timeout = setTimeout(()=>{
-        Loader.Hide();
-        timer.init();
+    const initTypedJs = () => {
         var typed = new Typed('#typed-text-cities', {
-            strings: ["????", "Évry", "[CITY_NAME_ERROR]", "Soisy-sur-????", "Paris", "Suresnes", "????", "DATA_CITY", "Juvisy", "Draveil", "New-York", "Créteil"],
+            strings: ["????", "Failed to retrieve data", "NETWORK_FAILED", "ERROR_6005", "Cannot retrieve data"],
             typeSpeed: 50,
             backSpeed: 50,
             backDelay: 2000,
             cursorChar: '<i class="fa-solid fa-square"></i>',
             loop: true
         });
+    }
+
+    let timeout = setTimeout(()=>{
+        Loader.Hide();
+        timer.init();
+        initTypedJs();
         clearTimeout(timeout);
     }, 5000);
-
 }
