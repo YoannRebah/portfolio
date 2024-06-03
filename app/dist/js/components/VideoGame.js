@@ -27,6 +27,7 @@ class VideoGame {
         VideoGame.CreateGameCursorHTML();
         VideoGame.AddEventMouseMoveGame();
         VideoGame.ToggleGameMouseCursor();
+        VideoGame.SetHighScore();
     }
 
     static StopGame() {
@@ -35,6 +36,7 @@ class VideoGame {
         VideoGame.HideVideoGame();
         VideoGame.ResetScoreCounter();
         VideoGame.InitGameIsEnded();
+        VideoGame.SetHighScore();
     }
 
     static InitGameIsStarted() {
@@ -46,7 +48,8 @@ class VideoGame {
 
     static InitGameIsEnded() {
         VideoGame.#gameIsStarted = false;
-        VideoGame.#scoreHTML.innerHTML = "0";
+        VideoGame.#score = 0;
+        VideoGame.#scoreHTML.innerHTML = VideoGame.#score;
     }
 
     static StartScoreCounter() {
@@ -104,21 +107,13 @@ class VideoGame {
 
     static SetLocalStorageDefaultHighScore() {
         if(localStorage.getItem(VideoGame.#localStorageKeyHighScore) == null) {
-            localStorage.setItem(VideoGame.#localStorageKeyHighScore, 0);
+            VideoGame.LocalStorageHighScore = 0;
         }
     }
 
     static SetHighScore() {
-        if(localStorage.getItem(VideoGame.#localStorageKeyHighScore) == null) {
-            VideoGame.LocalStorageHighScore = VideoGame.#score;
-        } else {
-            let highScore = VideoGame.LocalStorageHighScore < VideoGame.#score ? VideoGame.#score : VideoGame.LocalStorageHighScore;
-            VideoGame.LocalStorageHighScore = highScore;
-        }
-        VideoGame.SetHighScoreHTML();
-    }
-
-    static SetHighScoreHTML() {
+        const highScore = VideoGame.LocalStorageScore > VideoGame.LocalStorageHighScore ? VideoGame.LocalStorageScore : VideoGame.LocalStorageHighScore;
+        VideoGame.LocalStorageHighScore = highScore;
         VideoGame.#highScoreHTML.innerHTML = VideoGame.LocalStorageHighScore;
     }
 
