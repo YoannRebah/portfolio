@@ -17,6 +17,7 @@ class VideoGame {
 
     init() {
         this.AddEventBtnBackToArcadeMenu();
+        VideoGame.AddEventKeydownEscap();
         VideoGame.SetLocalStorageDefaultHighScore();
     }
 
@@ -139,6 +140,14 @@ class VideoGame {
     AddEventBtnBackToArcadeMenu() {
         this.#btnBackToArcadeMenu.addEventListener('click', ()=>{
             VideoGame.StopGame();
+        });
+    }
+
+    static AddEventKeydownEscap() {
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' || event.key === 'Esc') {
+                VideoGame.StopGame();
+            }
         });
     }
 
