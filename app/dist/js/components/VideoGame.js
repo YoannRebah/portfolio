@@ -42,10 +42,6 @@ class VideoGame {
         VideoGame.RemoveGameCursorHTML();
         VideoGame.RemoveTitleMoveToPlay();
         VideoGame.HideVideoGame();
-        VideoGame.ResetScoreCounter();
-        VideoGame.RemoveAllMeteorsHTML();
-        VideoGame.ResetMeteorCreation();
-        VideoGame.ResetHealthBar();
         VideoGame.InitGameIsEnded();
     }
 
@@ -59,6 +55,10 @@ class VideoGame {
 
     static InitGameIsEnded() {
         VideoGame.#gameIsStarted = false;
+        VideoGame.ResetScoreCounter();
+        VideoGame.RemoveAllMeteorsHTML();
+        VideoGame.ResetMeteorCreation();
+        VideoGame.ResetHealthBar();
     }
 
     static StartScoreCounter() {
@@ -224,67 +224,67 @@ class VideoGame {
         const meteorClasses = ["meteor-anim-1", "meteor-anim-2", "meteor-anim-3", "meteor-anim-4", "meteor-anim-5"];
         
         function createMeteor() {
-          const meteor = document.createElement('div');
-          meteor.classList.add('meteor');
-    
-          const randomClass = meteorClasses[Math.floor(Math.random() * meteorClasses.length)];
-          meteor.classList.add(randomClass);
-    
-          const img = document.createElement('img');
-          img.src = './app/dist/assets/images/meteor.png';
-          img.classList.add(randomClass);
-    
-          const randomSize = Math.floor(Math.random() * 61) + 20; // entre 20 et 80
-          img.style.width = `${randomSize}px`;
-          img.style.height = `${randomSize}px`;
-    
-          let dataDamage;
-          if (randomSize >= 20 && randomSize <= 40) {
-            dataDamage = 10;
-          } else if (randomSize >= 41 && randomSize <= 60) {
-            dataDamage = 20;
-          } else {
-            dataDamage = 30;
-          }
-    
-          meteor.setAttribute('data-damage', dataDamage);
-    
-          const randomLeft = Math.floor(Math.random() * 101);
-          meteor.style.left = `${randomLeft}%`;
-    
-          meteor.append(img);
-          VideoGame.#game.append(meteor);
-    
-          setTimeout(() => {
-            meteor.remove();
-          }, 5000);
-    
-          const interval = setInterval(() => {
-            const rocketCursor = document.querySelector('.collision-box');
-            if (rocketCursor && isColliding(meteor, rocketCursor)) {
-              console.log(`Météore touché! Dégâts: ${dataDamage}`);
-              VideoGame.UpdateHealthBar(-dataDamage);
-              clearInterval(interval);
+            const meteor = document.createElement('div');
+            meteor.classList.add('meteor');
+
+            const randomClass = meteorClasses[Math.floor(Math.random() * meteorClasses.length)];
+            meteor.classList.add(randomClass);
+
+            const img = document.createElement('img');
+            img.src = './app/dist/assets/images/meteor.png';
+            img.classList.add(randomClass);
+
+            const randomSize = Math.floor(Math.random() * 61) + 20; // entre 20 et 80
+            img.style.width = `${randomSize}px`;
+            img.style.height = `${randomSize}px`;
+
+            let dataDamage;
+            if (randomSize >= 20 && randomSize <= 40) {
+                dataDamage = 10;
+            } else if (randomSize >= 41 && randomSize <= 60) {
+                dataDamage = 20;
+            } else {
+                dataDamage = 30;
             }
-          }, 100);
+
+            meteor.setAttribute('data-damage', dataDamage);
+
+            const randomLeft = Math.floor(Math.random() * 101);
+            meteor.style.left = `${randomLeft}%`;
+
+            meteor.append(img);
+            VideoGame.#game.append(meteor);
+
+            setTimeout(() => {
+                meteor.remove();
+            }, 5000);
+
+            const interval = setInterval(() => {
+                const rocketCursor = document.querySelector('.collision-box');
+                if (rocketCursor && isColliding(meteor, rocketCursor)) {
+                    console.log(`Météore touché! Dégâts: ${dataDamage}`);
+                    VideoGame.UpdateHealthBar(-dataDamage);
+                    clearInterval(interval);
+                }
+            }, 100);
         }
-    
+
         function isColliding(el1, el2) {
-          const rect1 = el1.getBoundingClientRect();
-          const rect2 = el2.getBoundingClientRect();
-          
-          return !(rect1.right < rect2.left || 
-                   rect1.left > rect2.right || 
-                   rect1.bottom < rect2.top || 
-                   rect1.top > rect2.bottom);
+            const rect1 = el1.getBoundingClientRect();
+            const rect2 = el2.getBoundingClientRect();
+
+            return !(rect1.right < rect2.left || 
+                     rect1.left > rect2.right || 
+                     rect1.bottom < rect2.top || 
+                     rect1.top > rect2.bottom);
         }
-    
+
         VideoGame.#meteorInterval = setInterval(() => {
-          for (let i = 0; i < VideoGame.#meteorsPerSecond; i++) {
-            createMeteor();
-          }
+            for (let i = 0; i < VideoGame.#meteorsPerSecond; i++) {
+                createMeteor();
+            }
         }, 1000);
-    
+
         VideoGame.#increaseMeteorsInterval = setInterval(() => {
             VideoGame.#meteorsPerSecond += 1;
         }, 20000);
@@ -294,7 +294,6 @@ class VideoGame {
         clearInterval(VideoGame.#meteorInterval);
         clearInterval(VideoGame.#increaseMeteorsInterval);
         VideoGame.#meteorsPerSecond = 1;
-        VideoGame.AppendMeteorsHTML();
     }
     
     static RemoveAllMeteorsHTML() {
