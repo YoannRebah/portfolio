@@ -92,6 +92,7 @@
                 mix-blend-mode: difference;
                 background-image: url(../../dist/assets/images/space-background.jpeg);
                 cursor: none;
+                overflow: hidden;
 
                 h3 {
                     display: flex;
@@ -125,6 +126,48 @@
                     background-repeat: no-repeat;
                     background-size: contain;
                     background-image: url(../../dist/assets/gif/rocket-spaceship.gif);
+                }
+
+                .meteor {
+                    position: absolute;
+                    top: -20%;
+                    opacity: 0;
+                    animation: meteor-anim;
+                    animation-timing-function: linear;
+                    animation-fill-mode: forwards;
+                    @keyframes meteor-anim {
+                        0% {
+                            top: -20%;
+                            opacity: 0;
+                        }
+                        5% {
+                            opacity: 1;
+                        }
+                        100% {
+                            opacity: 1;
+                            top: 100%;
+                        }
+                    }
+                    
+                    &.meteor-anim-1 {
+                        animation-duration: 1s;
+                    }
+
+                    &.meteor-anim-2 {
+                        animation-duration: 1.8s;
+                    }
+
+                    &.meteor-anim-3 {
+                        animation-duration: 2.5s;
+                    }
+
+                    &.meteor-anim-4 {
+                        animation-duration: 2.8s;
+                    }
+
+                    &.meteor-anim-5 {
+                        animation-duration: 3.2s;
+                    }
                 }
             }
         }

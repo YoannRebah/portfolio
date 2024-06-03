@@ -42,12 +42,14 @@ class VideoGame {
     static InitGameIsStarted() {
         if(!VideoGame.#gameIsStarted) {
             VideoGame.StartScoreCounter();
+            VideoGame.AppendMeteorsHTML();
         }
         VideoGame.#gameIsStarted = true;
     }
 
     static InitGameIsEnded() {
         VideoGame.#gameIsStarted = false;
+        VideoGame.RemoveAllMeteorsHTML();
     }
 
     static StartScoreCounter() {
@@ -205,4 +207,67 @@ class VideoGame {
             VideoGame.ResumeScoreCounter();
         }
     }
+
+    static AppendMeteorsHTML() {
+        const meteorClasses = ["meteor-anim-1", "meteor-anim-2", "meteor-anim-3", "meteor-anim-4", "meteor-anim-5"];
+        let numberOfMeteors = 3; // Minimum de 3 météores au début
+        const maxMeteors = 10; // Maximum de 10 météores
+        const meteorList = []; // Liste pour stocker les météores générés
+    
+        const generateMeteor = () => {
+            // Créer une image de météore
+            const meteor = document.createElement('img');
+            meteor.classList.add('meteor');
+            meteor.src = "./app/dist/assets/images/meteor.png";
+            meteor.alt = "Météore";
+    
+            // Définir des propriétés aléatoires
+            const randomWidth = Math.floor(Math.random() * (200 - 50 + 1)) + 50;
+            const randomLeft = Math.random() * 100;
+    
+            meteor.style.width = `${randomWidth}px`;
+            meteor.style.left = `${randomLeft}%`;
+    
+            // Assigner une classe aléatoire du tableau
+            const randomClassIndex = Math.floor(Math.random() * meteorClasses.length);
+            meteor.classList.add(meteorClasses[randomClassIndex]);
+    
+            // Ajouter le météore à l'élément du jeu
+            VideoGame.#game.append(meteor);
+    
+            const meteorData = { element: meteor, timestamp: Date.now() }; // Stocker l'élément du météore et son horodatage
+            meteorList.push(meteorData); // Ajouter à la liste des météores générés
+    
+            // Définir un nouvel intervalle aléatoire pour générer un autre météore
+            const randomInterval = Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
+            setTimeout(generateMeteor, randomInterval);
+    
+            // Supprimer les météores qui ont dépassé 5 secondes
+            const currentTime = Date.now();
+            meteorList.forEach((meteorData, index) => {
+                if (currentTime - meteorData.timestamp > 5000) {
+                    meteorList.splice(index, 1); // Supprimer de la liste
+                    meteorData.element.remove(); // Supprimer de l'interface
+                }
+            });
+    
+            // Augmenter progressivement le nombre de météores jusqu'au maximum
+            if (numberOfMeteors < maxMeteors) {
+                numberOfMeteors++;
+            }
+        };
+    
+        // Générer un nombre initial de météores
+        for (let i = 0; i < numberOfMeteors; i++) {
+            generateMeteor();
+        }
+    }
+    
+    static RemoveAllMeteorsHTML() {
+        document.querySelectorAll('.meteor').forEach((elem)=>{
+            elem.remove();
+        })
+    }
+    
+    
 }
