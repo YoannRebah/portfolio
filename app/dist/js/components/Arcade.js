@@ -13,8 +13,6 @@ class Arcade {
         this.AddEventBtnOpenMenu();
         this.AddEventBtnNewGame();
         this.AddEventBtnQuitMenu();
-        this.AddEventMouseEnterGame();
-        this.AddEventMouseMoveGame();
     }
 
     get GameWidth() {
@@ -40,6 +38,8 @@ class Arcade {
     StartNewGame() {
         this.HideArcadeMenu();
         this.ShowVideoGame();
+        this.CreateGameCursorHTML();
+        this.AddEventMouseMoveGame();
     }
 
     QuitArcadeMenu() {
@@ -76,16 +76,14 @@ class Arcade {
         }
     }
 
-    AddEventMouseEnterGame() {
-        this.#game.addEventListener('mouseenter', (e) => {
-            if(document.querySelector('.game-cursor')) {
-                return
-            } else {
-                this.#gameCursor = document.createElement('div');
-                this.#gameCursor.classList.add('game-cursor', 'game-cursor-up')
-                this.#game.append(this.#gameCursor);
-            }
-        });
+    CreateGameCursorHTML() {
+        if(document.querySelector('.game-cursor')) {
+            return
+        } else {
+            this.#gameCursor = document.createElement('div');
+            this.#gameCursor.classList.add('game-cursor', 'game-cursor-up')
+            this.#game.append(this.#gameCursor);
+        }
     }
 
     AddEventMouseMoveGame() {
@@ -100,6 +98,9 @@ class Arcade {
     
             this.#currentPositionX = clientX;
             this.UpdateCursorPosition(this.#currentPositionX);
+
+            console.log(clientX)
+            console.log(this.#currentPositionX)
         });
     }
     

@@ -1272,7 +1272,7 @@ footer [data-content=footer] .list-footer li {
   position: absolute;
   width: 100px;
   height: 100px;
-  bottom: 0;
+  bottom: 20px;
   background-repeat: no-repeat;
   background-size: contain;
 }
