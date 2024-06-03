@@ -17,8 +17,7 @@
     .content,
     .content-header,
     .content-game,
-    .game,
-    .content-footer {
+    .game {
         position: relative;
         width: 100%;
         height: 100%;
@@ -32,7 +31,7 @@
         padding: 1rem 16%;
 
         .content-header {
-            flex: 8;
+            flex: 10;
             border: 1px dashed $orange;
             display: flex;
             align-items: center;
@@ -73,19 +72,24 @@
         }
 
         .content-game {
-            flex: 87;
-            background: red;
+            flex: 90;
 
             .game {
                 position: relative;
-                background: yellow;
-                cursor: pointer;
+                background-color: $body-bg;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                mix-blend-mode: difference;
+                background-image: url(../../dist/assets/images/space-background.jpeg);
+                cursor: none;
 
                 .game-cursor {
                     position: absolute;
                     width: 100px;
                     height: 100px;
                     bottom: 20px;
+                    left: -25%;
                     background-repeat: no-repeat;
                     background-size: contain;
 

@@ -40,6 +40,7 @@ class Arcade {
         this.ShowVideoGame();
         this.CreateGameCursorHTML();
         this.AddEventMouseMoveGame();
+        this.ToggleGameMouseCursor();
     }
 
     QuitArcadeMenu() {
@@ -64,7 +65,19 @@ class Arcade {
         });
     }
 
-    UpdateGameMouseCursor(direction /* left or right */) {
+    ShowGameMouseCursor() {
+        if(document.querySelector('.game-cursor')) {
+            this.#gameCursor.classList.remove('hidden');
+        }
+    }
+
+    HideGameMouseCursor() {
+        if(document.querySelector('.game-cursor')) {
+            this.#gameCursor.classList.add('hidden');
+        }
+    }
+
+    UpdateGameMouseCursorImage(direction /* left or right */) {
         if(document.querySelector('.game-cursor')) {
             this.#gameCursor.classList.remove('game-cursor-up');
             this.#gameCursor.classList.add(`game-cursor-${direction}`);
@@ -91,20 +104,32 @@ class Arcade {
             const clientX = e.clientX;
     
             if (clientX < this.#currentPositionX) {
-                this.UpdateGameMouseCursor('left');
+                this.UpdateGameMouseCursorImage('left');
             } else if (clientX > this.#currentPositionX) {
-                this.UpdateGameMouseCursor('right');
+                this.UpdateGameMouseCursorImage('right');
             }
     
             this.#currentPositionX = clientX;
-            this.UpdateCursorPosition(this.#currentPositionX);
-
-            console.log(clientX)
-            console.log(this.#currentPositionX)
+            this.UpdateGameMouseCursorPosition(this.#currentPositionX);
+            this.ToggleGameMouseCursor();
         });
     }
     
-    UpdateCursorPosition(x) {
-        this.#gameCursor.style.left = `${x}px`;
+    UpdateGameMouseCursorPosition(x) {
+        this.#gameCursor.style.transform = `translateX(${x}px)`;
+    }
+
+    ToggleGameMouseCursor() {
+        const elementRect = this.#gameCursor.getBoundingClientRect();
+        const containerRect = this.#game.getBoundingClientRect();
+
+        const isTouchingLeft = elementRect.left <= containerRect.left;
+        const isTouchingRight = elementRect.right >= containerRect.right;
+
+        if(isTouchingLeft || isTouchingRight) {
+            this.HideGameMouseCursor();
+        } else {
+            this.ShowGameMouseCursor();
+        }
     }
 }
