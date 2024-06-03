@@ -42,9 +42,14 @@ class VideoGame {
         VideoGame.RemoveGameCursorHTML();
         VideoGame.RemoveTitleMoveToPlay();
         VideoGame.HideVideoGame();
+        VideoGame.ResetScoreCounter();
+        VideoGame.RemoveAllMeteorsHTML();
+        VideoGame.ResetMeteorCreation();
+        VideoGame.ResetHealthBar();
         VideoGame.InitGameIsEnded();
     }
 
+    // call on first mouse movement
     static InitGameIsStarted() {
         if(!VideoGame.#gameIsStarted) {
             VideoGame.StartScoreCounter();
@@ -55,10 +60,6 @@ class VideoGame {
 
     static InitGameIsEnded() {
         VideoGame.#gameIsStarted = false;
-        VideoGame.ResetScoreCounter();
-        VideoGame.RemoveAllMeteorsHTML();
-        VideoGame.ResetMeteorCreation();
-        VideoGame.ResetHealthBar();
     }
 
     static StartScoreCounter() {
