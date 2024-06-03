@@ -23,6 +23,9 @@ window.onload = () => {
     const references = new References();
     references.init();
 
+    const videoGame = new VideoGame();
+    videoGame.init();
+
     const arcade = new Arcade();
     arcade.init();
 
