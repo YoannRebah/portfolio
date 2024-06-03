@@ -68,7 +68,7 @@ class VideoGame {
                 let timeout = setTimeout(()=>{
                     this.#titleMoveMouseToPlay.remove();
                     clearTimeout(timeout);
-                }, 500);
+                }, 300);
             }
         });
     }
