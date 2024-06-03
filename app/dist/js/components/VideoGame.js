@@ -7,15 +7,18 @@ class VideoGame {
     static #gameCursor;
     static #scoreHTML = document.querySelector('.score');
     static #highScoreHTML = document.querySelector('.high-score');
+    static #localStorageKeyScore = 'portfolio-yr-score';
     static #localStorageKeyHighScore = 'portfolio-yr-high-score';
     static #score = 0;
     static #scoreCounter = 0;
     static #scoreCounterStep = 50;
     static #intervalScoreCounter = null;
     static #gameIsStarted = false;
+    static #scoreCounterIsPaused = false;
 
     init() {
         this.AddEventBtnBackToArcadeMenu();
+        VideoGame.SetLocalStorageDefaultHighScore();
     }
 
     static StartNewGame() {
@@ -50,19 +53,45 @@ class VideoGame {
         if (VideoGame.#intervalScoreCounter !== null) {
             clearInterval(VideoGame.#intervalScoreCounter);
         }
+        VideoGame.#scoreCounterIsPaused = false;
         VideoGame.#intervalScoreCounter = setInterval(() => {
-            VideoGame.#scoreCounter = VideoGame.#scoreCounter + VideoGame.#scoreCounterStep;
-            VideoGame.#score = VideoGame.#scoreCounter;
-            VideoGame.#scoreHTML.innerHTML = VideoGame.#score;
+            if (!VideoGame.#scoreCounterIsPaused) {
+                VideoGame.#scoreCounter += VideoGame.#scoreCounterStep;
+                VideoGame.#score = VideoGame.#scoreCounter;
+                VideoGame.#scoreHTML.innerHTML = VideoGame.#score;
+            }
         }, 1000);
     }
 
     static ResetScoreCounter() {
         clearInterval(VideoGame.#intervalScoreCounter);
         VideoGame.#scoreCounter = 0;
+        VideoGame.#score = 0;
+        VideoGame.#scoreHTML.innerHTML = VideoGame.#score;
         VideoGame.#intervalScoreCounter = null;
+        VideoGame.#scoreCounterIsPaused = false;
     }
 
+    static PauseScoreCounter() {
+        VideoGame.#scoreCounterIsPaused = true;
+    }
+
+    static ResumeScoreCounter() {
+        VideoGame.#scoreCounterIsPaused = false;
+    }
+
+    // SCORE
+    static get LocalStorageScore() {
+        if(localStorage.getItem(VideoGame.#localStorageKeyScore)) {
+            return localStorage.getItem(VideoGame.#localStorageKeyScore);
+        }
+    }
+
+    static set LocalStorageScore(value) {
+        localStorage.setItem(VideoGame.#localStorageKeyScore, value);
+    }
+
+    // HIGH SCORE
     static get LocalStorageHighScore() {
         if(localStorage.getItem(VideoGame.#localStorageKeyHighScore)) {
             return localStorage.getItem(VideoGame.#localStorageKeyHighScore);
@@ -70,11 +99,27 @@ class VideoGame {
     }
 
     static set LocalStorageHighScore(value) {
-        if(localStorage.getItem(VideoGame.#localStorageKeyHighScore)) {
-            localStorage.setItem(VideoGame.#localStorageKeyHighScore, value);
-        } else {
+        localStorage.setItem(VideoGame.#localStorageKeyHighScore, value);
+    }
+
+    static SetLocalStorageDefaultHighScore() {
+        if(localStorage.getItem(VideoGame.#localStorageKeyHighScore) == null) {
             localStorage.setItem(VideoGame.#localStorageKeyHighScore, 0);
         }
+    }
+
+    static SetHighScore() {
+        if(localStorage.getItem(VideoGame.#localStorageKeyHighScore) == null) {
+            VideoGame.LocalStorageHighScore = VideoGame.#score;
+        } else {
+            let highScore = VideoGame.LocalStorageHighScore < VideoGame.#score ? VideoGame.#score : VideoGame.LocalStorageHighScore;
+            VideoGame.LocalStorageHighScore = highScore;
+        }
+        VideoGame.SetHighScoreHTML();
+    }
+
+    static SetHighScoreHTML() {
+        VideoGame.#highScoreHTML.innerHTML = VideoGame.LocalStorageHighScore;
     }
 
     static ShowVideoGame() {
@@ -152,8 +197,10 @@ class VideoGame {
 
         if(isTouchingLeft || isTouchingRight) {
             this.HideGameMouseCursor();
+            VideoGame.PauseScoreCounter();
         } else {
             this.ShowGameMouseCursor();
+            VideoGame.ResumeScoreCounter();
         }
     }
 }
