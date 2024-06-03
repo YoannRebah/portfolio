@@ -1212,12 +1212,12 @@ footer [data-content=footer] .list-footer li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 16%;
+  gap: 1rem;
 }
 .video-game .content .content-header {
-  -webkit-box-flex: 10;
-      -ms-flex: 10;
-          flex: 10;
-  border: 1px dashed hsl(27, 100%, 70%);
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1262,9 +1262,10 @@ footer [data-content=footer] .list-footer li {
   text-transform: uppercase;
 }
 .video-game .content .content-game {
-  -webkit-box-flex: 90;
-      -ms-flex: 90;
-          flex: 90;
+  -webkit-box-flex: 93;
+      -ms-flex: 93;
+          flex: 93;
+  border: 1px dashed hsl(27, 100%, 70%);
 }
 .video-game .content .content-game .game {
   position: relative;
@@ -1280,7 +1281,7 @@ footer [data-content=footer] .list-footer li {
   position: absolute;
   width: 100px;
   height: 100px;
-  bottom: 20px;
+  bottom: 30px;
   left: -25%;
   background-repeat: no-repeat;
   background-size: contain;
