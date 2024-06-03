@@ -44,7 +44,7 @@ class VideoGame {
         VideoGame.HideVideoGame();
         VideoGame.ResetScoreCounter();
         VideoGame.RemoveAllMeteorsHTML();
-        VideoGame.ResetHealthBar();
+        VideoGame.ResetMeteorCreation();
         VideoGame.ResetHealthBar();
         VideoGame.InitGameIsEnded();
     }
