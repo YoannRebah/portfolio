@@ -1,6 +1,7 @@
 class VideoGame {
 
     #btnBackToArcadeMenu = document.querySelector('[data-btn-action="back-to-arcade-menu"]');
+    static #titleMoveMouseToPlay = document.querySelector('.title-move-mouse-to-play');
     static #videoGame = document.querySelector('.video-game');
     static #game = document.querySelector('.game');
     static #currentPositionX = 0;
@@ -61,13 +62,15 @@ class VideoGame {
         VideoGame.#game.addEventListener('mousemove', (e) => {
             const clientX = e.clientX;
             VideoGame.#currentPositionX = clientX;
-            VideoGame.UpdateGameMouseCursorPosition(VideoGame.#currentPositionX);
+            VideoGame.#gameCursor.style.transform = `translateX(${VideoGame.#currentPositionX}px)`;
             VideoGame.ToggleGameMouseCursor();
+            if(VideoGame.#titleMoveMouseToPlay) {
+                let timeout = setTimeout(()=>{
+                    this.#titleMoveMouseToPlay.remove();
+                    clearTimeout(timeout);
+                }, 500);
+            }
         });
-    }
-    
-    static UpdateGameMouseCursorPosition(x) {
-        VideoGame.#gameCursor.style.transform = `translateX(${x}px)`;
     }
 
     static ToggleGameMouseCursor() {
