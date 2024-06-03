@@ -171,6 +171,9 @@ class VideoGame {
         } else {
             this.#gameCursor = document.createElement('div');
             this.#gameCursor.classList.add('game-cursor');
+            const collisionBox = document.createElement('div');
+            collisionBox.classList.add('collision-box');
+            this.#gameCursor.append(collisionBox);
             VideoGame.#game.append(VideoGame.#gameCursor);
         }
     }
@@ -210,64 +213,78 @@ class VideoGame {
 
     static AppendMeteorsHTML() {
         const meteorClasses = ["meteor-anim-1", "meteor-anim-2", "meteor-anim-3", "meteor-anim-4", "meteor-anim-5"];
-        let numberOfMeteors = 3; // Minimum de 3 météores au début
-        const maxMeteors = 10; // Maximum de 10 météores
-        const meteorList = []; // Liste pour stocker les météores générés
     
-        const generateMeteor = () => {
-            // Créer une image de météore
-            const meteor = document.createElement('img');
-            meteor.classList.add('meteor');
-            meteor.src = "./app/dist/assets/images/meteor.png";
-            meteor.alt = "Météore";
+        function createMeteor() {
+          const meteor = document.createElement('div');
+          meteor.classList.add('meteor');
     
-            // Définir des propriétés aléatoires
-            const randomWidth = Math.floor(Math.random() * (200 - 50 + 1)) + 50;
-            const randomLeft = Math.random() * 100;
+          const randomClass = meteorClasses[Math.floor(Math.random() * meteorClasses.length)];
+          meteor.classList.add(randomClass);
     
-            meteor.style.width = `${randomWidth}px`;
-            meteor.style.left = `${randomLeft}%`;
+          const img = document.createElement('img');
+          img.src = './app/dist/assets/images/meteor.png';
+          img.classList.add(randomClass);
     
-            // Assigner une classe aléatoire du tableau
-            const randomClassIndex = Math.floor(Math.random() * meteorClasses.length);
-            meteor.classList.add(meteorClasses[randomClassIndex]);
+          const randomSize = Math.floor(Math.random() * 61) + 20; // entre 20 et 80
+          img.style.width = `${randomSize}px`;
+          img.style.height = `${randomSize}px`;
     
-            // Ajouter le météore à l'élément du jeu
-            VideoGame.#game.append(meteor);
+          let dataDamage;
+          if (randomSize >= 20 && randomSize <= 40) {
+            dataDamage = 1;
+          } else if (randomSize >= 41 && randomSize <= 60) {
+            dataDamage = 2;
+          } else {
+            dataDamage = 3;
+          }
+          meteor.setAttribute('data-damage', dataDamage);
     
-            const meteorData = { element: meteor, timestamp: Date.now() }; // Stocker l'élément du météore et son horodatage
-            meteorList.push(meteorData); // Ajouter à la liste des météores générés
+          const randomLeft = Math.floor(Math.random() * 101);
+          meteor.style.left = `${randomLeft}%`;
     
-            // Définir un nouvel intervalle aléatoire pour générer un autre météore
-            const randomInterval = Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
-            setTimeout(generateMeteor, randomInterval);
+          meteor.append(img);
+          VideoGame.#game.append(meteor);
     
-            // Supprimer les météores qui ont dépassé 5 secondes
-            const currentTime = Date.now();
-            meteorList.forEach((meteorData, index) => {
-                if (currentTime - meteorData.timestamp > 5000) {
-                    meteorList.splice(index, 1); // Supprimer de la liste
-                    meteorData.element.remove(); // Supprimer de l'interface
-                }
-            });
+          setTimeout(() => {
+            meteor.remove();
+          }, 5000);
     
-            // Augmenter progressivement le nombre de météores jusqu'au maximum
-            if (numberOfMeteors < maxMeteors) {
-                numberOfMeteors++;
+          const interval = setInterval(() => {
+            const rocketCursor = document.querySelector('.collision-box');
+            if (rocketCursor && isColliding(meteor, rocketCursor)) {
+              console.log(`Météore touché! Dégâts: ${dataDamage}`);
+              clearInterval(interval);
             }
-        };
-    
-        // Générer un nombre initial de météores
-        for (let i = 0; i < numberOfMeteors; i++) {
-            generateMeteor();
+          }, 100);
         }
-    }
+    
+        function isColliding(el1, el2) {
+          const rect1 = el1.getBoundingClientRect();
+          const rect2 = el2.getBoundingClientRect();
+          
+          return !(rect1.right < rect2.left || 
+                   rect1.left > rect2.right || 
+                   rect1.bottom < rect2.top || 
+                   rect1.top > rect2.bottom);
+        }
+    
+        let meteorsPerSecond = 1; 
+        
+        setInterval(() => {
+          for (let i = 0; i < meteorsPerSecond; i++) {
+            createMeteor();
+          }
+        }, 1000);
+        
+        setInterval(() => {
+          meteorsPerSecond += 1;
+        }, 20000);
+      }
     
     static RemoveAllMeteorsHTML() {
         document.querySelectorAll('.meteor').forEach((elem)=>{
             elem.remove();
         })
     }
-    
     
 }

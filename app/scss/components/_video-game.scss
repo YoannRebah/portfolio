@@ -119,13 +119,20 @@
 
                 .game-cursor {
                     position: absolute;
-                    width: 84px;
+                    width: 50px;
                     height: 125px;
                     bottom: 0;
                     left: -25%;
                     background-repeat: no-repeat;
-                    background-size: contain;
+                    background-size: cover;
+                    background-position: center;
                     background-image: url(../../dist/assets/gif/rocket-spaceship.gif);
+
+                    .collision-box {
+                        width: 50px;
+                        height: 80px;
+                        background: red;
+                    }
                 }
 
                 .meteor {
