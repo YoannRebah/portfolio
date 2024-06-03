@@ -24,7 +24,7 @@ body, a, h2, button {
     cursor: url(../../dist/assets/images/mouse-cursor.png), auto;
 }
 
-a, h2, button, .employee-card {
+a, h2, button, .employee-card, .polaroid {
     &:hover {
         cursor: url(../../dist/assets/images/mouse-cursor-hover.png), auto;
     }

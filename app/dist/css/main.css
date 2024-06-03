@@ -94,7 +94,7 @@ body, a, h2, button {
   cursor: url(../../dist/assets/images/mouse-cursor.png), auto;
 }
 
-a:hover, h2:hover, button:hover, .employee-card:hover {
+a:hover, h2:hover, button:hover, .employee-card:hover, .polaroid:hover {
   cursor: url(../../dist/assets/images/mouse-cursor-hover.png), auto;
 }
 
@@ -1266,23 +1266,24 @@ footer [data-content=footer] .list-footer li {
 .video-game .content .content-game .game {
   position: relative;
   background: yellow;
+  cursor: pointer;
 }
-.video-game .content .content-game .game .cursor {
+.video-game .content .content-game .game .game-cursor {
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  background: dodgerblue;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-.video-game .content .content-game .game.game-cursor-up {
-  cursor: url(../../dist/assets/images/mouse-cursor-video-game-up.png), auto;
+.video-game .content .content-game .game .game-cursor.game-cursor-up {
+  background-image: url(../../dist/assets/images/mouse-cursor-video-game-up.png);
 }
-.video-game .content .content-game .game.game-cursor-left {
-  cursor: url(../../dist/assets/images/mouse-cursor-video-game-left.png), auto;
+.video-game .content .content-game .game .game-cursor.game-cursor-left {
+  background-image: url(../../dist/assets/images/mouse-cursor-video-game-left.png);
 }
-.video-game .content .content-game .game.game-cursor-right {
-  cursor: url(../../dist/assets/images/mouse-cursor-video-game-right.png), auto;
+.video-game .content .content-game .game .game-cursor.game-cursor-right {
+  background-image: url(../../dist/assets/images/mouse-cursor-video-game-right.png);
 }
 .video-game .content .content-footer {
   -webkit-box-flex: 5;
