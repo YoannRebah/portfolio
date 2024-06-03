@@ -3,6 +3,10 @@ class VideoGame {
     #btnBackToArcadeMenu = document.querySelector('[data-btn-action="back-to-arcade-menu"]');
     static #videoGame = document.querySelector('.video-game');
     static #game = document.querySelector('.game');
+    static #healthBar = document.querySelector('.health-bar');
+    static #health = 100;
+    static #healthMin = 0;
+    static #healthMax = 100;
     static #currentPositionX = 0;
     static #gameCursor;
     static #scoreHTML = document.querySelector('.score');
@@ -14,6 +18,9 @@ class VideoGame {
     static #intervalScoreCounter = null;
     static #gameIsStarted = false;
     static #scoreCounterIsPaused = false;
+    static #meteorsPerSecond = 1;
+    static #meteorInterval;
+    static #increaseMeteorsInterval;
 
     init() {
         this.AddEventBtnBackToArcadeMenu();
@@ -36,6 +43,9 @@ class VideoGame {
         VideoGame.RemoveTitleMoveToPlay();
         VideoGame.HideVideoGame();
         VideoGame.ResetScoreCounter();
+        VideoGame.RemoveAllMeteorsHTML();
+        VideoGame.ResetHealthBar();
+        VideoGame.ResetHealthBar();
         VideoGame.InitGameIsEnded();
     }
 
@@ -49,7 +59,6 @@ class VideoGame {
 
     static InitGameIsEnded() {
         VideoGame.#gameIsStarted = false;
-        VideoGame.RemoveAllMeteorsHTML();
     }
 
     static StartScoreCounter() {
@@ -213,7 +222,7 @@ class VideoGame {
 
     static AppendMeteorsHTML() {
         const meteorClasses = ["meteor-anim-1", "meteor-anim-2", "meteor-anim-3", "meteor-anim-4", "meteor-anim-5"];
-    
+        
         function createMeteor() {
           const meteor = document.createElement('div');
           meteor.classList.add('meteor');
@@ -231,12 +240,13 @@ class VideoGame {
     
           let dataDamage;
           if (randomSize >= 20 && randomSize <= 40) {
-            dataDamage = 1;
+            dataDamage = 10;
           } else if (randomSize >= 41 && randomSize <= 60) {
-            dataDamage = 2;
+            dataDamage = 20;
           } else {
-            dataDamage = 3;
+            dataDamage = 30;
           }
+    
           meteor.setAttribute('data-damage', dataDamage);
     
           const randomLeft = Math.floor(Math.random() * 101);
@@ -253,6 +263,7 @@ class VideoGame {
             const rocketCursor = document.querySelector('.collision-box');
             if (rocketCursor && isColliding(meteor, rocketCursor)) {
               console.log(`Météore touché! Dégâts: ${dataDamage}`);
+              VideoGame.UpdateHealthBar(-dataDamage);
               clearInterval(interval);
             }
           }, 100);
@@ -268,23 +279,48 @@ class VideoGame {
                    rect1.top > rect2.bottom);
         }
     
-        let meteorsPerSecond = 1; 
-        
-        setInterval(() => {
-          for (let i = 0; i < meteorsPerSecond; i++) {
+        VideoGame.#meteorInterval = setInterval(() => {
+          for (let i = 0; i < VideoGame.#meteorsPerSecond; i++) {
             createMeteor();
           }
         }, 1000);
-        
-        setInterval(() => {
-          meteorsPerSecond += 1;
+    
+        VideoGame.#increaseMeteorsInterval = setInterval(() => {
+            VideoGame.#meteorsPerSecond += 1;
         }, 20000);
-      }
+    }
+
+    static ResetMeteorCreation() {
+        clearInterval(VideoGame.#meteorInterval);
+        clearInterval(VideoGame.#increaseMeteorsInterval);
+        VideoGame.#meteorsPerSecond = 1;
+        VideoGame.AppendMeteorsHTML();
+    }
     
     static RemoveAllMeteorsHTML() {
         document.querySelectorAll('.meteor').forEach((elem)=>{
             elem.remove();
         })
+    }
+
+    static UpdateHealthBar(dataDamage) {
+        VideoGame.#health += dataDamage;
+
+        if(VideoGame.#health <= VideoGame.#healthMin) {
+            VideoGame.#health = VideoGame.#healthMin;
+            VideoGame.#healthBar.style.width = `${VideoGame.#healthMin}%`;
+        }
+
+        if(VideoGame.#health >= VideoGame.#healthMax) {
+            VideoGame.#health = VideoGame.#healthMax;
+            VideoGame.#healthBar.style.width = `${VideoGame.#healthMax}%`;
+        }
+
+        VideoGame.#healthBar.style.width = `${VideoGame.#health}%`;
+    }
+
+    static ResetHealthBar() {
+        VideoGame.#healthBar.style.width = `${VideoGame.#healthMax}%`;
     }
     
 }
