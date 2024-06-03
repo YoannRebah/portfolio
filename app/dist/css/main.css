@@ -1355,7 +1355,33 @@ footer [data-content=footer] .list-footer li {
 .video-game .content .content-game .game .game-cursor .collision-box {
   width: 50px;
   height: 80px;
-  background: red;
+  opacity: 0.6;
+}
+.video-game .content .content-game .game .game-cursor .collision-box.active {
+  -webkit-animation: collision-anim 0.3s forwards;
+          animation: collision-anim 0.3s forwards;
+}
+@-webkit-keyframes collision-anim {
+  0% {
+    background: transparent;
+  }
+  50% {
+    background: #da2f2f;
+  }
+  100% {
+    background: transparent;
+  }
+}
+@keyframes collision-anim {
+  0% {
+    background: transparent;
+  }
+  50% {
+    background: #da2f2f;
+  }
+  100% {
+    background: transparent;
+  }
 }
 .video-game .content .content-game .game .meteor {
   position: absolute;

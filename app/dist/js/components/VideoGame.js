@@ -45,7 +45,7 @@ class VideoGame {
         VideoGame.ResetScoreCounter();
         VideoGame.RemoveAllMeteorsHTML();
         VideoGame.ResetMeteorCreation();
-        VideoGame.ResetHealthBar();
+        VideoGame.ResetHealth();
         VideoGame.InitGameIsEnded();
     }
 
@@ -261,9 +261,8 @@ class VideoGame {
             }, 5000);
 
             const interval = setInterval(() => {
-                const rocketCursor = document.querySelector('.collision-box');
-                if (rocketCursor && isColliding(meteor, rocketCursor)) {
-                    console.log(`Météore touché! Dégâts: ${dataDamage}`);
+                const collisionBox = document.querySelector('.collision-box');
+                if (collisionBox && isColliding(meteor, collisionBox)) {
                     VideoGame.UpdateHealthBar(-dataDamage);
                     clearInterval(interval);
                 }
@@ -316,10 +315,19 @@ class VideoGame {
             VideoGame.#healthBar.style.width = `${VideoGame.#healthMax}%`;
         }
 
+        if(dataDamage < 0) {
+            document.querySelector('.collision-box').classList.add('active');
+            let timeout = setTimeout(()=>{
+                document.querySelector('.collision-box').classList.remove('active');
+                clearTimeout(timeout);
+            }, 500);
+        }
+
         VideoGame.#healthBar.style.width = `${VideoGame.#health}%`;
     }
 
-    static ResetHealthBar() {
+    static ResetHealth() {
+        VideoGame.#health = VideoGame.#healthMax;
         VideoGame.#healthBar.style.width = `${VideoGame.#healthMax}%`;
     }
     
