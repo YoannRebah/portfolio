@@ -68,6 +68,11 @@
                     font-size: 1.8rem;
                     text-transform: uppercase;
                 }
+
+                span {
+                    min-width: 80px;
+                    display: inline-block;
+                }
             }
         }
 
@@ -105,10 +110,6 @@
                         100% {
                             opacity: 0;
                         }
-                    }
-
-                    span {
-                        margin: 0 1rem;
                     }
                 }
 

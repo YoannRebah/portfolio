@@ -1261,6 +1261,10 @@ footer [data-content=footer] .list-footer li {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
+.video-game .content .content-header .container-score span {
+  min-width: 80px;
+  display: inline-block;
+}
 .video-game .content .content-game {
   -webkit-box-flex: 93;
       -ms-flex: 93;
@@ -1315,9 +1319,6 @@ footer [data-content=footer] .list-footer li {
   100% {
     opacity: 0;
   }
-}
-.video-game .content .content-game .game h3 span {
-  margin: 0 1rem;
 }
 .video-game .content .content-game .game .game-cursor {
   position: absolute;

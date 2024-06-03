@@ -1,14 +1,80 @@
 class VideoGame {
 
     #btnBackToArcadeMenu = document.querySelector('[data-btn-action="back-to-arcade-menu"]');
-    static #titleMoveMouseToPlay = document.querySelector('.title-move-mouse-to-play');
     static #videoGame = document.querySelector('.video-game');
     static #game = document.querySelector('.game');
     static #currentPositionX = 0;
     static #gameCursor;
+    static #scoreHTML = document.querySelector('.score');
+    static #highScoreHTML = document.querySelector('.high-score');
+    static #localStorageKeyHighScore = 'portfolio-yr-high-score';
+    static #score = 0;
+    static #scoreCounter = 0;
+    static #scoreCounterStep = 50;
+    static #intervalScoreCounter = null;
+    static #gameIsStarted = false;
 
     init() {
         this.AddEventBtnBackToArcadeMenu();
+    }
+
+    static StartNewGame() {
+        VideoGame.ShowVideoGame();
+        VideoGame.AppendTitleMoveToPlayHTML();
+        VideoGame.CreateGameCursorHTML();
+        VideoGame.AddEventMouseMoveGame();
+        VideoGame.ToggleGameMouseCursor();
+    }
+
+    static StopGame() {
+        VideoGame.RemoveGameCursorHTML();
+        VideoGame.RemoveTitleMoveToPlay();
+        VideoGame.HideVideoGame();
+        VideoGame.ResetScoreCounter();
+        VideoGame.InitGameIsEnded();
+    }
+
+    static InitGameIsStarted() {
+        if(!VideoGame.#gameIsStarted) {
+            VideoGame.StartScoreCounter();
+        }
+        VideoGame.#gameIsStarted = true;
+    }
+
+    static InitGameIsEnded() {
+        VideoGame.#gameIsStarted = false;
+        VideoGame.#scoreHTML.innerHTML = "0";
+    }
+
+    static StartScoreCounter() {
+        if (VideoGame.#intervalScoreCounter !== null) {
+            clearInterval(VideoGame.#intervalScoreCounter);
+        }
+        VideoGame.#intervalScoreCounter = setInterval(() => {
+            VideoGame.#scoreCounter = VideoGame.#scoreCounter + VideoGame.#scoreCounterStep;
+            VideoGame.#score = VideoGame.#scoreCounter;
+            VideoGame.#scoreHTML.innerHTML = VideoGame.#score;
+        }, 1000);
+    }
+
+    static ResetScoreCounter() {
+        clearInterval(VideoGame.#intervalScoreCounter);
+        VideoGame.#scoreCounter = 0;
+        VideoGame.#intervalScoreCounter = null;
+    }
+
+    static get LocalStorageHighScore() {
+        if(localStorage.getItem(VideoGame.#localStorageKeyHighScore)) {
+            return localStorage.getItem(VideoGame.#localStorageKeyHighScore);
+        }
+    }
+
+    static set LocalStorageHighScore(value) {
+        if(localStorage.getItem(VideoGame.#localStorageKeyHighScore)) {
+            localStorage.setItem(VideoGame.#localStorageKeyHighScore, value);
+        } else {
+            localStorage.setItem(VideoGame.#localStorageKeyHighScore, 0);
+        }
     }
 
     static ShowVideoGame() {
@@ -19,20 +85,22 @@ class VideoGame {
         this.#videoGame.classList.remove('active');
     }
 
-    static StartNewGame() {
-        VideoGame.ShowVideoGame();
-        VideoGame.CreateGameCursorHTML();
-        VideoGame.AddEventMouseMoveGame();
-        VideoGame.ToggleGameMouseCursor();
+    static AppendTitleMoveToPlayHTML() {
+        const h3 = document.createElement('h3');
+        h3.classList.add('title-move-to-play', 'jersey-15-regular');
+        h3.innerHTML = "Déplacez la souris";
+        VideoGame.#game.append(h3);
     }
 
-    StopGame() {
-        VideoGame.HideVideoGame();
+    static RemoveTitleMoveToPlay() {
+        if(document.querySelector('.title-move-to-play')) {
+            document.querySelector('.title-move-to-play').remove();
+        }
     }
 
     AddEventBtnBackToArcadeMenu() {
         this.#btnBackToArcadeMenu.addEventListener('click', ()=>{
-            this.StopGame();
+            VideoGame.StopGame();
         });
     }
 
@@ -58,18 +126,20 @@ class VideoGame {
         }
     }
 
+    static RemoveGameCursorHTML() {
+        if(document.querySelector('.game-cursor')) {
+            document.querySelector('.game-cursor').remove();
+        }
+    }
+
     static AddEventMouseMoveGame() {
         VideoGame.#game.addEventListener('mousemove', (e) => {
             const clientX = e.clientX;
             VideoGame.#currentPositionX = clientX;
             VideoGame.#gameCursor.style.transform = `translateX(${VideoGame.#currentPositionX}px)`;
             VideoGame.ToggleGameMouseCursor();
-            if(VideoGame.#titleMoveMouseToPlay) {
-                let timeout = setTimeout(()=>{
-                    this.#titleMoveMouseToPlay.remove();
-                    clearTimeout(timeout);
-                }, 300);
-            }
+            VideoGame.RemoveTitleMoveToPlay();
+            VideoGame.InitGameIsStarted();
         });
     }
 
