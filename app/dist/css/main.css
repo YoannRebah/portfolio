@@ -1279,21 +1279,13 @@ footer [data-content=footer] .list-footer li {
 }
 .video-game .content .content-game .game .game-cursor {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  bottom: 30px;
+  width: 84px;
+  height: 125px;
+  bottom: 0;
   left: -25%;
   background-repeat: no-repeat;
   background-size: contain;
-}
-.video-game .content .content-game .game .game-cursor.game-cursor-up {
-  background-image: url(../../dist/assets/images/mouse-cursor-video-game-up.png);
-}
-.video-game .content .content-game .game .game-cursor.game-cursor-left {
-  background-image: url(../../dist/assets/images/mouse-cursor-video-game-left.png);
-}
-.video-game .content .content-game .game .game-cursor.game-cursor-right {
-  background-image: url(../../dist/assets/images/mouse-cursor-video-game-right.png);
+  background-image: url(../../dist/assets/gif/rocket-spaceship.gif);
 }
 .video-game .content .content-footer {
   -webkit-box-flex: 5;

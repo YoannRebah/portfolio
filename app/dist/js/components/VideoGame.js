@@ -47,24 +47,12 @@ class VideoGame {
         }
     }
 
-    static UpdateGameMouseCursorImage(direction /* left or right */) {
-        if(document.querySelector('.game-cursor')) {
-            VideoGame.#gameCursor.classList.remove('game-cursor-up');
-            VideoGame.#gameCursor.classList.add(`game-cursor-${direction}`);
-            let timeout = setTimeout(()=>{
-                VideoGame.#gameCursor.classList.remove(`game-cursor-${direction}`);
-                VideoGame.#gameCursor.classList.add('game-cursor-up');
-                clearTimeout(timeout);
-            }, 500)
-        }
-    }
-
     static CreateGameCursorHTML() {
         if(document.querySelector('.game-cursor')) {
             return
         } else {
             this.#gameCursor = document.createElement('div');
-            this.#gameCursor.classList.add('game-cursor', 'game-cursor-up')
+            this.#gameCursor.classList.add('game-cursor');
             VideoGame.#game.append(VideoGame.#gameCursor);
         }
     }
@@ -72,13 +60,6 @@ class VideoGame {
     static AddEventMouseMoveGame() {
         VideoGame.#game.addEventListener('mousemove', (e) => {
             const clientX = e.clientX;
-    
-            if (clientX < VideoGame.#currentPositionX) {
-                this.UpdateGameMouseCursorImage('left');
-            } else if (clientX > VideoGame.#currentPositionX) {
-                this.UpdateGameMouseCursorImage('right');
-            }
-    
             VideoGame.#currentPositionX = clientX;
             VideoGame.UpdateGameMouseCursorPosition(VideoGame.#currentPositionX);
             VideoGame.ToggleGameMouseCursor();
