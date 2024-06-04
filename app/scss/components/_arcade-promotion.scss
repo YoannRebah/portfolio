@@ -1,10 +1,15 @@
 .container-arcade-promotion {
     position: relative;
     margin: 0 auto;
-    margin-top: 6rem;
+    margin-top: 2rem;
     width: 100%;
     max-width: 740px;
-    height: 30rem;
+    height: 13rem;
+
+    @include screen('s') {
+        margin-top: 6rem;
+        height: 30rem;
+    }
 
     a {
         position: absolute;
@@ -13,7 +18,7 @@
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         background-image: url(../../dist/assets/images/arcade-promotion.jpg);
         transition: 0.15s ease-in-out;

@@ -120,31 +120,47 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 480px) {
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
 }
 h2::before {
   content: "-";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 3rem;
+  width: 1.5rem;
   height: 0.2rem;
   background: hsl(172, 85%, 49%);
   color: hsl(172, 85%, 49%);
   margin-right: 0.75rem;
+}
+@media (min-width: 480px) {
+  h2::before {
+    width: 3rem;
+  }
 }
 h2::after {
   content: "";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 97%;
+  width: 93%;
   height: 0.2rem;
   background: hsl(323, 100%, 78%);
   position: absolute;
   right: 0;
   bottom: -0.2rem;
+}
+@media (min-width: 480px) {
+  h2::after {
+    width: 97%;
+  }
 }
 h2.reduce {
   color: hsl(323, 100%, 78%);
@@ -212,7 +228,12 @@ hr.cyan {
   width: 100%;
 }
 .container_medium {
-  padding: 0 16%;
+  padding: 0 8%;
+}
+@media (min-width: 480px) {
+  .container_medium {
+    padding: 0 16%;
+  }
 }
 
 header[data-container=hero-banner] {
@@ -334,11 +355,21 @@ section {
   position: relative;
 }
 section.main-section {
-  padding-top: 7.5rem;
+  padding-top: 3rem;
+}
+@media (min-width: 480px) {
+  section.main-section {
+    padding-top: 7.5rem;
+  }
 }
 section.main-section .content {
   position: relative;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 480px) {
+  section.main-section .content {
+    margin-top: 5rem;
+  }
 }
 
 footer {
@@ -366,10 +397,16 @@ footer [data-content=footer] .list-footer li {
 .container-arcade-promotion {
   position: relative;
   margin: 0 auto;
-  margin-top: 6rem;
+  margin-top: 2rem;
   width: 100%;
   max-width: 740px;
-  height: 30rem;
+  height: 13rem;
+}
+@media (min-width: 480px) {
+  .container-arcade-promotion {
+    margin-top: 6rem;
+    height: 30rem;
+  }
 }
 .container-arcade-promotion a {
   position: absolute;
@@ -378,7 +415,7 @@ footer [data-content=footer] .list-footer li {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-image: url(../../dist/assets/images/arcade-promotion.jpg);
   -webkit-transition: 0.15s ease-in-out;
@@ -612,10 +649,10 @@ footer [data-content=footer] .list-footer li {
   position: relative;
 }
 .neon-letters span:nth-child(1) {
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   font-style: italic;
-  margin-bottom: -2.5rem;
+  margin-bottom: -1rem;
   margin-left: 0.85rem;
   -webkit-animation: neon-glitch-anim 10s linear infinite;
           animation: neon-glitch-anim 10s linear infinite;
@@ -654,19 +691,40 @@ footer [data-content=footer] .list-footer li {
     text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
 }
+@media (min-width: 480px) {
+  .neon-letters span:nth-child(1) {
+    font-size: 3.2rem;
+    margin-bottom: -2.5rem;
+  }
+}
 .neon-letters span:nth-child(2) {
-  margin-bottom: -4rem;
+  margin-bottom: -2rem;
+}
+@media (min-width: 480px) {
+  .neon-letters span:nth-child(2) {
+    margin-bottom: -4rem;
+  }
 }
 .neon-letters span:nth-child(2), .neon-letters span:nth-child(3) {
-  font-size: 8rem;
+  font-size: 5rem;
   text-shadow: 0 0 5px hsl(323, 100%, 78%), 0 0 15px hsl(323, 100%, 78%), 0 0 20px hsl(323, 100%, 78%), 0 0 40px hsl(323, 100%, 78%), 0 0 60px hsl(323, 63%, 37%), 0 0 10px hsl(323, 100%, 78%), 0 0 98px hsl(323, 63%, 37%);
+}
+@media (min-width: 480px) {
+  .neon-letters span:nth-child(2), .neon-letters span:nth-child(3) {
+    font-size: 8rem;
+  }
 }
 .neon-letters span:nth-child(3) {
   margin-left: 1rem;
-  margin-bottom: -2rem;
+  margin-bottom: -1rem;
+}
+@media (min-width: 480px) {
+  .neon-letters span:nth-child(3) {
+    margin-bottom: -2rem;
+  }
 }
 .neon-letters span:nth-child(4) {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%), 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   font-style: italic;
   text-align: right;
@@ -700,6 +758,11 @@ footer [data-content=footer] .list-footer li {
   }
   100% {
     text-shadow: 0 0 5px #212121, 0 0 15px #212121, 0 0 20px #212121, 0 0 40px #212121, 0 0 60px #212121, 0 0 10px #212121, 0 0 98px #212121, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+}
+@media (min-width: 480px) {
+  .neon-letters span:nth-child(4) {
+    font-size: 2.5rem;
   }
 }
 .neon-letters.small span:nth-child(1) {

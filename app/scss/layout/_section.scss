@@ -2,11 +2,19 @@ section {
     position: relative;
 
     &.main-section {
-        padding-top: 7.5rem;
+        padding-top: 3rem;
+
+        @include screen('s') {
+            padding-top: 7.5rem;
+        }
 
         .content {
             position: relative;
-            margin-top: 5rem;
+            margin-top: 2.5rem;
+
+            @include screen('s') {
+                margin-top: 5rem;
+            }
         }
     }
 }

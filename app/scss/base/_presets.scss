@@ -47,28 +47,41 @@ h2 {
     font-weight: 700 !important;
     display: flex;
     align-items: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include screen('s') {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
 
     &::before {
         content: "-";
         display: flex;
-        width: 3rem;
+        width: 1.5rem;
         height: 0.2rem;
         background: $cyan;
         color: $cyan;
         margin-right: .75rem;
+
+        @include screen('s') {
+            width: 3rem;
+        }
     }
 
     &::after {
         content: "";
         display: flex;
-        width: 97%;
+        width: 93%;
         height: 0.2rem;
         background: $pink;
         position: absolute;
         right: 0;
         bottom: -0.2rem;
+
+        @include screen('s') {
+            width: 97%;
+        }
     }
 
     &.reduce {
