@@ -1,5 +1,4 @@
 const timer = new Timer();
-const earthGlobe = new EarthGlobe();
 const titlePopin = new TitlePopin();
 
 window.onload = () => {
@@ -9,7 +8,6 @@ window.onload = () => {
 function initPageStart() {
     let timeout = setTimeout(()=>{
         timer.init();
-        earthGlobe.init();
         titlePopin.init();
         Loader.Hide();
         clearTimeout(timeout);

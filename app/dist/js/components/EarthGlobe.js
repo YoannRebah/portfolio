@@ -52,3 +52,6 @@ class EarthGlobe {
         });
     }
 }
+
+const earthGlobe = new EarthGlobe();
+earthGlobe.init();
