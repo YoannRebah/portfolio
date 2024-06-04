@@ -3,7 +3,7 @@
         position: relative;
         margin: 0 auto;
         width: 100%;
-        border-radius: 3rem;
+        border-radius: 1.5rem;
         padding: 2rem;
         display: flex;
         flex-direction: column;
@@ -16,6 +16,7 @@
         @include screen('s') {
             max-width: 680px;
             padding: 4rem;
+            border-radius: 3rem;
         }
 
         h3 {
@@ -24,9 +25,10 @@
             font-size: 2.1rem;
             transform: rotateX(60deg);
             transform-origin: bottom;
-            text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 8px 0 #E79C10, 0 -8px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
 
             @include screen('s') {
+                text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
                 font-size: 4rem;
             }
         }

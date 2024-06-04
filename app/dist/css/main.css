@@ -410,7 +410,20 @@ footer [data-content=footer] .list-footer {
   }
 }
 footer [data-content=footer] .list-footer li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+}
+@media (min-width: 480px) {
+  footer [data-content=footer] .list-footer li {
+    margin-bottom: 1rem;
+  }
+}
+footer [data-content=footer] .list-footer li a {
+  font-size: 0.6rem;
+}
+@media (min-width: 480px) {
+  footer [data-content=footer] .list-footer li a {
+    font-size: 1rem;
+  }
 }
 
 .container-arcade-promotion {
@@ -1662,7 +1675,7 @@ footer [data-content=footer] .list-footer li {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1684,6 +1697,7 @@ footer [data-content=footer] .list-footer li {
   [data-content=arcade] .container-arcade {
     max-width: 680px;
     padding: 4rem;
+    border-radius: 3rem;
   }
 }
 [data-content=arcade] .container-arcade h3 {
@@ -1694,10 +1708,11 @@ footer [data-content=footer] .list-footer li {
           transform: rotateX(60deg);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 8px 0 #E79C10, 0 -8px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 480px) {
   [data-content=arcade] .container-arcade h3 {
+    text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
     font-size: 4rem;
   }
 }
@@ -1798,6 +1813,20 @@ footer [data-content=footer] .list-footer li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 480px) {
+  [data-content=contact] .container-contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0;
+  }
 }
 [data-content=contact] .container-contact .contact {
   display: -webkit-box;
@@ -1807,21 +1836,24 @@ footer [data-content=footer] .list-footer li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 20rem;
 }
-[data-content=contact] .container-contact .contact.illustration {
-  background-image: url(../../dist/assets/images/minitel.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-filter: sepia(1);
-          filter: sepia(1);
+[data-content=contact] .container-contact .contact img {
+  width: 60%;
+}
+@media (min-width: 480px) {
+  [data-content=contact] .container-contact .contact img {
+    width: 70%;
+  }
 }
 [data-content=contact] .container-contact .contact h3 {
   font-size: 2.2rem;
@@ -1829,15 +1861,21 @@ footer [data-content=footer] .list-footer li {
 }
 [data-content=contact] .container-contact .contact .list-contact-infos {
   margin-left: 2rem;
+  list-style: none;
 }
 [data-content=contact] .container-contact .contact .list-contact-infos li {
   margin-bottom: 1.75rem;
 }
 [data-content=contact] .container-contact .contact .list-contact-infos li a {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1rem;
   border-bottom: 1px solid;
   padding-bottom: 0.1rem;
+}
+@media (min-width: 480px) {
+  [data-content=contact] .container-contact .contact .list-contact-infos li a {
+    font-size: 1.4rem;
+  }
 }
 [data-content=contact] .container-contact .contact .list-contact-infos li a i {
   margin-right: 0.2rem;
