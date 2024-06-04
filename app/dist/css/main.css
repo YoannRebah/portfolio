@@ -361,7 +361,7 @@ section {
   position: relative;
 }
 section.main-section {
-  padding-top: 3rem;
+  padding-top: 4rem;
 }
 @media (min-width: 480px) {
   section.main-section {
@@ -1861,12 +1861,18 @@ footer [data-content=footer] .list-footer li {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 3rem;
+  margin-top: 3.5rem;
+}
+@media (min-width: 480px) {
+  [data-content=notable-achievements] .container-polaroid {
+    margin-top: 0;
+  }
 }
 [data-content=notable-achievements] .container-polaroid .polaroid {
   position: relative;
-  -webkit-box-flex: calc(50% - 5rem);
-      -ms-flex: calc(50% - 5rem);
-          flex: calc(50% - 5rem);
+  -webkit-box-flex: calc(100% - 3rem);
+      -ms-flex: calc(100% - 3rem);
+          flex: calc(100% - 3rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1876,6 +1882,13 @@ footer [data-content=footer] .list-footer li {
           flex-direction: column;
   height: 330px;
   border: 10px solid #fff;
+}
+@media (min-width: 480px) {
+  [data-content=notable-achievements] .container-polaroid .polaroid {
+    -webkit-box-flex: calc(50% - 3rem);
+        -ms-flex: calc(50% - 3rem);
+            flex: calc(50% - 3rem);
+  }
 }
 [data-content=notable-achievements] .container-polaroid .polaroid:nth-child(1) {
   -webkit-transform: rotate(1deg);
@@ -2176,13 +2189,21 @@ footer [data-content=footer] .list-footer li {
 }
 [data-content=tools] .tool {
   position: relative;
-  -webkit-box-flex: 25%;
-      -ms-flex: 25%;
-          flex: 25%;
-  height: 185px;
+  -webkit-box-flex: calc(50% - 0.8rem);
+      -ms-flex: calc(50% - 0.8rem);
+          flex: calc(50% - 0.8rem);
+  height: 140px;
   padding: 1rem;
   border: 16px solid #212121;
   outline: 3px solid #3a3a3a;
+}
+@media (min-width: 480px) {
+  [data-content=tools] .tool {
+    -webkit-box-flex: calc(33% - 0.8rem);
+        -ms-flex: calc(33% - 0.8rem);
+            flex: calc(33% - 0.8rem);
+    height: 185px;
+  }
 }
 @media (min-width: 1281px) {
   [data-content=tools] .tool {
@@ -2271,13 +2292,18 @@ footer [data-content=footer] .list-footer li {
   bottom: 0;
   left: 0;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   font-family: "Reddit Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   text-shadow: 2px 3px 2px #212121, 5px -3px 2px rgba(255, 52, 52, 0.6), 6px -5px 2px rgba(52, 255, 120, 0.6);
+}
+@media (min-width: 480px) {
+  [data-content=tools] .tool .screen::before {
+    font-size: 1.1rem;
+  }
 }
 [data-content=tools] .tool .screen[data-tool] {
   background-size: cover;
