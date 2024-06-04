@@ -1639,7 +1639,7 @@ footer [data-content=footer] .list-footer li {
 [data-content=arcade] .container-arcade {
   position: relative;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 100%;
   border-radius: 3rem;
   padding: 4rem;
   display: -webkit-box;
@@ -1658,15 +1658,25 @@ footer [data-content=footer] .list-footer li {
   -webkit-box-shadow: inset 0px 0px 37px 15px rgba(77, 77, 77, 0.65);
           box-shadow: inset 0px 0px 37px 15px rgba(77, 77, 77, 0.65);
 }
+@media (min-width: 480px) {
+  [data-content=arcade] .container-arcade {
+    max-width: 80%;
+  }
+}
 [data-content=arcade] .container-arcade h3 {
   margin-top: -1.5rem;
   margin-bottom: 2rem;
-  font-size: 4rem;
+  font-size: 2.1rem;
   -webkit-transform: rotateX(60deg);
           transform: rotateX(60deg);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 480px) {
+  [data-content=arcade] .container-arcade h3 {
+    font-size: 4rem;
+  }
 }
 [data-content=arcade] .container-arcade .insert-coins {
   display: -webkit-box;
@@ -1702,7 +1712,7 @@ footer [data-content=footer] .list-footer li {
   }
 }
 [data-content=arcade] .container-arcade .insert-coins img {
-  width: 2.2rem;
+  width: 1.8rem;
   margin-right: 0.33rem;
   -webkit-animation: img-anim 1.2s linear infinite;
           animation: img-anim 1.2s linear infinite;
@@ -1727,20 +1737,35 @@ footer [data-content=footer] .list-footer li {
             transform: rotateY(360deg);
   }
 }
+@media (min-width: 480px) {
+  [data-content=arcade] .container-arcade .insert-coins img {
+    width: 2.2rem;
+  }
+}
 [data-content=arcade] .container-arcade .insert-coins span {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-right: 0.2rem;
   letter-spacing: -0.15rem;
 }
+@media (min-width: 480px) {
+  [data-content=arcade] .container-arcade .insert-coins span {
+    font-size: 1.5rem;
+  }
+}
 [data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu] {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #fff;
   padding: 0.5rem 2rem;
   border-radius: 0.15rem;
   background: hsla(323, 63%, 37%, 0.3);
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
+}
+@media (min-width: 480px) {
+  [data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu] {
+    font-size: 1.5rem;
+  }
 }
 [data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu]:hover {
   background: hsl(323, 63%, 37%);

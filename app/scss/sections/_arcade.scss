@@ -2,7 +2,7 @@
     .container-arcade {
         position: relative;
         margin: 0 auto;
-        max-width: 80%;
+        max-width: 100%;
         border-radius: 3rem;
         padding: 4rem;
         display: flex;
@@ -13,13 +13,21 @@
         background-image: linear-gradient(to right, $pink-light 1px, transparent 1px), linear-gradient(to bottom, $pink2-light 1px, transparent 1px);
         box-shadow: inset 0px 0px 37px 15px rgba(77, 77, 77, 0.65);
 
+        @include screen('s') {
+            max-width: 80%;
+        }
+
         h3 {
             margin-top: -1.5rem;
             margin-bottom: 2rem;
-            font-size: 4rem;
+            font-size: 2.1rem;
             transform: rotateX(60deg);
             transform-origin: bottom;
             text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
+
+            @include screen('s') {
+                font-size: 4rem;
+            }
         }
 
         .insert-coins {
@@ -40,7 +48,7 @@
             }
 
             img {
-                width: 2.2rem;
+                width: 1.8rem;
                 margin-right: 0.33rem;
                 animation: img-anim 1.2s linear infinite;
                 @keyframes img-anim {
@@ -51,23 +59,35 @@
                         transform: rotateY(360deg);
                     }
                 }
+
+                @include screen('s') {
+                    width: 2.2rem;
+                }
             }
 
             span {
                 color: $white;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 margin-right: 0.2rem;
                 letter-spacing: -0.15rem;
+
+                @include screen('s') {
+                    font-size: 1.5rem;
+                }
             }
         }
 
         [data-btn-action="open-arcade-menu"] {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: $white;
             padding: 0.5rem 2rem;
             border-radius: 0.15rem;
             background: $pink2-light;
             transition: background 0.1s ease-in-out;
+
+            @include screen('s') {
+                font-size: 1.5rem;
+            }
 
             &:hover {
                 background: $pink2;
