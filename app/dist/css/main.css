@@ -820,6 +820,8 @@ footer [data-content=footer] .list-footer li {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: color;
+  -webkit-box-shadow: inset 0px 0px 37px 15px rgba(243, 243, 243, 0.7);
+          box-shadow: inset 0px 0px 37px 15px rgba(243, 243, 243, 0.7);
 }
 
 .toolbar {
