@@ -1,8 +1,6 @@
-class Section {
+class Skills {
 
-    #titlesH2 = document.querySelectorAll('[data-h2]');
     #contentSkills = document.querySelector('.content[data-content="skills"]');
-    #contentTools = document.querySelector('.content[data-content="tools"]');
     #skills = [
         {
             id: "html",
@@ -86,72 +84,9 @@ class Section {
             ]
         }
     ];
-    #tools = [
-        {
-            label: "VS Code",
-            animationDelay: "10s"
-        },
-        {
-            label: "Visual Studio",
-            animationDelay: "2.2s"
-        },
-        {
-            label: "Figma",
-            animationDelay: "8s"
-        },
-        {
-            label: "Git",
-            animationDelay: "4.5s"
-        },
-        {
-            label: "AEM",
-            animationDelay: "1s"
-        },
-        {
-            label: "Wordpress",
-            animationDelay: "3.8s"
-        }
-    ];
     
     init() {
-        this.AddEventClickH2();
         this.AppendSkillsHTML();
-        this.AppendToolsHTML();
-    }
-
-    ToggleStyleH2(elem) {
-        if(elem) {
-            if(elem.classList.contains('reduce')) {
-                elem.classList.remove('reduce');
-            } else {
-                elem.classList.add('reduce');
-            }
-        }
-    }
-
-    ToggleContent(dataContent) {
-        if(document.querySelector(`[data-content=${dataContent}]`)) {
-            const content = document.querySelector(`[data-content=${dataContent}]`);
-
-            if(content.classList.contains('display-none')) {
-                content.classList.remove('display-none');
-            } else {
-                content.classList.add('display-none');
-            }
-        }
-    }
-
-    AddEventClickH2() {
-        if(document.querySelector('[data-h2]')) {
-            this.#titlesH2.forEach((elem)=>{
-                elem.addEventListener('click', (e)=>{
-                    const thisTarget = e.target;
-                    const thisDataH2 = thisTarget.getAttribute('data-h2');
-                    this.ToggleContent(thisDataH2);
-                    this.ToggleStyleH2(thisTarget);
-                })
-            });
-        }
     }
 
     AppendSkillsHTML() {
@@ -202,21 +137,7 @@ class Section {
             this.#contentSkills.append(rowSkill, hr);
         });
     }
-
-    AppendToolsHTML() {
-        this.#tools.forEach((elem)=>{
-            const tool = document.createElement('div');
-            tool.classList.add('tool');
-
-            const screen = document.createElement('div');
-            screen.classList.add('screen');
-            screen.setAttribute('data-tool', elem.label);
-            screen.style.animationDelay = elem.animationDelay;
-
-            tool.append(screen);
-
-            this.#contentTools.append(tool);
-        });
-    }
-
 }
+
+const skills = new Skills();
+skills.init();

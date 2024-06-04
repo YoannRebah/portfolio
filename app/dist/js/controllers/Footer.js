@@ -35,3 +35,6 @@ class Footer {
     }
 
 }
+
+const footer = new Footer();
+footer.init();

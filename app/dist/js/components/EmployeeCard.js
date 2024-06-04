@@ -48,3 +48,6 @@ class EmployeeCard {
         this.#employeeCard.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)';
     }
 }
+
+const employeeCard = new EmployeeCard();
+employeeCard.init();

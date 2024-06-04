@@ -372,3 +372,6 @@ class VideoGame {
     }
     
 }
+
+const videoGame = new VideoGame();
+videoGame.init();

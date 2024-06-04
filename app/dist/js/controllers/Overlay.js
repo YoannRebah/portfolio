@@ -42,3 +42,6 @@ class Overlay {
         }, this.#intervalRemoveGlitchLines);
     }
 }
+
+const overlay = new Overlay();
+overlay.init();

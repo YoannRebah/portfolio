@@ -44,3 +44,6 @@ class Arcade {
         });
     }
 }
+
+const arcade = new Arcade();
+arcade.init();

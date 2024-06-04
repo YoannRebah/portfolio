@@ -86,7 +86,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 body {
-  background: #040114;
+  background: #03010f;
   color: #fff;
 }
 
@@ -261,7 +261,7 @@ header[data-container=hero-banner] {
   top: 0;
   left: 0;
   height: 6rem;
-  background: #040114;
+  background: #03010f;
   border-bottom: 1.5px solid hsl(172, 85%, 49%);
   z-index: 1;
   opacity: 0;
@@ -486,7 +486,7 @@ footer [data-content=footer] .list-footer li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #040114;
+  background-color: #03010f;
   background-image: url(../../dist/assets/images/tv-no-signal.jpg);
   background-size: cover;
   background-position: center;
@@ -1200,7 +1200,7 @@ footer [data-content=footer] .list-footer li {
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: #040114;
+  background-color: #03010f;
   pointer-events: none;
   opacity: 0;
 }
@@ -1288,7 +1288,7 @@ footer [data-content=footer] .list-footer li {
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: #040114;
+  background-color: #03010f;
   pointer-events: none;
   opacity: 0;
 }
@@ -1407,7 +1407,7 @@ footer [data-content=footer] .list-footer li {
   border: 1px dashed hsl(27, 100%, 70%);
 }
 .video-game .content .content-game .game {
-  background-color: #040114;
+  background-color: #03010f;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1575,7 +1575,7 @@ footer [data-content=footer] .list-footer li {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #040114;
+  background-color: #03010f;
   opacity: 0;
   pointer-events: none;
 }

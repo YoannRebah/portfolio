@@ -67,3 +67,6 @@ class References {
         })
     }
 }
+
+const references = new References();
+references.init();
