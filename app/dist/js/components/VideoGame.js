@@ -4,6 +4,7 @@ class VideoGame {
     static #videoGameHTML = document.querySelector('.video-game');
     static #gameHTML = document.querySelector('.game');
     static #gameOverHTML = document.querySelector('.game-over');
+    static #gameOverScoreHTML = document.querySelector('.game-over-score');
     static #healthBarHTML = document.querySelector('.health-bar');
     static #scoreHTML = document.querySelector('.score');
     static #highScoreHTML = document.querySelector('.high-score');
@@ -36,6 +37,10 @@ class VideoGame {
 
     static HideGameOver() {
         VideoGame.#gameOverHTML.classList.remove('active');
+    }
+
+    static SetGameOverScore() {
+        VideoGame.#gameOverScoreHTML.innerHTML = VideoGame.LocalStorageScore;
     }
 
     static StartNewGame() {
@@ -76,6 +81,7 @@ class VideoGame {
     static InitGameOver(bool) {
         VideoGame.#gameOver = bool;
         if(VideoGame.#gameOver) {
+            VideoGame.SetGameOverScore();
             VideoGame.StopGame();
             VideoGame.ShowGameOver();
         } else {
@@ -92,6 +98,7 @@ class VideoGame {
             if (!VideoGame.#scoreCounterIsPaused) {
                 VideoGame.#scoreCounter += VideoGame.#scoreCounterStep;
                 VideoGame.#scoreHTML.innerHTML = VideoGame.#scoreCounter;
+                VideoGame.LocalStorageScore = VideoGame.#scoreCounter;
             }
         }, 1000);
     }

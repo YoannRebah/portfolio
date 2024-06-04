@@ -1465,9 +1465,9 @@ footer [data-content=footer] .list-footer li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: #040114;
   opacity: 0;
   pointer-events: none;
@@ -1489,6 +1489,9 @@ footer [data-content=footer] .list-footer li {
   mix-blend-mode: hard-light;
   opacity: 0.5;
 }
+.game-over h3, .game-over p, .game-over button {
+  z-index: 1;
+}
 .game-over h3 {
   font-size: 7rem;
   -webkit-transform: rotateX(60deg);
@@ -1496,7 +1499,9 @@ footer [data-content=footer] .list-footer li {
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
-  margin-bottom: 4rem;
+}
+.game-over p {
+  font-size: 2.5rem;
 }
 .game-over .container-btn {
   display: -webkit-box;
