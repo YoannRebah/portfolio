@@ -5,7 +5,11 @@ section {
         padding-top: 4rem;
 
         @include screen('s') {
-            padding-top: 7.5rem;
+            padding-top: 6rem;
+        }
+
+        &:last-child() {
+            margin-bottom: 8rem;
         }
 
         .content {
@@ -13,7 +17,7 @@ section {
             margin-top: 3rem;
 
             @include screen('s') {
-                margin-top: 5rem;
+                margin-top: 4rem;
             }
         }
     }

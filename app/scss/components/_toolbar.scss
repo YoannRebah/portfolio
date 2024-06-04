@@ -14,5 +14,10 @@
         font-size: 1.4rem;
         opacity: 0.65;
         text-transform: uppercase;
+        display: none;
+
+        @include screen('s') {
+            display: block;
+        }
     }
 }

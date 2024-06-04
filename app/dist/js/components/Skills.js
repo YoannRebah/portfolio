@@ -62,11 +62,11 @@ class Skills {
             iconClassName: "fa-brands fa-js",
             items: [
                 {
-                    label: "Bases",
+                    label: "Syntaxe de base",
                     percent: 95
                 },
                 {
-                    label: "Structure de données",
+                    label: "Fonctions",
                     percent: 88
                 },
                 {
@@ -74,7 +74,7 @@ class Skills {
                     percent: 82
                 },
                 {
-                    label: "Manipulation du DOM",
+                    label: "Asynchronicité",
                     percent: 76
                 },
                 {
