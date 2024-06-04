@@ -1214,6 +1214,7 @@ footer [data-content=footer] .list-footer li a {
           animation: title-popin-anim 0.25s forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+  display: none;
 }
 @-webkit-keyframes title-popin-anim {
   0% {
@@ -1233,7 +1234,7 @@ footer [data-content=footer] .list-footer li a {
 }
 @media (min-width: 501px) {
   .container-title-popin {
-    padding-top: 6rem;
+    display: block;
   }
 }
 .container-title-popin .title-popin {
