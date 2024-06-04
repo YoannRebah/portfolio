@@ -4,7 +4,12 @@
 
     .row-skill {
         display: flex;
+        flex-direction: column;
         align-items: center;
+
+        @include screen('s') {
+            flex-direction: row;
+        }
 
         &:last-of-type {
             + hr {
@@ -58,13 +63,23 @@
             flex: 15;
 
             p {
-                font-size: 1.1rem;
+                font-size: 0.9rem;
                 font-weight: 700;
-                margin-bottom: .5rem;
+                margin-bottom: .33rem;
+                text-align: center;
+
+                @include screen('s') {
+                    font-size: 1.1rem;
+                    margin-bottom: .5rem;
+                }
             }
 
             i {
-                font-size: 6rem;
+                font-size: 3rem;
+
+                @include screen('s') {
+                    font-size: 6rem;
+                }
             }
         }
 
@@ -85,10 +100,15 @@
                 gap: 0.5rem;
 
                 p {
-                    width: 250px;
+                    width: 200px;
                     text-align: right;
-                    font-size: 0.9rem;
+                    font-size: 0.7rem;
                     text-wrap: nowrap;
+
+                    @include screen('s') {
+                        width: 250px;
+                        font-size: 0.9rem;
+                    }
                 }
 
                 .container-progress-bar {

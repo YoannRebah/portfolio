@@ -150,7 +150,7 @@ h2::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 93%;
+  width: 94%;
   height: 0.2rem;
   background: hsl(323, 100%, 78%);
   position: absolute;
@@ -188,8 +188,14 @@ a > * {
 
 hr {
   border: 1px solid;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 480px) {
+  hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 hr.pink {
   border-color: hsl(323, 100%, 78%);
@@ -397,7 +403,7 @@ footer [data-content=footer] .list-footer li {
 .container-arcade-promotion {
   position: relative;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 100%;
   max-width: 740px;
   height: 13rem;
@@ -2017,9 +2023,21 @@ footer [data-content=footer] .list-footer li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (min-width: 480px) {
+  [data-content=skills] .row-skill {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 [data-content=skills] .row-skill:last-of-type + hr {
   display: none;
@@ -2067,12 +2085,24 @@ footer [data-content=footer] .list-footer li {
           flex: 15;
 }
 [data-content=skills] .row-skill .container-icon-text p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.33rem;
+  text-align: center;
+}
+@media (min-width: 480px) {
+  [data-content=skills] .row-skill .container-icon-text p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
 }
 [data-content=skills] .row-skill .container-icon-text i {
-  font-size: 6rem;
+  font-size: 3rem;
+}
+@media (min-width: 480px) {
+  [data-content=skills] .row-skill .container-icon-text i {
+    font-size: 6rem;
+  }
 }
 [data-content=skills] .row-skill .wrapper {
   position: relative;
@@ -2102,10 +2132,16 @@ footer [data-content=footer] .list-footer li {
   gap: 0.5rem;
 }
 [data-content=skills] .row-skill .wrapper .skill-item p {
-  width: 250px;
+  width: 200px;
   text-align: right;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   text-wrap: nowrap;
+}
+@media (min-width: 480px) {
+  [data-content=skills] .row-skill .wrapper .skill-item p {
+    width: 250px;
+    font-size: 0.9rem;
+  }
 }
 [data-content=skills] .row-skill .wrapper .skill-item .container-progress-bar {
   position: relative;

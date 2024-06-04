@@ -72,7 +72,7 @@ h2 {
     &::after {
         content: "";
         display: flex;
-        width: 93%;
+        width: 94%;
         height: 0.2rem;
         background: $pink;
         position: absolute;
@@ -116,8 +116,13 @@ a {
 
 hr {
     border: 1px solid;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @include screen('s') {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 
     &.pink {
         border-color: $pink;
