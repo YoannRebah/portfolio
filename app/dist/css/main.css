@@ -2089,12 +2089,14 @@ footer [data-content=footer] .list-footer li {
           align-items: center;
   background-size: 32px 32px;
   background-position: center;
-  background-image: linear-gradient(to right, hsl(323, 100%, 78%) 1px, transparent 1px), linear-gradient(to bottom, hsl(323, 63%, 37%) 1px, transparent 1px);
-  border: 1px solid hsl(323, 63%, 37%);
+  background-image: linear-gradient(to right, hsla(323, 100%, 78%, 0.4) 1px, transparent 1px), linear-gradient(to bottom, hsla(323, 63%, 37%, 0.4) 1px, transparent 1px);
+  border: 1px solid #212121;
+  -webkit-box-shadow: inset 0px 0px 37px 15px rgb(0, 0, 0);
+          box-shadow: inset 0px 0px 37px 15px rgb(0, 0, 0);
 }
 [data-content=arcade] .container-arcade h3 {
   margin-top: -1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.7rem;
   font-size: 4rem;
   -webkit-transform: rotateX(60deg);
           transform: rotateX(60deg);
@@ -2102,9 +2104,14 @@ footer [data-content=footer] .list-footer li {
           transform-origin: bottom;
   text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
 }
-[data-content=arcade] .container-arcade p {
-  font-size: 1.6rem;
-  margin-bottom: 1.75rem;
+[data-content=arcade] .container-arcade .insert-coins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.8rem;
   -webkit-animation: h3-anim 0.9s linear infinite;
           animation: h3-anim 0.9s linear infinite;
 }
@@ -2119,23 +2126,7 @@ footer [data-content=footer] .list-footer li {
     opacity: 0;
   }
 }
-[data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: hsl(323, 100%, 78%);
-  padding: 0.5rem 2rem;
-  border-radius: 0.15rem;
-  -webkit-transition: background 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out;
-}
-[data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu]:hover {
-  background: hsl(323, 63%, 37%);
-}
-[data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu] img {
+[data-content=arcade] .container-arcade .insert-coins img {
   width: 2.2rem;
   margin-right: 0.33rem;
   -webkit-animation: img-anim 1.2s linear infinite;
@@ -2161,9 +2152,21 @@ footer [data-content=footer] .list-footer li {
             transform: rotateY(360deg);
   }
 }
-[data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu] span {
+[data-content=arcade] .container-arcade .insert-coins span {
   color: #fff;
   font-size: 1.5rem;
   margin-right: 0.2rem;
   letter-spacing: -0.15rem;
+}
+[data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu] {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 0.15rem;
+  background: hsla(323, 63%, 37%, 0.4);
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+[data-content=arcade] .container-arcade [data-btn-action=open-arcade-menu]:hover {
+  background: hsl(323, 63%, 37%);
 }

@@ -10,21 +10,23 @@
         align-items: center;
         background-size: 32px 32px;
         background-position: center;
-        background-image: linear-gradient(to right, $pink 1px, transparent 1px), linear-gradient(to bottom, $pink2 1px, transparent 1px);
-        border: 1px solid $pink2;
+        background-image: linear-gradient(to right, $pink-light 1px, transparent 1px), linear-gradient(to bottom, $pink2-light 1px, transparent 1px);
+        border: 1px solid $black;
+        box-shadow: inset 0px 0px 37px 15px rgba(0,0,0,1);
 
         h3 {
             margin-top: -1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.7rem;
             font-size: 4rem;
             transform: rotateX(60deg);
             transform-origin: bottom;
             text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
         }
 
-        p {
-            font-size: 1.6rem;
-            margin-bottom: 1.75rem;
+        .insert-coins {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.8rem;
             animation: h3-anim 0.9s linear infinite;
             @keyframes h3-anim {
                 0% {
@@ -36,19 +38,6 @@
                 100% {
                     opacity: 0;
                 }
-            }
-        }
-
-        [data-btn-action="open-arcade-menu"] {
-            display: flex;
-            align-items: center;
-            background: $pink;
-            padding: 0.5rem 2rem;
-            border-radius: 0.15rem;
-            transition: background 0.1s ease-in-out;
-
-            &:hover {
-                background: $pink2;
             }
 
             img {
@@ -70,6 +59,19 @@
                 font-size: 1.5rem;
                 margin-right: 0.2rem;
                 letter-spacing: -0.15rem;
+            }
+        }
+
+        [data-btn-action="open-arcade-menu"] {
+            font-size: 1.5rem;
+            color: $white;
+            padding: 0.5rem 2rem;
+            border-radius: 0.15rem;
+            background: $pink2-light;
+            transition: background 0.1s ease-in-out;
+
+            &:hover {
+                background: $pink2;
             }
         }
     }
