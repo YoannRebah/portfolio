@@ -16,7 +16,7 @@
 
         h3 {
             margin-top: -1.5rem;
-            margin-bottom: 1.7rem;
+            margin-bottom: 2rem;
             font-size: 4rem;
             transform: rotateX(60deg);
             transform-origin: bottom;
@@ -26,7 +26,7 @@
         .insert-coins {
             display: flex;
             align-items: center;
-            margin-bottom: 1.8rem;
+            margin-bottom: 2rem;
             animation: h3-anim 0.9s linear infinite;
             @keyframes h3-anim {
                 0% {
