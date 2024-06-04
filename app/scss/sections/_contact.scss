@@ -20,10 +20,6 @@
 
             img {
                 width: 60%;
-
-                @include screen('s') {
-                    width: 70%;
-                }
             }
 
             h3 {

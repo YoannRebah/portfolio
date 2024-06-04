@@ -24,8 +24,9 @@ $shadow-pink-3d: 0 0 5px $pink, 0 0 15px $pink, 0 0 20px $pink, 0 0 40px $pink, 
 $shadow-black-3d: 0 0 5px $black, 0 0 15px $black, 0 0 20px $black, 0 0 40px $black, 0 0 60px $black, 0 0 10px $black, 0 0 98px $black, 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191,1px 8px 1px #919191,1px 9px 1px #919191,1px 10px 1px #919191,1px 18px 6px rgba(16,16,16,0.4),1px 22px 10px rgba(16,16,16,0.2),1px 25px 35px rgba(16,16,16,0.2),1px 30px 60px rgba(16,16,16,0.4);
 
 $breakpoints: (
-  'xs':  320px,
-  's':  480px,
+  'xxs':  280px,
+  'xs':  370px,
+  's':  501px,
   'm': 768px,
   'l':  1025px,
   'xl': 1281px,
