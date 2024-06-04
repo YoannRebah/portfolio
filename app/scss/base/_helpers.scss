@@ -23,3 +23,19 @@
     opacity: 0 !important;
     pointer-events: none !important;
 }
+
+.display-block-s {
+    display: block;
+                    
+    @include screen('s') {
+        display: none;
+    }
+}
+
+.hidden-block-s {
+    display: none;
+                    
+    @include screen('s') {
+        display: block;
+    }
+}

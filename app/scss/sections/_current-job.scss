@@ -1,0 +1,14 @@
+[data-content="current-job"] {
+    .container-current-job {
+        position: relative;
+        width: 100%;
+        overflow-x: auto;
+        padding: 3rem;
+        margin-top: -2rem;
+        margin-bottom: -2rem;
+
+        @include screen('s') {
+            overflow: hidden;
+        }
+    }
+}

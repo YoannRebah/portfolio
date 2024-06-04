@@ -16,6 +16,10 @@
         }
     }
 
+    @include screen('s') {
+        padding-top: 6rem;
+    }
+
     .title-popin {
         padding: 0.25rem 0.33rem;
 
