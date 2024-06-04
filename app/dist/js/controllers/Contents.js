@@ -2,7 +2,7 @@ class Contents {
 
     static #contentElements = [
         {
-            href: "intro",
+            href: "#intro",
             target: "",
             ariaLabel: "Introduction",
             label: "Introduction",
@@ -13,7 +13,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "skills",
+            href: "#skills",
             target: "",
             ariaLabel: "Compétences",
             label: "Compétences",
@@ -24,7 +24,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "tools",
+            href: "#tools",
             target: "",
             ariaLabel: "Outils",
             label: "Outils",
@@ -35,7 +35,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "notable-achievements",
+            href: "#notable-achievements",
             target: "",
             ariaLabel: "Réalisations",
             label: "Réalisations",
@@ -46,7 +46,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "current-job",
+            href: "#current-job",
             target: "",
             ariaLabel: "Poste Actuel",
             label: "Poste Actuel",
@@ -57,7 +57,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "interests",
+            href: "#interests",
             target: "",
             ariaLabel: "Centres d'intérêt",
             label: "Centres d'intérêt",
@@ -68,7 +68,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "arcade",
+            href: "#arcade",
             target: "",
             ariaLabel: "Salle d'Arcade",
             label: "Salle d'Arcade",
@@ -79,7 +79,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "contact",
+            href: "#contact",
             target: "",
             ariaLabel: "Contact",
             label: "Contact",
@@ -90,7 +90,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "location",
+            href: "#location",
             target: "",
             ariaLabel: "Localisation",
             label: "Localisation",
@@ -101,7 +101,7 @@ class Contents {
             isInFooter: true
         },
         {
-            href: "references",
+            href: "#references",
             target: "",
             ariaLabel: "Références & Inspirations",
             label: "Références & Inspirations",
