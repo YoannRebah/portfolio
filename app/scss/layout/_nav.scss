@@ -14,8 +14,10 @@ $nav-height: 6rem;
     transition: 0.25s ease-in-out;
 
     &.active {
-        opacity: 1;
-        pointer-events: all;
+        @include screen('s') {
+            opacity: 1;
+            pointer-events: all;
+        }
     }
 
     .main-nav {
