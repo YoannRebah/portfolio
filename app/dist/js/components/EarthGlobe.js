@@ -21,7 +21,7 @@ class EarthGlobe {
     }
 
     SetSceneBackground() {
-        this.#scene.background = new THREE.Color(0x040114);
+        this.#scene.background = new THREE.Color(Utils.BodyBgColorBase16);
     }
 
     SetRendererSize() {
