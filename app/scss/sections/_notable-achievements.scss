@@ -7,11 +7,13 @@ $gap-polaroid: 3rem;
         width: 100%;
         max-width: 700px;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: $gap-polaroid;
         margin-top: 3.5rem;
 
         @include screen('s') {
+            justify-content: inherit;
             margin-top: 0;
         }
     
@@ -22,6 +24,11 @@ $gap-polaroid: 3rem;
             flex-direction: column;
             height: 330px;
             border: 10px solid $white;
+            max-width: 320px;
+
+            @include screen('s') {
+                max-width: inherit;
+            }
 
             @include screen('s') {
                 flex: calc(50% - $gap-polaroid);
