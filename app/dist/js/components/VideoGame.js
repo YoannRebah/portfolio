@@ -1,22 +1,24 @@
 class VideoGame {
 
-    #btnBackToArcadeMenu = document.querySelector('[data-btn-action="back-to-arcade-menu"]');
-    static #videoGame = document.querySelector('.video-game');
-    static #game = document.querySelector('.game');
-    static #healthBar = document.querySelector('.health-bar');
+    #btnBackToArcadeMenuHTML = document.querySelectorAll('[data-btn-action="back-to-arcade-menu"]');
+    static #videoGameHTML = document.querySelector('.video-game');
+    static #gameHTML = document.querySelector('.game');
+    static #gameOverHTML = document.querySelector('.game-over');
+    static #healthBarHTML = document.querySelector('.health-bar');
+    static #scoreHTML = document.querySelector('.score');
+    static #highScoreHTML = document.querySelector('.high-score');
+    static #localStorageKeyScore = 'portfolio-yr-score';
+    static #localStorageKeyHighScore = 'portfolio-yr-high-score';
     static #health = 100;
     static #healthMin = 0;
     static #healthMax = 100;
     static #currentPositionX = 0;
     static #gameCursor;
-    static #scoreHTML = document.querySelector('.score');
-    static #highScoreHTML = document.querySelector('.high-score');
-    static #localStorageKeyScore = 'portfolio-yr-score';
-    static #localStorageKeyHighScore = 'portfolio-yr-high-score';
     static #scoreCounter = 0;
     static #scoreCounterStep = 50;
     static #intervalScoreCounter = null;
     static #gameIsStarted = false;
+    static #gameOver = false;
     static #scoreCounterIsPaused = false;
     static #meteorsPerSecond = 1;
     static #meteorInterval;
@@ -26,6 +28,14 @@ class VideoGame {
         this.AddEventBtnBackToArcadeMenu();
         VideoGame.AddEventKeydownEscap();
         VideoGame.SetLocalStorageDefaultHighScore();
+    }
+
+    static ShowGameOver() {
+        VideoGame.#gameOverHTML.classList.add('active');
+    }
+
+    static HideGameOver() {
+        VideoGame.#gameOverHTML.classList.remove('active');
     }
 
     static StartNewGame() {
@@ -54,12 +64,23 @@ class VideoGame {
         if(!VideoGame.#gameIsStarted) {
             VideoGame.StartScoreCounter();
             VideoGame.AppendMeteorsHTML();
+            VideoGame.InitGameOver(false);
         }
         VideoGame.#gameIsStarted = true;
     }
 
     static InitGameIsEnded() {
         VideoGame.#gameIsStarted = false;
+    }
+
+    static InitGameOver(bool) {
+        VideoGame.#gameOver = bool;
+        if(VideoGame.#gameOver) {
+            VideoGame.StopGame();
+            VideoGame.ShowGameOver();
+        } else {
+            VideoGame.HideGameOver();
+        }
     }
 
     static StartScoreCounter() {
@@ -129,18 +150,20 @@ class VideoGame {
     }
 
     static ShowVideoGame() {
-        this.#videoGame.classList.add('active');
+        this.#videoGameHTML.classList.add('active');
     }
 
     static HideVideoGame() {
-        this.#videoGame.classList.remove('active');
+        this.#videoGameHTML.classList.remove('active');
     }
 
     static AppendTitleMoveToPlayHTML() {
-        const h3 = document.createElement('h3');
-        h3.classList.add('title-move-to-play', 'jersey-15-regular');
-        h3.innerHTML = "Déplacez la souris";
-        VideoGame.#game.append(h3);
+        if(document.querySelector('.title-move-to-play') == null) {
+            const h3 = document.createElement('h3');
+            h3.classList.add('title-move-to-play', 'jersey-15-regular');
+            h3.innerHTML = "Déplacez la souris";
+            VideoGame.#gameHTML.append(h3);
+        }
     }
 
     static RemoveTitleMoveToPlay() {
@@ -150,8 +173,11 @@ class VideoGame {
     }
 
     AddEventBtnBackToArcadeMenu() {
-        this.#btnBackToArcadeMenu.addEventListener('click', ()=>{
-            VideoGame.StopGame();
+        this.#btnBackToArcadeMenuHTML.forEach((elem)=>{
+            elem.addEventListener('click', ()=>{
+                VideoGame.HideGameOver();
+                VideoGame.StopGame();
+            });
         });
     }
 
@@ -184,7 +210,7 @@ class VideoGame {
             const collisionBox = document.createElement('div');
             collisionBox.classList.add('collision-box');
             this.#gameCursor.append(collisionBox);
-            VideoGame.#game.append(VideoGame.#gameCursor);
+            VideoGame.#gameHTML.append(VideoGame.#gameCursor);
         }
     }
 
@@ -195,7 +221,7 @@ class VideoGame {
     }
 
     static AddEventMouseMoveGame() {
-        VideoGame.#game.addEventListener('mousemove', (e) => {
+        VideoGame.#gameHTML.addEventListener('mousemove', (e) => {
             const clientX = e.clientX;
             VideoGame.#currentPositionX = clientX;
             VideoGame.#gameCursor.style.transform = `translateX(${VideoGame.#currentPositionX}px)`;
@@ -207,7 +233,7 @@ class VideoGame {
 
     static ToggleGameMouseCursor() {
         const elementRect = VideoGame.#gameCursor.getBoundingClientRect();
-        const containerRect = VideoGame.#game.getBoundingClientRect();
+        const containerRect = VideoGame.#gameHTML.getBoundingClientRect();
 
         const isTouchingLeft = elementRect.left <= containerRect.left;
         const isTouchingRight = elementRect.right >= containerRect.right;
@@ -254,17 +280,19 @@ class VideoGame {
             meteor.style.left = `${randomLeft}%`;
 
             meteor.append(img);
-            VideoGame.#game.append(meteor);
+            VideoGame.#gameHTML.append(meteor);
 
             setTimeout(() => {
                 meteor.remove();
             }, 5000);
 
             const interval = setInterval(() => {
-                const collisionBox = document.querySelector('.collision-box');
-                if (collisionBox && isColliding(meteor, collisionBox)) {
-                    VideoGame.UpdateHealthBar(-dataDamage);
-                    clearInterval(interval);
+                if(document.querySelector('.game-cursor')) {
+                    const collisionBox = document.querySelector('.collision-box');
+                    if (collisionBox && isColliding(meteor, collisionBox)) {
+                        VideoGame.UpdateHealthBar(-dataDamage);
+                        clearInterval(interval);
+                    }
                 }
             }, 100);
         }
@@ -307,28 +335,31 @@ class VideoGame {
 
         if(VideoGame.#health <= VideoGame.#healthMin) {
             VideoGame.#health = VideoGame.#healthMin;
-            VideoGame.#healthBar.style.width = `${VideoGame.#healthMin}%`;
+            VideoGame.#healthBarHTML.style.width = `${VideoGame.#healthMin}%`;
+            VideoGame.InitGameOver(true);
         }
 
         if(VideoGame.#health >= VideoGame.#healthMax) {
             VideoGame.#health = VideoGame.#healthMax;
-            VideoGame.#healthBar.style.width = `${VideoGame.#healthMax}%`;
+            VideoGame.#healthBarHTML.style.width = `${VideoGame.#healthMax}%`;
         }
 
         if(dataDamage < 0) {
-            document.querySelector('.collision-box').classList.add('active');
-            let timeout = setTimeout(()=>{
-                document.querySelector('.collision-box').classList.remove('active');
-                clearTimeout(timeout);
-            }, 500);
+            if(document.querySelector('.collision-box')) {
+                document.querySelector('.collision-box').classList.add('active');
+                let timeout = setTimeout(()=>{
+                    document.querySelector('.collision-box').classList.remove('active');
+                    clearTimeout(timeout);
+                }, 500);
+            }
         }
 
-        VideoGame.#healthBar.style.width = `${VideoGame.#health}%`;
+        VideoGame.#healthBarHTML.style.width = `${VideoGame.#health}%`;
     }
 
     static ResetHealth() {
         VideoGame.#health = VideoGame.#healthMax;
-        VideoGame.#healthBar.style.width = `${VideoGame.#healthMax}%`;
+        VideoGame.#healthBarHTML.style.width = `${VideoGame.#healthMax}%`;
     }
     
 }

@@ -1,7 +1,7 @@
 class Arcade {
 
     #btnOpenArcadeMenu = document.querySelector('[data-btn-action="open-arcade-menu"]');
-    #btnNewGame = document.querySelector('[data-btn-action="new-game"]');
+    #btnNewGame = document.querySelectorAll('[data-btn-action="new-game"]');
     #btnQuitArcadeMenu = document.querySelector('[data-btn-action="quit-arcade-menu"]');
     static #videoGameMenu = document.querySelector('.video-game-menu');
 
@@ -30,8 +30,11 @@ class Arcade {
     }
 
     AddEventBtnNewGame() {
-        this.#btnNewGame.addEventListener('click', ()=>{
-            VideoGame.StartNewGame();
+        this.#btnNewGame.forEach((elem)=>{
+            elem.addEventListener('click', ()=>{
+                VideoGame.HideGameOver();
+                VideoGame.StartNewGame();
+            });
         });
     }
 
