@@ -260,7 +260,7 @@ header[data-container=hero-banner] {
   width: 100%;
   top: 0;
   left: 0;
-  height: 6rem;
+  height: 5.3rem;
   background: #03010f;
   border-bottom: 1.5px solid hsl(172, 85%, 49%);
   z-index: 1;
@@ -343,7 +343,7 @@ header[data-container=hero-banner] {
           filter: brightness(130%);
 }
 [data-container=main-nav].reduce {
-  top: -5.9rem;
+  top: -5.2rem;
   border-bottom-color: hsl(323, 100%, 78%);
 }
 [data-container=main-nav].reduce [data-btn-action=reduce-main-nav] {
@@ -783,7 +783,7 @@ footer [data-content=footer] .list-footer li {
 }
 .neon-letters.small span:nth-child(1) {
   text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   margin-bottom: -0.5rem;
   margin-left: 0.5rem;
   -webkit-animation: none;
@@ -793,7 +793,7 @@ footer [data-content=footer] .list-footer li {
   margin-bottom: -0.75rem;
 }
 .neon-letters.small span:nth-child(2), .neon-letters.small span:nth-child(3) {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 .neon-letters.small span:nth-child(3) {
   margin-left: 0.5rem;
@@ -801,7 +801,7 @@ footer [data-content=footer] .list-footer li {
 }
 .neon-letters.small span:nth-child(4) {
   text-shadow: 0 0 5px hsl(172, 85%, 49%), 0 0 15px hsl(172, 85%, 49%), 0 0 20px hsl(172, 85%, 49%), 0 0 40px hsl(172, 85%, 49%), 0 0 60px hsl(170, 79%, 33%), 0 0 10px hsl(172, 85%, 49%), 0 0 98px hsl(170, 79%, 33%);
-  font-size: 0.55rem;
+  font-size: 0.45rem;
   margin-right: 0.33rem;
   -webkit-animation: none;
           animation: none;

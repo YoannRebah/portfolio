@@ -95,7 +95,7 @@
         span {
             &:nth-child(1) {
                 text-shadow: $shadow-cyan;
-                font-size: 0.85rem;
+                font-size: 0.75rem;
                 margin-bottom: -0.5rem;
                 margin-left: 0.5rem;
                 animation: none;
@@ -107,7 +107,7 @@
     
             &:nth-child(2),
             &:nth-child(3) {
-                font-size: 1.5rem;
+                font-size: 1.35rem;
             }
     
             &:nth-child(3) {
@@ -117,7 +117,7 @@
     
             &:nth-child(4) {
                 text-shadow: $shadow-cyan;
-                font-size: 0.55rem;
+                font-size: 0.45rem;
                 margin-right: 0.33rem;
                 animation: none;
             }
