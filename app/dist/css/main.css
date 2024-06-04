@@ -2089,10 +2089,9 @@ footer [data-content=footer] .list-footer li {
           align-items: center;
   background-size: 32px 32px;
   background-position: center;
-  background-image: linear-gradient(to right, hsla(323, 100%, 78%, 0.4) 1px, transparent 1px), linear-gradient(to bottom, hsla(323, 63%, 37%, 0.4) 1px, transparent 1px);
-  border: 1px solid #212121;
-  -webkit-box-shadow: inset 0px 0px 37px 15px rgb(0, 0, 0);
-          box-shadow: inset 0px 0px 37px 15px rgb(0, 0, 0);
+  background-image: linear-gradient(to right, hsla(323, 100%, 78%, 0.3) 1px, transparent 1px), linear-gradient(to bottom, hsla(323, 63%, 37%, 0.3) 1px, transparent 1px);
+  -webkit-box-shadow: inset 0px 0px 37px 15px rgba(0, 0, 0, 0.85);
+          box-shadow: inset 0px 0px 37px 15px rgba(0, 0, 0, 0.85);
 }
 [data-content=arcade] .container-arcade h3 {
   margin-top: -1.5rem;
@@ -2163,7 +2162,7 @@ footer [data-content=footer] .list-footer li {
   color: #fff;
   padding: 0.5rem 2rem;
   border-radius: 0.15rem;
-  background: hsla(323, 63%, 37%, 0.4);
+  background: hsla(323, 63%, 37%, 0.3);
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
 }
