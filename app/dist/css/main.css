@@ -381,6 +381,12 @@ footer [data-content=footer] .list-footer li {
   background-size: cover;
   background-position: center;
   background-image: url(../../dist/assets/images/arcade-promotion.jpg);
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+.container-arcade-promotion a:hover {
+  -webkit-filter: brightness(115%);
+          filter: brightness(115%);
 }
 
 .glitch-line {

@@ -16,5 +16,10 @@
         background-size: cover;
         background-position: center;
         background-image: url(../../dist/assets/images/arcade-promotion.jpg);
+        transition: 0.15s ease-in-out;
+
+        &:hover {
+            filter: brightness(115%);
+        }
     }
 }
