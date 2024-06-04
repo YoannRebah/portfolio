@@ -10,7 +10,7 @@ section {
 
         .content {
             position: relative;
-            margin-top: 2.5rem;
+            margin-top: 2rem;
 
             @include screen('s') {
                 margin-top: 5rem;

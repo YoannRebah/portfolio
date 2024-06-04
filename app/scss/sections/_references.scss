@@ -1,14 +1,30 @@
 [data-content="references"] {
-    margin-top: 0 !important;
-
+    
     .references-list {
-        column-count: 3;
+        column-count: 2;
         column-fill: auto;
-        height: 150px;
+        height: 200px;
+
+        @include screen('s') {
+            column-count: 3;
+            height: 150px;
+        }
 
         li {
             margin-left: 1rem;
-            padding: 0.5rem 0;
+            padding: 0.25rem 0;
+
+            @include screen('s') {
+                padding: 0.5rem 0;
+            }
+
+            a {
+                font-size: 0.6rem;
+
+                @include screen('s') {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 

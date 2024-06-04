@@ -3,11 +3,11 @@ class References {
     #referencesList = document.querySelector('.references-list');
     #references = [
         {
-            html: "Miami Vice (Pilote de 1980)",
+            html: "Miami Vice (Pilote - 1980)",
             href: "https://x.com/WilliamReymond/status/1728148302494150986?t=n3qVBPyxhhFbx1BkEmAgYQ&s=19"
         },
         {
-            html: "L'Œuvre de Michael Mann (cinéaste)",
+            html: "L'Œuvre de Michael Mann",
             href: "https://fr.wikipedia.org/wiki/Michael_Mann"
         },
         {
