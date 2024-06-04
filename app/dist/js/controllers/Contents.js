@@ -2,6 +2,17 @@ class Contents {
 
     static #contentElements = [
         {
+            href: "intro",
+            target: "",
+            ariaLabel: "Introduction",
+            label: "Introduction",
+            classNames: "",
+            dataTitlePopin: "",
+            iconClassNames: "",
+            isInMainNav: false,
+            isInFooter: true
+        },
+        {
             href: "skills",
             target: "",
             ariaLabel: "Compétences",
@@ -50,6 +61,17 @@ class Contents {
             target: "",
             ariaLabel: "Centres d'intérêt",
             label: "Centres d'intérêt",
+            classNames: "",
+            dataTitlePopin: "",
+            iconClassNames: "",
+            isInMainNav: false,
+            isInFooter: true
+        },
+        {
+            href: "arcade",
+            target: "",
+            ariaLabel: "Salle d'Arcade",
+            label: "Salle d'Arcade",
             classNames: "",
             dataTitlePopin: "",
             iconClassNames: "",

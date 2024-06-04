@@ -357,7 +357,7 @@ footer [data-content=footer] .list-footer {
   -webkit-column-fill: auto;
      -moz-column-fill: auto;
           column-fill: auto;
-  height: 120px;
+  height: 150px;
 }
 footer [data-content=footer] .list-footer li {
   margin-bottom: 1rem;
