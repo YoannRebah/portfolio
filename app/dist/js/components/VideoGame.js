@@ -345,10 +345,12 @@ class VideoGame {
         }
 
         if(dataDamage < 0) {
-            if(document.querySelector('.collision-box')) {
+            if(document.querySelector('.game-cursor')) {
                 document.querySelector('.collision-box').classList.add('active');
                 let timeout = setTimeout(()=>{
-                    document.querySelector('.collision-box').classList.remove('active');
+                    if(document.querySelector('.collision-box')) {
+                        document.querySelector('.collision-box').classList.remove('active');
+                    }
                     clearTimeout(timeout);
                 }, 500);
             }

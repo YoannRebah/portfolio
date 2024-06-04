@@ -1,12 +1,30 @@
 [data-content="arcade"] {
     .container-arcade {
+        position: relative;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 3rem;
+        padding: 3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-size: 32px 32px;
+        background-position: center;
+        background-image: linear-gradient(to right, $pink 1px, transparent 1px), linear-gradient(to bottom, $pink2 1px, transparent 1px);
+        border: 1px solid $pink2;
 
         h3 {
+            margin-top: -1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 4rem;
+            transform: rotateX(60deg);
+            transform-origin: bottom;
+            text-shadow: 0 13px 0 #E79C10, 0 -13px 0 #D53A33, 0 8px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
             font-size: 1.6rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
             animation: h3-anim 0.9s linear infinite;
             @keyframes h3-anim {
                 0% {
